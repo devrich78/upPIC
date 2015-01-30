@@ -32,7 +32,7 @@ I created an account for the first time over here on GitHub and got a pretty coo
 
 #What/where/how can I use the images created with [:.:] for:
 
-[:.:] is designed primarily as a Display Image creator; however you can also use the images created with [:.:] in any project or website you want as well as many other places and ideas such as:
+[:.:] is designed primarily as a Display Image creator; however you can also use the images created with [:.:] in any project or website you want as well as many other places!  For example; here are some general ideas:
 
 |   |   |   |   |
 |---|---|---|---|
@@ -41,6 +41,16 @@ I created an account for the first time over here on GitHub and got a pretty coo
 |  * Comics  |  * Graphic Novels  |  * Novels  |  * Cutscenes for Video Games  |
 |  * Videos  |  * Video Clips  |  * Video Game Images  |  * AND A WHOLE LOT MORE!!  |
 
+
+#Who "owns" the images created with [:.:] ?
+
+YOU -- Essentially; the image(s) created with [:.:] are owned by the person(s) who used [:.:] to create the image(s). 
+
+However; there is two stipulations to this:
+
+1: Considering that there are only a finite possible number of images you can create with [:.:] -- if you and someone else both create the same image then I ask you all to not sue, threaten, or otherwise disrepect or bring harm to each other.  Let's all get along and use [:.:] for our own personalizational awesomeness :-D
+
+2: Another stipulation is that I don't want you to copyright the images created with [:.:] "directly" -- However; if you combine/embed the image(s) that you create with [:.:] into other image(s) not created with [:.:] then that is ok to copyright, however you agree NOT to attempt to interfer with or prevent others using [:.:] who may create the same image(s) as yours... hmmm i shoudl probaably re-word that better... but you get the idea, play nice, and play fair :-)
 
 
 
