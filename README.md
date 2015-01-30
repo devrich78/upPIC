@@ -1,5 +1,5 @@
-<h1></h1>#[:.:] user profile Pixelated Image Creator
-# aka [:upPIC:]</h1>
+#[:.:] user profile Pixelated Image Creator
+# aka [:upPIC:]
 
 -- Initially created and inspired by: devrich78 and currently made available under the Apache 2.0 license
 
@@ -20,12 +20,15 @@ Because when I went to create the repo and typed in [:.:] I got a yellow message
 
 I created an account for the first time over here on GitHub and got a pretty cool 5x5 pixelated image:
 
-''#''
-'###'
-''#''
-'###'
-##### -- Where 
-
+```php
+ _____
+|  #  |
+| ### |
+|  #  |
+| ### |
+|#####|
+ -----
+```
 
 
 
