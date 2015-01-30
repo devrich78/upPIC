@@ -36,39 +36,13 @@ I created an account for the first time over here on GitHub and got a pretty coo
 
 |   |   |   |   |
 |---|---|---|---|
-|  * Icons  |  * Images  |  * Animated Gifs  |  * Animated-Other-Images |
-|  * col1 | * col2 again |
+|  * Icons  |  * Images  |  * Animated Gifs  |  * Animated-Other-Images  |
+|  * Display Images  |  * Profile Pics  |  * Avatars  |  * T-Shirts ( This is my fanorite thing to do!! )  |
 
 
-  |  * Display Images
-  |  * Profile Pics
-  |  * Avatars
-  |  * Comics
-  |  * Graphic Novels
-  |  * Novels
-  |  * Videos
-  |  * Video Clips
-  |  * Cutscenes for Video Games
-  |  * Video Game Images
-  |  * T-Shirts ( This is my fanorite thing to do!! )
-  |  * 
-  |  * 
-  |  * 
-  |  * 
-  |  * 
-  |  * 
-  |  * 
-  |  * 
-  |  * 
-  |  * 
-  |  * 
-  |  * 
-  |  * 
-  |  * 
-  |  * 
-  |  * 
-  |  * 
-  
+|  * Comics  |  * Graphic Novels  |  * Novels  |  * Videos  |
+|  * Video Clips  |  * Cutscenes for Video Games  |  * Video Game Images  |  * AND A WHOLE LOT MORE!!
+-----------------------------------------------------------------
 
 
 
