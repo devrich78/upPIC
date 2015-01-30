@@ -11,10 +11,10 @@ Why is your repository (repo) called/labeled "upPIC" and not "[:.:]" ?
 Because when I went to create the repo and typed in [:.:] I got a yellow message box saying that if I created the repo as [:.:] then it: "Will be created as -.-" which is a pretty cute smilie face but not the name of this project ;-)
 
 
-
-#About [:.:]
-
 #What is [:.:] ?
+
+[:.:] user profile Pixelated Image Creator is a system, concept, and user-interface design that is specifically designed to allow you to create your own pixelated Display Image.
+
 
 #Where did the idea for [:.:] come from?
 
@@ -30,6 +30,12 @@ I created an account for the first time over here on GitHub and got a pretty coo
                                          -----
 ```
 
+#What/where/how can I use the images created with [:.:] for:
+
+[:.:] is designed primarily as a Display Image creator; however you can also use the images created with [:.:] in any project or website you want as well as many other places and ideas such as:
+
+|  * Comics | * col2
+|  * col1 | * col2 again |
 
 
 
