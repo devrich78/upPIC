@@ -10,9 +10,9 @@ __( This README.md and the [:upPIC:] project are a Work-In-Progess.  I ask that 
 
 
 #[:.:] user profile Pixelated Image Creator
-# aka [:upPIC:]
+__aka [:upPIC:]__
 
--- Initially created and inspired by: devrich78 and currently made available under the Apache 2.0 license
+-- Initially created and inspired by me: devrich78 and currently made available under the Apache 2.0 license
 
 
 Top FAQ Question:
