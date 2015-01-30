@@ -10,12 +10,10 @@ __( This README.md and the [:upPIC:] project are a Work-In-Progess.  I ask that 
 
 
 #[:.:] user profile Pixelated Image Creator
-__aka [:upPIC:]__
-
--- Initially created and inspired by me: devrich78 and currently made available under the Apache 2.0 license
+aka [:upPIC:] -- Initially created and inspired by me: devrich78 and currently made available under the Apache 2.0 license
 
 
-Top FAQ Question:
+__Top FAQ Question:__
 
 Why is your repository (repo) called/labeled "upPIC" and not "[:.:]" ?
 
