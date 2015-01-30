@@ -34,7 +34,8 @@ I created an account for the first time over here on GitHub and got a pretty coo
 
 [:.:] is designed primarily as a Display Image creator; however you can also use the images created with [:.:] in any project or website you want as well as many other places and ideas such as:
 
-|  * Comics | * col2
+|  * Comics | * col2 |
+|--|--|
 |  * col1 | * col2 again |
 
 
