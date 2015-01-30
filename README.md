@@ -35,8 +35,46 @@ I created an account for the first time over here on GitHub and got a pretty coo
 [:.:] is designed primarily as a Display Image creator; however you can also use the images created with [:.:] in any project or website you want as well as many other places and ideas such as:
 
 |  * Comics | * col2 |
-|--|--|
+|---|---|---|---|
 |  * col1 | * col2 again |
+
+
+  |  * Display Images
+  |  * Profile Pics
+  |  * Avatars
+  |  * Comics
+  |  * Graphic Novels
+  |  * Novels
+  |  * Videos
+  |  * Video Clips
+  |  * Cutscenes for Video Games
+  |  * Video Game Images
+  |  * Icons
+  |  * Images
+  |  * Animated Gifs
+  |  * Animated-Other-Images
+  |  * 
+  |  * 
+  |  * 
+  |  * 
+  |  * 
+  |  * 
+  |  * 
+  |  * 
+  |  * 
+  |  * 
+  |  * 
+  |  * 
+  |  * 
+  |  * 
+  |  * 
+  |  * 
+  |  * 
+  |  * 
+  
+
+
+
 
 
 
