@@ -13,19 +13,19 @@ __( This README.md and the [:upPIC:] project are a Work-In-Progess.  I ask that 
 aka [:upPIC:] -- Initially created and inspired by me: devrich78 and currently made available under the Apache 2.0 license
 
 
-__Top FAQ Question:__
+#Top FAQ Questions:
 
-Why is your repository (repo) called/labeled "upPIC" and not "[:.:]" ?
+__Why is your repository (repo) called/labeled "upPIC" and not "[:.:]" ?__
 
 Because when I went to create the repo and typed in [:.:] I got a yellow message box saying that if I created the repo as [:.:] then it: "Will be created as -.-" which is a pretty cute smilie face but not the name of this project ;-)
 
 
-#What is [:.:] ?
+__What is [:.:] ?__
 
 [:.:] user profile Pixelated Image Creator is a system, concept, and user-interface design that is specifically designed to allow you to create your own pixelated Display Image.
 
 
-#Where did the idea for [:.:] come from?
+__Where did the idea for [:.:] come from?__
 
 I created an account for the first time over here on GitHub and got a pretty cool 5x5 pixelated image:
 
@@ -41,7 +41,7 @@ I created an account for the first time over here on GitHub and got a pretty coo
 And I love that image but I wanted to be able to create my own image and 'beef' it up ( so to speak ).  So I came up with the simple idea of making some design and construction process for creating my own "Pixelated Iamges".
 
 
-#What/where/how can I use the images created with [:.:] for:
+__What/where/how can I use the images created with [:.:] for:__
 
 [:.:] is designed primarily as a Display Image creator; however you can also use the images created with [:.:] in any project or website you want as well as many other places!  For example; here are some general ideas:
 
@@ -53,7 +53,7 @@ And I love that image but I wanted to be able to create my own image and 'beef' 
 |  * Videos  |  * Video Clips  |  * Video Game Images  |  * AND A WHOLE LOT MORE!!  |
 
 
-#Who "owns" the images created with [:.:] ?
+__Who "owns" the images created with [:.:] ?__
 
 YOU and well "i" i guess... Essentially; the image(s) created with [:.:] are owned by the person(s) who used [:.:] to create the image(s) as long as they follow these simple stipulations:
 
