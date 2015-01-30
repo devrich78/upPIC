@@ -8,7 +8,7 @@ Top FAQ Question:
 
 Why is your repository (repo) called/labeled "upPIC" and not "[:.:]" ?
 
-Because when I went to create the repo and typed in [:.:] then i got a yellow message box saying that if I created the repo as [:.:] then it: "Will be created as -.-" which is a pretty cute smilie face but not the name of this project ;-)
+Because when I went to create the repo and typed in [:.:] I got a yellow message box saying that if I created the repo as [:.:] then it: "Will be created as -.-" which is a pretty cute smilie face but not the name of this project ;-)
 
 
 
