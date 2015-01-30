@@ -13,3 +13,19 @@ Because when I went to create the repo and typed in [:.:] I got a yellow message
 
 
 #About [:.:]
+
+#What is [:.:] ?
+
+#Where did the idea for [:.:] come from?
+
+I created an account for the first time over here on GitHub and got a pretty cool 5x5 pixelated image:
+
+''#''
+'###'
+''#''
+'###'
+##### -- Where 
+
+
+
+
