@@ -1,4 +1,5 @@
-#[:.:] user profile Pixelated Image Creator aka [:upPIC:]
+#[:.:] user profile Pixelated Image Creator
+# aka [:upPIC:]
 
 ** Oh wow, this is my very first GIT anything including on GitHub -- please be kind :-)
 
