@@ -50,7 +50,7 @@ However; there is two stipulations to this:
 
 1: Considering that there are only a finite possible number of images you can create with [:.:] -- if you and someone else both create the same image then I ask you all to not sue, threaten, or otherwise disrepect or bring harm to each other.  Let's all get along and use [:.:] for our own personalizational awesomeness :-D
 
-2: Another stipulation is that I don't want you to copyright the images created with [:.:] "directly" -- However; if you combine/embed the image(s) that you create with [:.:] into other image(s) not created with [:.:] then that is ok to copyright, however you agree NOT to attempt to interfer with or prevent others using [:.:] who may create the same image(s) as yours... hmmm i shoudl probaably re-word that better... but you get the idea, play nice, and play fair :-)
+2: Another stipulation is that I don't want you to copyright the images created with [:.:] "directly" -- However; if you combine/embed the image(s) that you create with [:.:] into other image(s) not created with [:.:] then that is ok to copyright, however you agree NOT to attempt to interfer with or prevent others using [:.:] who may create the same image(s) as yours to copyrighting their own creations as long as they also combine the image(s) they create with [:.:] by combining/embedding them with other images... hmmm i should probaably re-word that better... but you get the idea, play nice, and play fair :-)
 
 
 
