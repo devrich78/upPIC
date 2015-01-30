@@ -21,13 +21,13 @@ Because when I went to create the repo and typed in [:.:] I got a yellow message
 I created an account for the first time over here on GitHub and got a pretty cool 5x5 pixelated image:
 
 ```php
-                                               _____
-                                              |  #  |
-                                              | ### |
-                                              |  #  |
-                                              | ### |
-                                              |#####|
-                                               -----
+                                           _____
+                                          |  #  |
+                                          | ### |
+                                          |  #  |
+                                          | ### |
+                                          |#####|
+                                           -----
 ```
 
 
