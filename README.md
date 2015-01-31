@@ -11,7 +11,7 @@ formerly -> "upPIC"
 
 
 #[[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)] user profile Pixelated Image Creator
-aka [:upPIC:] -- Initially created and inspired by me: devrich78 and currently made available under the Apache 2.0 license
+Initially created and inspired by me: devrich78 and currently made available under the Apache 2.0 license
 
 
 #Top FAQ Questions about [[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)]
@@ -29,11 +29,11 @@ ___What is___ [[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/dev
 
 ___Did you trademark the___ [[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)] ___ASCII logo?___
 
-
 YES - please note that the [[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)] ASCII logo is one of my trademarks as of January 1st, 2015 -- HOWEVER; you may all use the [[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)] logo anywhere and in any way you wish ___as long as___ you do ___not___ disrepect it and provide a link back to this GitHub repository or my website.  Many thanks for your support on that and because of your continued support, I plan to always keep upPIC free for everybody!
 
 
 ___What is your "user profile Pixelated Image Creator" project all about ?___
+
 "user profile Pixelated Image Creator" is my very first GitHub project.  It is a web-based ( initially ) and cross-platform/cross-industry system, concept, and user-interface that is specifically designed to allow you to create your own pixelated Display Image 'on-the-fly' for use anywhere and everywhere ( just mention upPIC is all i ask if you like it ).
 
 
@@ -67,14 +67,11 @@ ___What/where/how can I use the images created with___ [[:](http://GitHub.com/de
 
 ___Who "owns" the images created with___ [[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)] ___?___
 
-YOU and well "i" i guess... Essentially; the image(s) created with [[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)] are owned by the person(s) who used [[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)] to create the image(s) as long as they follow these simple stipulations:
+Essentially; the image(s) created with [[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)] are owned by the person(s) who used [[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)] to create the image(s) as long as they follow these simple stipulations:
 
 1: Considering that there are only a finite possible number of images you can create with [[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)] -- if you and someone else both create the same image then I ask you all to not sue, threaten, or otherwise disrepect or bring harm to each other.  Let's all get along and use [:.:] for our own personalizational awesomeness :-D
 
 2: Another stipulation is that I don't want you to copyright the images created with [[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)] "directly" -- However; if you combine/embed the image(s) that you create with [[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)] into other image(s) not created with [:.:] then that is ok to copyright, however you agree NOT to attempt to interfer with or prevent others using [[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)] who may create the same image(s) as yours to copyrighting their own creations as long as they also combine the image(s) they create with [[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)] by combining/embedding them with other images... hmmm i should probaably re-word that better... but you get the idea, play nice, and play fair :-)
-
-
-
 
 
 ___Why do you keep adding abbreviations ( abbr ) in your text, it's odd ?___
@@ -82,6 +79,7 @@ ___Why do you keep adding abbreviations ( abbr ) in your text, it's odd ?___
 The reason is because of completeness but mostly it's to help new comers to the abbreviations ( also to help me rememeber certain new abbreviations I have learned such as "repo" for meaning a "GitHub.com Repository" ).
 
 I'll try to avoid doing it too much as to not annoy anyone.
+
 
 
 
