@@ -29,7 +29,7 @@ ___What is___ [[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/dev
 
 ___What is your "user profile Pixelated Image Creator" project all about ?___
 
-"user profile Pixelated Image Creator" is my very first GitHub project.  It is a web-based ( initially ) and cross-platform/cross-industry system, concept, and user-interface that is specifically designed to allow you to create your own pixelated Display Image 'on-the-fly' for use anywhere and everywhere ( just mention upPIC is all i ask if you like it ).
+"user profile Pixelated Image Creator" ( _pronounced:_ "up" "pic" ) is my very first GitHub project.  It is a web-based ( initially ) and cross-platform/cross-industry system, concept, and user-interface that is specifically designed to allow you to create your own pixelated Display Image 'on-the-fly' for use anywhere and everywhere ( just mention upPIC is all i ask if you like it ).
 
 
 ___Where did the idea for___ [[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)] ___come from?___
