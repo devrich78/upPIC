@@ -27,11 +27,6 @@ ___What is___ [[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/dev
 [[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)] <-- this ASCII text logo represents my very first GitHub project "user profile Pixelated Image Creator". 
 
 
-___Did you trademark the___ [[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)] ___ASCII logo?___
-
-YES - please note that the [[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)] ASCII logo is one of my trademarks as of January 1st, 2015 -- HOWEVER; you may all use the [[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)] logo anywhere and in any way you wish ___as long as___ you do ___not___ disrepect it and provide a link back to this GitHub repository or my website.  Many thanks for your support on that and because of your continued support, I plan to always keep upPIC free for everybody!
-
-
 ___What is your "user profile Pixelated Image Creator" project all about ?___
 
 "user profile Pixelated Image Creator" is my very first GitHub project.  It is a web-based ( initially ) and cross-platform/cross-industry system, concept, and user-interface that is specifically designed to allow you to create your own pixelated Display Image 'on-the-fly' for use anywhere and everywhere ( just mention upPIC is all i ask if you like it ).
@@ -51,6 +46,22 @@ I created an account for the first time over here on GitHub and got a pretty coo
                                          -----
 ```
 And I love that image but I wanted to be able to create my own image and 'beef' it up ( so to speak ).  So I came up with the simple idea of making some design and construction process for creating my own "Pixelated Iamges".
+
+
+__Why put this up on GitHub.com ?  Isn't this something you are making just for yourself ?__
+
+When I came up with the idea, I essentially felt like sharing this would be great! Not just great but more than great!
+
+I want to share this with the world and have everyone help me build as much awareness for [[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)] as possible!
+
+One way to help build awareness is to put my --> [[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)] ASCII logo in the footer of your website or somewhere as a link back to my upPIC repo.  Something like this:
+
+<a href="http://Github.com.devrich78/upPIC/" alt="upPIC - Make your own pixelated Display Image or avatar!!">[:.:]</a>
+
+
+___Did you trademark the___ [[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)] ___ASCII logo?___
+
+YES - please note that the [[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)] ASCII logo is one of my trademarks as of January 1st, 2015 -- HOWEVER; you may all use the [[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)] logo anywhere and in any way you wish ___as long as___ you do ___not___ disrepect it and provide a link back to this GitHub repository or my website.  Many thanks for your support on that and because of your continued support, I plan to always keep upPIC free for everybody!
 
 
 ___What/where/how can I use the images created with___ [[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)] ___for:___
