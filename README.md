@@ -8,7 +8,7 @@ test```c[:.:]```ing
 
 test```html[:.:]```ing
 
-test```php[:.:]```ing
+test`php[:.:]`ing
 
 test```css[:.:]```ing
 
