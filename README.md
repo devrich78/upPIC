@@ -25,7 +25,7 @@ test```[:.:]```ing
 #[:.:] [[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)]
 
 
-#[:.:] [:[.](http://GitHub.com/devrich78/upPIC/):]
+#[:.:] [[](http://GitHub.com/devrich78/upPIC/):[.](http://GitHub.com/devrich78/upPIC/):[]](http://GitHub.com/devrich78/upPIC/)
 
 
 
