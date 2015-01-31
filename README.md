@@ -12,7 +12,7 @@ test`php[:.:]`ing
 
 
 
-[:.:](http://GitHub.com/devrich78/upPIC/)
+[[:.:]](http://GitHub.com/devrich78/upPIC/)
 
 test```[:.:]```ing
 
