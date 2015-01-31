@@ -23,7 +23,15 @@ Because when I went to create the repo and typed in [:.:] I got a yellow message
 
 __What is [:.:] ?__
 
-[:.:] <-- this ASCII text logo represents my very first GitHub project "user profile Pixelated Image Creator". Also note that I have trademarked the [:.:] ASCII logo as of January 1st, 2015 -- however; you may all use the [:.:] logo anywhere and in any way you wish as long as you dont disrepect it and provide a link back to this GitHub repository or my website.  Many thanks for your support on that and I plan to always keep it free for everybody!
+
+[:.:] <-- this ASCII text logo represents my very first GitHub project "user profile Pixelated Image Creator". 
+
+
+__Did you trademark the [:.:] ASCII logo?__
+
+
+YES - please note that the [:.:] ASCII logo is one of my trademarks as of January 1st, 2015 -- HOWEVER; you may all use the [:.:] logo anywhere and in any way you wish ___as long as___ you do ___not___ disrepect it and provide a link back to this GitHub repository or my website.  Many thanks for your support on that and because of your continued support, I plan to always keep upPIC free for everybody!
+
 
 __What is your "user profile Pixelated Image Creator" project all about ?__
 "user profile Pixelated Image Creator" is my very first GitHub project.  It is a web-based ( initially ) and cross-platform/cross-industry system, concept, and user-interface that is specifically designed to allow you to create your own pixelated Display Image 'on-the-fly' for use anywhere and everywhere ( just mention upPIC is all i ask if you like it ).
