@@ -77,6 +77,7 @@ ___What/where/how can I use the images created with___ [[:](http://GitHub.com/de
 
 |   |   |   |   |
 |---|---|---|---|
+|  * Forums  |  * Blogs  |  * School Locker  |  * Book or Bumper Stickers  |
 |  * Icons  |  * Images  |  * Animated Gifs  |  * Animated-Other-Images  |
 |  * Avatars  |  * Profile Pics  |  * Display Images  |  * T-Shirts ( This is my fanorite thing to do!! )  |
 |  * Comics  |  * Graphic Novels  |  * Novels  |  * Cutscenes for Video Games  |
