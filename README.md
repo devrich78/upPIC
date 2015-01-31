@@ -10,9 +10,11 @@ test```html[:.:]```ing
 
 test`php[:.:]`ing
 
-test```css[:.:]```ing
+test```css
+[:.:]
+```ing
 
-test```[:.:]```ing
+([:.:])
 
 test```[:.:]```ing
 
