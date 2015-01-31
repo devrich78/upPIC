@@ -1,4 +1,4 @@
-__( This README.md and the___ "__[:.:]__" ___"upPIC" project are a constant Work-In-Progress ( W.I.P ).  I ask that you please be patient and kind as I don't have a lot of free time these days.  However; I plan to work on [:.:] as often as I can over time.  Many thanks for your support! )__
+___( This README.md and the___ "__[:.:]__" ___"upPIC" project are a constant Work-In-Progress ( W.I.P ).  I ask that you please be patient and kind as I don't have a lot of free time these days.  However; I plan to work on [:.:] as often as I can over time.  Many thanks for your support! )___
 
 
 #[:.:]
@@ -13,7 +13,7 @@ aka [:upPIC:] -- Initially created and inspired by me: devrich78 and currently m
 
 #Top FAQ Questions about [:.:]
 
-___Why is your repository (repo) called/labeled "upPIC" and not ___ __[:.:]__ ___ ?___
+___Why is your repository (repo) called/labeled "upPIC" and not ___ __[:.:]__ ___?___
 
 Because when I went to create the repo and typed in [:.:] I got a yellow message box saying that if I created the repo as [:.:] then it: "Will be created as -.-" which is a pretty cute smilie face but not the name of this project ;-)
 
