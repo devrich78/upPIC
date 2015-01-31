@@ -1,11 +1,5 @@
+__( This README.md and the [:.:] "upPIC" project are constant Work-In-Progress ( W.I.P ).  I ask that you please be patient and kind as I don't have a lot of free time these days.  However; I plan to work on [:.:] as often as I can over time.  Many thanks for your support! )__
 
-
-Work-In-Progress ( W.I.P )
-
-
-
-
-__( This README.md and the [:.:] "upPIC" project are constant Work-In-Progess.  I ask that you please be patient and kind as I don't have a lot of free time these days.  However; I plan to work on [:.:] as often as I can over time.  Many thanks for your support! )__
 
 #[:.:]
 formerly -> [:upPIC:]
