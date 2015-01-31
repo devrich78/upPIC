@@ -13,18 +13,18 @@ aka [:upPIC:] -- Initially created and inspired by me: devrich78 and currently m
 
 #Top FAQ Questions about [:.:]
 
-__Why is your repository (repo) called/labeled "upPIC" and not "[:.:]" ?__
+___Why is your repository (repo) called/labeled "upPIC" and not "___ __[:.:]__ ___" ?___
 
 Because when I went to create the repo and typed in [:.:] I got a yellow message box saying that if I created the repo as [:.:] then it: "Will be created as -.-" which is a pretty cute smilie face but not the name of this project ;-)
 
 
-__What is [:.:] ?__
+___What is___ __[:.:]__ ___?___
 
 
 [:.:] <-- this ASCII text logo represents my very first GitHub project "user profile Pixelated Image Creator". 
 
 
-__Did you trademark the [:.:] ASCII logo?__
+__Did you trademark the ___ __[:.:]__ ___ ASCII logo?__
 
 
 YES - please note that the [:.:] ASCII logo is one of my trademarks as of January 1st, 2015 -- HOWEVER; you may all use the [:.:] logo anywhere and in any way you wish ___as long as___ you do ___not___ disrepect it and provide a link back to this GitHub repository or my website.  Many thanks for your support on that and because of your continued support, I plan to always keep upPIC free for everybody!
@@ -34,7 +34,7 @@ __What is your "user profile Pixelated Image Creator" project all about ?__
 "user profile Pixelated Image Creator" is my very first GitHub project.  It is a web-based ( initially ) and cross-platform/cross-industry system, concept, and user-interface that is specifically designed to allow you to create your own pixelated Display Image 'on-the-fly' for use anywhere and everywhere ( just mention upPIC is all i ask if you like it ).
 
 
-__Where did the idea for [:.:] come from?__
+__Where did the idea for ___ __[:.:]__ ___ come from?__
 
 I created an account for the first time over here on GitHub and got a pretty cool 5x5 pixelated image:
 
@@ -62,7 +62,7 @@ __What/where/how can I use the images created with [:.:] for:__
 |  * Videos  |  * Video Clips  |  * Video Game Images  |  * AND A WHOLE LOT MORE!!  |
 
 
-__Who "owns" the images created with [:.:] ?__
+__Who "owns" the images created with ___ __[:.:]__ ___ ?__
 
 YOU and well "i" i guess... Essentially; the image(s) created with [:.:] are owned by the person(s) who used [:.:] to create the image(s) as long as they follow these simple stipulations:
 
