@@ -54,11 +54,17 @@ When I came up with the idea, I essentially felt like sharing this would be grea
 
 I want to share this with the world and have everyone help me build as much awareness for [[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)] as possible!
 
+
+__How can I help build awareness for upPIC ?__
+
 One way to help build awareness is to put my --> [[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)] ASCII logo in the footer of your website or somewhere as a link back to my upPIC repo.  Something like this:
 
 ```html
 <a href="http://Github.com.devrich78/upPIC/" alt="upPIC - Make your own pixelated Display Image or avatar!!">[:.:]</a>
 ```
+
+Another way to help is to use upPIC to create your own Display Image or Avatar and then use it and tell your family and friends all about how easy it is :-)
+
 
 ___Did you trademark the___ [[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)] ___ASCII logo?___
 
