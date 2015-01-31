@@ -66,10 +66,6 @@ One way to help build awareness is to put my --> [[:](http://GitHub.com/devrich7
 Another way to help is to use upPIC to create your own Display Image or Avatar and then use it and tell your family and friends all about how easy it is :-)
 
 
-___Did you trademark the___ [[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)] ___ASCII logo?___
-
-YES - please note that the [[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)] ASCII logo is one of my trademarks as of January 1st, 2015 -- HOWEVER; you may all use the [[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)] logo anywhere and in any way you wish ___as long as___ you do ___not___ disrepect it and provide a link back to this GitHub repository or my website.  Many thanks for your support on that and because of your continued support, I plan to always keep upPIC free for everybody!
-
 
 ___What/where/how can I use the images created with___ [[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)] ___for:___
 
@@ -91,6 +87,11 @@ Essentially; the image(s) created with [[:](http://GitHub.com/devrich78/upPIC/).
 1: Considering that there are only a finite possible number of images you can create with [[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)] -- if you and someone else both create the same image then I ask you all to not sue, threaten, or otherwise disrepect or bring harm to each other.  Let's all get along and use [:.:] for our own personalizational awesomeness :-D
 
 2: Another stipulation is that I don't want you to copyright the images created with [[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)] "directly" -- However; if you combine/embed the image(s) that you create with [[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)] into other image(s) not created with [:.:] then that is ok to copyright, however you agree NOT to attempt to interfer with or prevent others using [[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)] who may create the same image(s) as yours to copyrighting their own creations as long as they also combine the image(s) they create with [[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)] by combining/embedding them with other images... hmmm i should probaably re-word that better... but you get the idea, play nice, and play fair :-)
+
+
+___Did you trademark the___ [[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)] ___ASCII logo?___
+
+YES - please note that the [[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)] ASCII logo is one of my trademarks as of January 1st, 2015 -- HOWEVER; you may all use the [[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)] logo anywhere and in any way you wish ___as long as___ you do ___not___ disrepect it and provide a link back to this GitHub repository or my website.  Many thanks for your support on that and because of your continued support, I plan to always keep upPIC free for everybody!
 
 
 ___Why do you keep adding abbreviations ( abbr ) in your text, it's odd ?___
