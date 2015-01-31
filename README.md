@@ -1,4 +1,4 @@
-__( This README.md and the [:.:] "upPIC" project are constant Work-In-Progress ( W.I.P ).  I ask that you please be patient and kind as I don't have a lot of free time these days.  However; I plan to work on [:.:] as often as I can over time.  Many thanks for your support! )__
+__( This README.md and the [:.:] "upPIC" project are a constant Work-In-Progress ( W.I.P ).  I ask that you please be patient and kind as I don't have a lot of free time these days.  However; I plan to work on [:.:] as often as I can over time.  Many thanks for your support! )__
 
 
 #[:.:]
@@ -7,14 +7,11 @@ formerly -> [:upPIC:]
 formerly -> "upPIC"
 
 
-
-
-
 #[:.:] user profile Pixelated Image Creator
 aka [:upPIC:] -- Initially created and inspired by me: devrich78 and currently made available under the Apache 2.0 license
 
 
-#Top FAQ Questions:
+#Top FAQ Questions about [:.:]
 
 __Why is your repository (repo) called/labeled "upPIC" and not "[:.:]" ?__
 
@@ -75,6 +72,13 @@ YOU and well "i" i guess... Essentially; the image(s) created with [:.:] are own
 
 
 
+
+
+__Why do you keep adding abbreviations ( abbr ) in your text, it's odd ? __
+
+The reason is because of completeness but mostly it's to help new comers to the abbreviations ( also to help me rememeber certain new abbreviations I have learned such as "repo" for meaning a "GitHub.com Repository" ).
+
+I'll try to avoid doing it too much as to not annoy anyone.
 
 
 
