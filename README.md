@@ -95,9 +95,17 @@ YES - please note that the [[:](http://GitHub.com/devrich78/upPIC/).[:](http://G
 
 ___Why do you keep adding abbreviations ( abbr ) in your text, it's odd ?___
 
-The reason is because of completeness but mostly it's to help new comers to the abbreviations ( also to help me rememeber certain new abbreviations I have learned such as "repo" for meaning a "GitHub.com Repository" ).
+The reason is for completeness and also to help me rememeber certain new abbreviations I have learned such as "repo" for meaning a "GitHub.com Repository".
+
+Primarily I have been doing this for years as per my background in support and techinal writing.  It helps new comers to programming and other fields to more quickly become famililar with new/common abbreviations that would help them better understand their fields of interest.
 
 I'll try to avoid doing it too much as to not annoy anyone.
+
+__Why do you have so many spelling mistakes here and there ?__
+
+I'm a tech, not an english professor.  Although this is something that I work at improving, occasionally a spelling error still occurs here and there.  Please bare with me and I'll try to correct them as I find them :-)
+
+
 
 
 
