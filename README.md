@@ -2,8 +2,7 @@
 
 
 
-
-#[[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)]
+#[[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)] - Version: 1.0
 
 formerly -> [:upPIC:]
 
