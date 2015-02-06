@@ -3,6 +3,7 @@
 TABLE of CONTENTS:
 
 [Change_Log](https://github.com/devrich78/upPIC/blob/master/README.md#change_log)
+
 [Top FAQ Questions about [[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)]](https://github.com/devrich78/upPIC#top-faq-questions-about-)
 
 #[[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)] - Version: 1.0
@@ -133,9 +134,13 @@ I'm a tech, not an english professor.  Although this is something that I work at
 #Change_Log:
 
 Version 1.0:
-** Jan 27th, 2015 == upPIC is officially concieved today :-)
+
+** Jan 29th, 2015 == OFFICIAL LOGO DAY__!!__ ( upPIC's official logo is created today )
+
+** Jan 27th, 2015 == OFFICIAL BIRTHDAY__!!__ ( upPIC is officially concieved today ) :-)
 
 Version 0.0:
+
 ** Jan 26th, 2015 == ...
 
 
