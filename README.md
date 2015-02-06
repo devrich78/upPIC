@@ -118,6 +118,13 @@ I'm a tech, not an english professor.  Although this is something that I work at
 #Change_Log:
 
 Version 1.0:
-** X, 2015 == upPIC is concieved today :-)
+** Jan 27th, 2015 == upPIC is officially concieved today :-)
+
+Version 0.0:
+** Jan 26th, 2015 == ...
+
+
+
+
 
 
