@@ -2,7 +2,7 @@
 
 TABLE of CONTENTS:
 
-[Change_Log](https://github.com/devrich78/upPIC#top-faq-questions-about-)
+[Change_Log](https://github.com/devrich78/upPIC/blob/master/README.md#change_log)
 [Top FAQ Questions about [[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)]](https://github.com/devrich78/upPIC#top-faq-questions-about-)
 
 #[[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)] - Version: 1.0
@@ -47,6 +47,21 @@ I created an account for the first time over here on GitHub and got a pretty coo
                                          -----
 ```
 And I love that image but I wanted to be able to create my own image and 'beef' it up ( so to speak ).  So I came up with the simple idea of making some design and construction process for creating my own "Pixelated Iamges".
+
+
+__Why is your GitHub Display Image different than above?__
+
+The image above was my very first ( and favorite ) GitHub Display Image that I ever got but this is the one that I had while designing [[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)]
+
+```php
+                                         _____
+                                        | ### |
+                                        |## ##|
+                                        |# # #|
+                                        |#####|
+                                        |#####|
+                                         -----
+```
 
 
 __Why put this up on GitHub.com ?  Isn't this something you are making just for yourself ?__
