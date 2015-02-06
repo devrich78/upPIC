@@ -135,9 +135,9 @@ I'm a tech, not an english professor.  Although this is something that I work at
 
 Version 1.0:
 
-** Jan 29th, 2015 == OFFICIAL LOGO DAY___!!___ ( upPIC's official logo [[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)] is created today )
+** Jan 29th, 2015 == OFFICIAL LOGO DAY ___!!___ ( upPIC's official logo [[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)] is created today )
 
-** Jan 27th, 2015 == OFFICIAL BIRTHDAY___!!___ ( upPIC is officially concieved today ) :-)
+** Jan 27th, 2015 == OFFICIAL BIRTHDAY ___!!___ ( upPIC is officially concieved today ) :-)
 
 Version 0.0:
 
