@@ -1,6 +1,9 @@
 **_( This README.md and the_** [[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)] **_"upPIC" project are a constant Work-In-Progress ( W.I.P ).  I ask that you please be patient and kind as I don't have a lot of free time these days.  However; I plan to work on_** [[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)] **_as often as I can over time.  Many thanks for your support! )_**
 
+TABLE of CONTENTS:
 
+[Change_Log](https://github.com/devrich78/upPIC#top-faq-questions-about-)
+[Top FAQ Questions about [[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)]](https://github.com/devrich78/upPIC#top-faq-questions-about-)
 
 #[[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)] - Version: 1.0
 
@@ -112,4 +115,9 @@ I'm a tech, not an english professor.  Although this is something that I work at
 
 
 
-.
+#Change_Log:
+
+Version 1.0:
+** X, 2015 == upPIC is concieved today :-)
+
+
