@@ -4,7 +4,7 @@ TABLE of CONTENTS:
 
 [Change_Log](https://github.com/devrich78/upPIC/blob/master/README.md#change_log)
 
-[Top FAQ Questions about [[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)]](https://github.com/devrich78/upPIC#top-faq-questions-about-)
+[Top FAQ Questions about ](https://github.com/devrich78/upPIC#top-faq-questions-about-) [[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)]
 
 #[[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)] - Version: 1.0
 
