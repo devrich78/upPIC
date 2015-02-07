@@ -31,12 +31,12 @@ ___What is___ [[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/dev
 
 ___What is your "user profile Pixelated Image Creator" project all about ?___
 
-"user profile Pixelated Image Creator" ( _pronounced:_ "up" "pic" ) is my very first GitHub project.  It is a web-based ( initially ) and cross-platform/cross-industry system, concept, and user-interface that is specifically designed to allow you to create your own pixelated Display Image 'on-the-fly' for use anywhere and everywhere ( just mention upPIC is all i ask if you like it ).
+"user profile Pixelated Image Creator" ( _pronounced:_ "up" "pic" ) is my very first GitHub project.  It is a web-based ( initially ) and cross-platform/cross-industry system, concept, and user-interface that is specifically designed to allow you to create your own pixelated Profile-Picture/Display-Image 'on-the-fly' for use anywhere and everywhere ( just mention upPIC is all i ask if you like it ).
 
 
 ___Where did the idea for___ [[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)] ___come from?___
 
-I created an account for the first time over here on GitHub and got a pretty cool 5x5 pixelated image:
+I created an account for the first time over here on GitHub and got a pretty cool 5x5 pixelated image which GitHub calls a "Identicon":
 
 ```php
                                          _____
@@ -50,9 +50,15 @@ I created an account for the first time over here on GitHub and got a pretty coo
 And I love that image but I wanted to be able to create my own image and 'beef' it up ( so to speak ).  So I came up with the simple idea of making some design and construction process for creating my own "Pixelated Iamges".
 
 
-__Why is your GitHub Display Image different than above?__
+__Where can I go to get a different "Identicon" for GitHub?__
 
-The image above was my very first ( and favorite ) GitHub Display Image that I ever got but this is the one that I had while designing [[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)]
+GitHub explains on this page: [https://github.com/blog/1586-identicons](https://github.com/blog/1586-identicons) that as of August 14th, 2013; GitHub creates a "Identicon" based on a hash representation of your username when you first sign up for a GitHub account and therefore can not change your image.
+
+That said; you "can" upload your own image to use instead of their "Identicon" and this page: [https://help.github.com/articles/how-do-i-set-up-my-profile-picture/#changing-your-profile-picture](https://help.github.com/articles/how-do-i-set-up-my-profile-picture/#changing-your-profile-picture) will explain how you can change your Profile Picture on GitHub.
+
+__Why is your GitHub Profile-Picture different than above?__
+
+The image above was my very first ( and favorite ) GitHub Profile-Picture that I ever got but this is the one that I had while designing [[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)]
 
 ```php
                                          _____
@@ -77,22 +83,22 @@ __How can I help build awareness for upPIC ?__
 One way to help build awareness is to put my --> [[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)] ASCII logo in the footer of your website or somewhere as a link back to my upPIC repo.  Something like this:
 
 ```html
-<a href="http://Github.com.devrich78/upPIC/" alt="upPIC - Make your own pixelated Display Image or avatar!!">[:.:]</a>
+<a href="http://Github.com.devrich78/upPIC/" alt="upPIC - Make your own pixelated Profile-Picture/Display-Image or avatar!!">[:.:]</a>
 ```
 
-Another way to help is to use upPIC to create your own Display Image or Avatar and then use it and tell your family and friends all about how easy it is :-)
+Another way to help is to use upPIC to create your own Profile-Picture/Display-Image or Avatar and then use it and tell your family and friends all about how easy it is :-)
 
 
 
 ___What/where/how can I use the images created with___ [[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)] ___for:___
 
-[[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)] is designed primarily as a Display Image creator; however you can also use the images created with [[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)] in any project or website you want as well as many other places!  For example; here are some general ideas:
+[[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)] is designed primarily as a Profile-Picture/Display-Image creator; however you can also use the images created with [[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)] in any project or website you want as well as many other places!  For example; here are some general ideas:
 
 |   |   |   |   |
 |---|---|---|---|
 |  * Forums  |  * Blogs  |  * School Locker  |  * Book or Bumper Stickers  |
 |  * Icons  |  * Images  |  * Animated Gifs  |  * Animated-Other-Images  |
-|  * Avatars  |  * Profile Pics  |  * Display Images  |  * T-Shirts ( This is my fanorite thing to do!! )  |
+|  * Avatars  |  * Profile Picture  |  * Display Images  |  * T-Shirts ( This is my fanorite thing to do!! )  |
 |  * Comics  |  * Graphic Novels  |  * Novels  |  * Cutscenes for Video Games  |
 |  * Videos  |  * Video Clips  |  * Video Game Images  |  * AND A WHOLE LOT MORE!!  |
 
