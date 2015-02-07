@@ -1,35 +1,66 @@
-<!doctype>
+<!DOCTYPE>
 <html>
 <head>
+<meta charset="UTF-8">
 <title>[:.:] - upPIC - Version 1.0</title>
 <style type="text/css">
-div.uPgrid{
+div.uPgridBox{
+	display:inline-block;
+	border: #00AAFF groove 8px;
+	font-family:Ubuntu;
+	font-size:8px;
+
+}
+div.uPgridCell{
 	display:inline-block;
 	font-family:Ubuntu;
 	font-size:8px;
 }
+
 </style>
 <script type="text/JavaScript">
 // Global Variables!!
-	upPicmaxWidth = 64; // NOTE: this is base-one so 1-64 NOT 0-63 !!!!
-	upPicmaxHeight = 64; // NOTE: this is base-one so 1-64 NOT 0-63 !!!!
+	upPICmaxCols = 64; // NOTE: this is base-one so 1-64 NOT 0-63 !!!!
+	upPICmaxRows = 64; // NOTE: this is base-one so 1-64 NOT 0-63 !!!!
+	
+	upPICwidth = "10px";
+	upPICheight = "10px";
+	
 
 // /Global Variables!!
 function writeInitialGrid(){
-  for(iy=0;iy<upPicmaxWidth;iy++){
-    for(ix=0;ix<upPicmaxHeight;ix++){
-    	id = "C"+iy.toString()+"_R"+ix.toString();
-      document.write("<div class=\"uPgrid\" id=\"uPgrid_"+id+"\"></div>");
-    }
-  }
+
+	bgColR = 2;
+	bgColG = 2;
+	bgColB = 2;
+
+	document.write("<div class=\"uPgridBox\" id=\"uPgridBox\">");
+	for(iy=0;iy<upPICmaxCols;iy++){
+		for(ix=0;ix<upPICmaxRows;ix++){
+		
+			bgColR += 1;
+
+			if(bgColR > 9){bgColR=2;bgColG += 1;}
+			
+			if(bgColG > 9){bgColG=2;bgColB += 1;}
+			
+			if(bgColB > 9){bgColB=2;bgColR = 0;}
+
+		
+			id = "C"+iy.toString()+"_R"+ix.toString();
+			document.write("<div class=\"uPgridCell\" style=\"width:"+upPICwidth+";height:"+upPICheight+";background-color:#"+bgColR.toString()+bgColR.toString()+bgColG.toString()+bgColG.toString()+bgColB.toString()+bgColB.toString()+";\" id=\"uPgrid_"+id+"\">1</div>");
+		}
+		document.write("<br>"); // NEW LINE To break each row into it's own row vs all uPgridCell's sticking together!
+	}
+	document.write("</div>");
 }
 function reDrawGrid(){
-  for(iy=0;iy<upPicmaxWidth;iy++){
-    for(ix=0;ix<upPicmaxHeight;ix++){
-    	id = "C"+iy.toString()+"_R"+ix.toString();
-      document.getElementById("uPgrid_"+id).innerHTML = id;
-    }
-  }
+	for(iy=0;iy<upPICmaxCols;iy++){
+		for(ix=0;ix<upPICmaxRows;ix++){
+			id = "C"+iy.toString()+"_R"+ix.toString();
+			document.getElementById("uPgrid_"+id).innerHTML = "";// id;
+		}
+	}
 }
 </script>
 </head>
