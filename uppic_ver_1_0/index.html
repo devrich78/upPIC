@@ -5,15 +5,29 @@
 <style type="text/css">
 div.uPgrid{
 	display:inline-block;
-	
+	font-family:Ubuntu;
+	font-size:8px;
 }
 </style>
 <script type="text/JavaScript">
+// Global Variables!!
+	upPicmaxWidth = 64; // NOTE: this is base-one so 1-64 NOT 0-63 !!!!
+	upPicmaxHeight = 64; // NOTE: this is base-one so 1-64 NOT 0-63 !!!!
+
+// /Global Variables!!
+function writeInitialGrid(){
+  for(iy=0;iy<upPicmaxWidth;iy++){
+    for(ix=0;ix<upPicmaxHeight;ix++){
+    	id = "C"+iy.toString()+"_R"+ix.toString();
+      document.write("<div class=\"uPgrid\" id=\"uPgrid_"+id+"\"></div>");
+    }
+  }
+}
 function reDrawGrid(){
-  for(iy=0;iy<64;iy++){
-    for(ix=0;ix<64;ix++){
-    	id = "uPgrid_C"+iy.toString()+"_R"+ix.toString();
-      document.write("<div class=\"uPgrid\" id=\""+id+"\">"+id+"</div>");
+  for(iy=0;iy<upPicmaxWidth;iy++){
+    for(ix=0;ix<upPicmaxHeight;ix++){
+    	id = "C"+iy.toString()+"_R"+ix.toString();
+      document.getElementById("uPgrid_"+id).innerHTML = id;
     }
   }
 }
@@ -21,9 +35,10 @@ function reDrawGrid(){
 </head>
 <body>
 
-<script type="text/JavaScript">
 
-reDrawGrid();
+<script type="text/JavaScript">
+writeInitialGrid(); // Create the first instance of the upPIC grid ( Note that this should be called __ONLY-ONCE__ !!
+reDrawGrid(); // Create the first instance of the upPIC grid ( Note that this should be called __ONLY-ONCE__ !!
 </script>
 
 
