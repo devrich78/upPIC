@@ -3,3 +3,7 @@
 This branch is the GitHub "gh-pages" branch and as such will not have the project itself but just the website webpages which you can check out at:
 
 [DevRich78.github.io/upPIC/index.html](http://DevRich78.github.io/upPIC/index.html)
+
+If you wish to join our cause and contribute to our GitHub project; feel free!
+|
+'----> Just click/tap here: [http://GitHub.com/DevRich78/upPIC/](http://GitHub.com/DevRich78/upPIC/)
