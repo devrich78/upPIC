@@ -114,7 +114,9 @@ Essentially; the image(s) created with [[:](http://GitHub.com/devrich78/upPIC/).
 
 ___Did you trademark the___ [[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)] ___ASCII logo?___
 
-YES - please note that the [[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)] ASCII logo is one of my trademarks as of January 1st, 2015 -- HOWEVER; you may all use the [[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)] logo anywhere and in any way you wish ___as long as___ you do ___not___ disrepect it and provide a link back to this GitHub repository or my website.  Many thanks for your support on that and because of your continued support, I plan to always keep upPIC free for everybody!
+YES - please note that the [[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)] ASCII logo is one of my trademarks as of January 1st, 2015 -- HOWEVER; you may all use the [[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)] logo anywhere and in any way you wish ___as long as___ you do ___not___ disrepect it/me/this_project/other_contributors_to_this_project/GitHub/etc and I ask that you also provide a link back to this GitHub repository or my website.
+
+Many thanks for your support on that and because of your continued support, I plan to always keep upPIC free for everybody!
 
 
 ___Why do you keep adding abbreviations ( abbr ) in your text, it's odd ?___
