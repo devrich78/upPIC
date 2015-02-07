@@ -8,5 +8,7 @@ This branch is the GitHub "gh-pages" branch and as such will not have the projec
 ```
 If you wish to join our cause and contribute to our GitHub project; feel free!
 |
-'----> Just click/tap here: [http://GitHub.com/DevRich78/upPIC/](http://GitHub.com/DevRich78/upPIC/)
+V
 ```
+
+Just click/tap here: [http://GitHub.com/DevRich78/upPIC/](http://GitHub.com/DevRich78/upPIC/)
