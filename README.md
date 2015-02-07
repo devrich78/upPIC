@@ -13,7 +13,7 @@ formerly -> [:upPIC:]
 
 
 #[[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)] user profile Pixelated Image Creator
-Initially created and inspired by me: devrich78 and currently made available under the Apache 2.0 license
+Initially created and inspired by me: DevRich78 and currently made available under the Apache 2.0 license
 
 
 #Top FAQ Questions about [[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)]
