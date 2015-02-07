@@ -3,10 +3,28 @@
 <head>
 <title>[:.:] - upPIC - Version 1.0</title>
 <style type="text/css">
+div.uPgrid{
+	display:inline-block;
+	
+}
+</style>
+<script type="text/JavaScript">
+function reDrawGrid(){
+  for(iy=0;iy<64;iy++){
+    for(ix=0;ix<64;ix++){
+    	id = "uPgrid_C"+iy.toString()+"_R"+ix.toString();
+      document.write("<div class=\"uPgrid\" id=\""+id+"\">"+id+"</div>");
+    }
+  }
+}
+</script>
 </head>
 <body>
 
+<script type="text/JavaScript">
 
+reDrawGrid();
+</script>
 
 
 
