@@ -6,7 +6,9 @@ TABLE of CONTENTS:
 
 [TO_DO List](https://DevRich78.github.io/upPIC/to_do.html)
 
-[Top FAQ Questions about ](https://github.com/devrich78/upPIC#top-faq-questions-about-) [[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)]
+[(Top) FAQ Questions about ](https://github.com/devrich78/upPIC#top-faq-questions-about-) [[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)]
+
+[(General and MISC) FAQ Questions about ](https://github.com/devrich78/upPIC#top-faq-questions-about-) [[:](http://GitHub.com/devrich78/upPIC/).[:](https://DevRich78.github.io/upPIC/faq.html)]
 
 
 [Credits](https://DevRich78.github.io/upPIC/credits.html)
@@ -55,12 +57,6 @@ I created an account for the first time over here on GitHub and got a pretty coo
 ```
 And I love that image but I wanted to be able to create my own image and 'beef' it up ( so to speak ).  So I came up with the simple idea of making some design and construction process for creating my own "Pixelated Iamges".
 
-
-__Where can I go to get a different "Identicon" for GitHub?__
-
-GitHub explains on this page: [https://github.com/blog/1586-identicons](https://github.com/blog/1586-identicons) that as of August 14th, 2013; GitHub creates a "Identicon" based on a hash representation of your username when you first sign up for a GitHub account and therefore can not change your image.
-
-That said; you "can" upload your own image to use instead of their "Identicon" and this page: [https://help.github.com/articles/how-do-i-set-up-my-profile-picture/#changing-your-profile-picture](https://help.github.com/articles/how-do-i-set-up-my-profile-picture/#changing-your-profile-picture) will explain how you can change your Profile Picture on GitHub.
 
 __Why is your GitHub Profile-Picture different than above?__
 
@@ -123,23 +119,6 @@ ___Did you trademark the___ [[:](http://GitHub.com/devrich78/upPIC/).[:](http://
 YES - please note that the [[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)] ASCII logo is one of my trademarks as of January 1st, 2015 -- HOWEVER; you may all use the [[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)] logo anywhere and in any way you wish ___as long as___ you do ___not___ disrepect it/me/this_project/other_contributors_to_this_project/GitHub/etc and I ask that you also provide a link back to this GitHub repository or my website.
 
 Many thanks for your support on that and because of your continued support, I plan to always keep upPIC free for everybody!
-
-
-___Why do you keep adding abbreviations ( abbr ) in your text, it's odd ?___
-
-The reason is for completeness and also to help me rememeber certain new abbreviations I have learned such as "repo" for meaning a "GitHub.com Repository".
-
-Primarily I have been doing this for years as per my background in support and techinal writing.  It helps new comers to programming and other fields to more quickly become famililar with new/common abbreviations that would help them better understand their fields of interest.
-
-I'll try to avoid doing it too much as to not annoy anyone.
-
-__Why do you have so many spelling mistakes here and there ?__
-
-I'm a tech, not an english professor.  Although this is something that I work at improving, occasionally a spelling error still occurs here and there.  Please bare with me and I'll try to correct them as I find them :-)
-
-
-
-
 
 
 
