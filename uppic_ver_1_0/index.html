@@ -22,16 +22,83 @@ div.uPgridCell{
 
 </style>
 <script type="text/JavaScript">
-// Global Variables!!
-	upPICmaxCols = 16; // NOTE: this is base-one so 1-64 NOT 0-63 !!!!
-	upPICmaxRows = 16; // NOTE: this is base-one so 1-64 NOT 0-63 !!!!
-	
-	upPICcellScaleX = "10px"; // (MUST BE IN "px") NOTE: This is the scale used to scale the clickable grid
-	upPICcellScaleY = "10px"; // (MUST BE IN "px") NOTE: This is the scale used to scale the clickable grid
-	
-	cellPrefix = "uPgridCell_";
+/********   SECTION__GO!__[   Global Variables!!   ]   ********/
 
-// /Global Variables!!
+	var upPICmaxCols = 16; // NOTE: this is base-one so 1-64 NOT 0-63 !!!!
+	var upPICmaxRows = 16; // NOTE: this is base-one so 1-64 NOT 0-63 !!!!
+	
+	var upPICcellScaleX = "10px"; // (MUST BE IN "px") NOTE: This is the scale used to scale the clickable grid
+	var upPICcellScaleY = "10px"; // (MUST BE IN "px") NOTE: This is the scale used to scale the clickable grid
+	
+	var cellPrefix = "uPc_"; // ( changed it to "uPc_" short form of "uPgridCell" to improve script responsiveness) This prefix is used to help ensure uniqueness between various HTML tag elements..
+	
+	var reDrawGridLinesInMilliseconds = 1600; // This is the time in milliseconds that the JavaScript engine will reDraw the the grid lines around the cell grid boxes ( aka the cell broders )
+
+	var reDrawGridL; // Make reDrawGridL a global var
+
+/********   END__SECTION__[   Global Variables!!   ]   ********/
+
+
+function reDrawGrid(){
+	for(iy=0;iy<upPICmaxCols;iy++){
+		for(ix=0;ix<upPICmaxRows;ix++){
+			id = cellPrefix+"C"+iy.toString()+"_R"+ix.toString();
+			document.getElementById(id).innerHTML = "";// id;
+		}
+	}
+}
+function reDrawGridLines(){
+	window.clearInterval(reDrawGridL);
+		for(iy=0;iy<upPICmaxCols;iy++){
+			for(ix=0;ix<upPICmaxRows;ix++){
+				id2 = cellPrefix+"C"+iy.toString()+"_R"+ix.toString();
+				document.title = "id2={"+id2+"} and id={"+id+"}";
+				if(id2 != id){
+					document.getElementById(id2).style.borderColor="#0f0f0f";
+					document.getElementById(id2).style.borderStyle="solid";
+					document.getElementById(id2).style.borderWidth="1px";
+					document.getElementById(id2).style.padding="0px";
+				}else{
+					document.getElementById(id).style.borderColor="#4444ff";
+					document.getElementById(id).style.borderStyle="solid";
+					document.getElementById(id).style.borderWidth="1px";
+					document.getElementById(id).style.padding="0px";
+				}
+			}
+		}
+
+	reDrawGridL = window.setInterval("reDrawGridLines()",reDrawGridLinesInMilliseconds); 
+}
+
+/********   SECTION__GO!__[   JavaScript DOM Event Handling Functions   ]   ********/
+
+function overCell(id){
+//	document.title = "You are hovering over Cell: ["+id+"] and it's color is: ["+document.getElementById(cellPrefix+id).style.backgroundColor+"]";
+	
+	document.getElementById(id).style.borderColor="#4444ff";
+	document.getElementById(id).style.borderStyle="solid";
+	document.getElementById(id).style.borderWidth="1px";
+	document.getElementById(id).style.padding="0px";
+	
+}
+function clickedCell(id){
+	document.title = "You just clicked on Cell: ["+id+"]";
+}
+/********   SECTION__END__[   JavaScript DOM Event Handling Functions   ]   ********/
+
+/********   END__SECTION__[   Notes and References   ]   ********/
+/*
+
+
+
+*/
+/********   END__SECTION__[   Notes and References   ]   ********/
+
+
+
+
+
+
 function writeInitialGrid(){
 
 	bgColR = 2;
@@ -58,59 +125,10 @@ function writeInitialGrid(){
 	}
 	document.write("</div>");
 }
-function reDrawGrid(){
-	for(iy=0;iy<upPICmaxCols;iy++){
-		for(ix=0;ix<upPICmaxRows;ix++){
-			id = "C"+iy.toString()+"_R"+ix.toString();
-			document.getElementById(cellPrefix+id).innerHTML = "";// id;
-		}
-	}
-}
-function reDrawGridLines(){
-	document.setInterval
-}
-
-/********   SECTION__GO!__[   JavaScript DOM Event Handling Functions   ]   ********/
-
-function overCell(id){
-//	document.title = "You are hovering over Cell: ["+id+"] and it's color is: ["+document.getElementById(cellPrefix+id).style.backgroundColor+"]";
-
-	// TO-DO: Clear all of the cells's border's to start them over!
-	
-	for(iy=0;iy<upPICmaxCols;iy++){
-		for(ix=0;ix<upPICmaxRows;ix++){
-			id2 = cellPrefix+"C"+iy.toString()+"_R"+ix.toString();
-			document.title = "id2={"+id2+"} and id={"+id+"}";
-			if(id2 != id){
-				document.getElementById(id2).style.borderColor="#0f0f0f"; // TO-DO: Make this change the border so that the user can see which cell the mouse is over
-				document.getElementById(id2).style.borderStyle="solid"; // TO-DO: Make this change the border so that the user can see which cell the mouse is over
-				document.getElementById(id2).style.borderWidth="1px"; // TO-DO: Make this change the border so that the user can see which cell the mouse is over
-				document.getElementById(id2).style.padding="0px"; // TO-DO: Make this change the border so that the user can see which cell the mouse is over
-			}else{
-				document.getElementById(id2).style.borderColor="#4444ff"; // TO-DO: Make this change the border so that the user can see which cell the mouse is over
-				document.getElementById(id2).style.borderStyle="solid"; // TO-DO: Make this change the border so that the user can see which cell the mouse is over
-				document.getElementById(id2).style.borderWidth="1px"; // TO-DO: Make this change the border so that the user can see which cell the mouse is over
-				document.getElementById(id2).style.padding="0px"; // TO-DO: Make this change the border so that the user can see which cell the mouse is over
-			}
-		}
-	}
-	
-	
-	
-	
-}
-function clickedCell(id){
-	document.title = "You just clicked on Cell: ["+id+"]";
-}
-/********   SECTION__END__[   JavaScript DOM Event Handling Functions   ]   ********/
-
-/********   END__SECTION__[   Notes and References   ]   ********/
-/*
 
 
 
-*/
-/********   END__SECTION__[   Notes and References   ]   ********/
+
 
 
 
