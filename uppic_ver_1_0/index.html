@@ -123,7 +123,7 @@ function writeInitialGrid(){
 			if(bgColB > 9){bgColB=2;bgColR = 0;}
 
 		
-			id = "C"+iy.toString()+"_R"+ix.toString();
+			id = "C"+ix.toString()+"_R"+iy.toString();
 			document.write("<div id=\""+cellPrefix+id+"\" onclick=\"clickedCell('"+cellPrefix+id+"');\" onmousemove=\"overCell('"+cellPrefix+id+"');\" class=\"uPgridCell\" style=\"width:"+upPICcellScaleX+";height:"+upPICcellScaleY+";background-color:#"+bgColR.toString()+bgColR.toString()+bgColG.toString()+bgColG.toString()+bgColB.toString()+bgColB.toString()+";\">1</div>");
 		}
 		document.write("<br>"); // NEW LINE To break each row into it's own row vs all uPgridCell's sticking together!
