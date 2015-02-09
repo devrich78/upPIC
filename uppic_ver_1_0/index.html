@@ -13,11 +13,22 @@ div.uPgridBox{
 }
 div.uPgridCell{
 	display:inline-block;
-	
+
 	padding:1px; /* NOTE: This is used to allow a border to appear/disappear so leave it as 1px !! */
 	
 	font-family:Ubuntu;
 	font-size:8px;
+}
+
+
+div.actionsDiv{
+	display:inline-block;
+	width:640px;
+
+	border: #44aaff groove 8px;
+
+	font-family:Ubuntu;
+	font-size:14px;
 }
 
 </style>
@@ -123,6 +134,10 @@ function initMeNow(){
 </head>
 <body>
 
+<div>
+
+
+<div class="uPgridBox" id="uPgridBox">
 
 <script type="text/JavaScript">
 function writeInitialGrid(){
@@ -131,7 +146,6 @@ function writeInitialGrid(){
 	bgColG = 2;
 	bgColB = 2;
 
-	document.write("<div class=\"uPgridBox\" id=\"uPgridBox\">");
 	for(ir=0;ir<upPICmaxCols;ir++){
 		for(ic=0;ic<upPICmaxRows;ic++){
 		
@@ -145,20 +159,32 @@ function writeInitialGrid(){
 
 		
 			id = "C"+ic.toString()+"_R"+ir.toString();
-			document.write("<div id=\""+cellPrefix+id+"\" onclick=\"clickedCell('"+cellPrefix+id+"');\" onmousemove=\"overCell('"+cellPrefix+id+"');\" class=\"uPgridCell\" style=\"width:"+upPICcellScaleX+";height:"+upPICcellScaleY+";background-color:#"+bgColR.toString()+bgColR.toString()+bgColG.toString()+bgColG.toString()+bgColB.toString()+bgColB.toString()+";\">1</div>");
+			document.getElementById("uPgridBox").innerHTML+=("<div id=\""+cellPrefix+id+"\" onclick=\"clickedCell('"+cellPrefix+id+"');\" onmousemove=\"overCell('"+cellPrefix+id+"');\" class=\"uPgridCell\" style=\"width:"+upPICcellScaleX+";height:"+upPICcellScaleY+";background-color:#"+bgColR.toString()+bgColR.toString()+bgColG.toString()+bgColG.toString()+bgColB.toString()+bgColB.toString()+";\">1</div>");
 		}
-		document.write("<br>"); // NEW LINE To break each row into it's own row vs all uPgridCell's sticking together!
+		document.getElementById("uPgridBox").innerHTML+="<br>"; // NEW LINE To break each row into it's own row vs all uPgridCell's sticking together!
 	}
-	document.write("</div>");
+
 }
 
-
-
-
-
 </script>
+</div>
 
 
+</div>
+
+
+<div>
+
+<div class="actionsDiv" id="actionsDiv">
+What do you want to happen when you click/tap on a cell:
+
+(To-Do) Add in a series of option tags in a dropbox to allow the user to select the action that will occur when they click/tap on a cell; i.e.: [Change Color To The Selcted Color From The Color Palette Box Below]
+</div>
+
+
+
+
+</div><br>
 
 
 
