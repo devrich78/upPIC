@@ -66,6 +66,12 @@ function reDrawGrid(){
 		}
 	}
 }
+function reDrawGridLines(){
+	document.setInterval
+}
+
+/********   SECTION__GO!__[   JavaScript DOM Event Handling Functions   ]   ********/
+
 function overCell(id){
 //	document.title = "You are hovering over Cell: ["+id+"] and it's color is: ["+document.getElementById(cellPrefix+id).style.backgroundColor+"]";
 
@@ -96,7 +102,15 @@ function overCell(id){
 function clickedCell(id){
 	document.title = "You just clicked on Cell: ["+id+"]";
 }
+/********   SECTION__END__[   JavaScript DOM Event Handling Functions   ]   ********/
 
+/********   END__SECTION__[   Notes and References   ]   ********/
+/*
+
+
+
+*/
+/********   END__SECTION__[   Notes and References   ]   ********/
 
 
 
@@ -104,6 +118,8 @@ function clickedCell(id){
 function initMeNow(){
 	writeInitialGrid(); // Create the first instance of the upPIC grid ( Note that this should be called __ONLY-ONCE__ !!
 	reDrawGrid(); // Create the first instance of the upPIC grid ( Note that this should be called __ONLY-ONCE__ !!
+	reDrawGridLines(); // Redraws all of the borders around the Grid boxes ( NOTE: This should be called sparingly as it uses a lot of JavaScript CPU processing power when called! )
+
 }
 initMeNow(); // Inititalize the upPIC construction system :-)
 </script>
