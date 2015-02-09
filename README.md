@@ -8,6 +8,10 @@ TABLE of CONTENTS:
 
 [Top FAQ Questions about ](https://github.com/devrich78/upPIC#top-faq-questions-about-) [[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)]
 
+
+[Credits](https://DevRich78.github.io/upPIC/credits.html)
+
+
 #[[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)] - Version: 1.0
 
 formerly -> [:upPIC:]
@@ -137,39 +141,6 @@ I'm a tech, not an english professor.  Although this is something that I work at
 
 
 
-
-
-
-
-#Change_Log:
-
-Version 1.0:
-
-** Jan 29th, 2015 == OFFICIAL LOGO DAY ___!!___ ( upPIC's official logo [[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)] is created today )
-
-** Jan 27th, 2015 == OFFICIAL BIRTHDAY ___!!___ ( upPIC is officially concieved today ) :-)
-
-Version 0.0:
-
-** Jan 26th, 2015 == ...
-
-
-
-
-
-
-
-#TO_DO List:
-
-___HIGH-PRIORITY TO_DO LIST ITEMS GO HERE___
-
-***[ To-Do ]*** Change "grid box cell borders" to something more meaningful as to not confuse anyone ( like me )
-
-___Regular-Priority TO_DO List items:___
-
-***[ To-Do ]*** Add in a feature to allow the user to specify how often the grid box cell borders are re-drawn
-
-___Additional TO_DO List items:___
 
 
 
