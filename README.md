@@ -8,7 +8,7 @@ TABLE of CONTENTS:
 
 [(Top) FAQ Questions about ](https://github.com/devrich78/upPIC#top-faq-questions-about-) [[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)]
 
-[(General and MISC) FAQ Questions about ](https://github.com/devrich78/upPIC#top-faq-questions-about-) [[:](http://GitHub.com/devrich78/upPIC/).[:](https://DevRich78.github.io/upPIC/faq.html)]
+[(General and MISC) FAQ Questions about ](https://DevRich78.github.io/upPIC/to_do.html) [[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)]
 
 
 [Credits](https://DevRich78.github.io/upPIC/credits.html)
