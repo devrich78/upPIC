@@ -37,7 +37,7 @@ div.uPgridCell{
 	var reDrawGridL; // Make reDrawGridL a global var
 
 	var currentlyMouseOverCell = ""; // This is the cell where the mouse cursor "last" was _or_ "is" over.
-	
+	var currentlySelectedCell = ""; // This is the cell that "is" currently selected!
 	
 /********   END__SECTION__[   Global Variables!!   ]   ********/
 
@@ -56,7 +56,7 @@ function reDrawGridLines(){
 		for(iy=0;iy<upPICmaxCols;iy++){
 			for(ix=0;ix<upPICmaxRows;ix++){
 				id2 = cellPrefix+"C"+iy.toString()+"_R"+ix.toString();
-				if(id2 != currentlyMouseOverCell){
+				if(id2 != currentlySelectedCell){
 					document.getElementById(id2).style.borderColor="#0f0f0f";
 					document.getElementById(id2).style.borderStyle="solid";
 					document.getElementById(id2).style.borderWidth="1px";
@@ -88,6 +88,7 @@ function overCell(id){
 }
 function clickedCell(id){
 	document.title = "You just clicked on Cell: ["+id+"]";
+	currentlySelectedCell = id;
 }
 /********   SECTION__END__[   JavaScript DOM Event Handling Functions   ]   ********/
 
