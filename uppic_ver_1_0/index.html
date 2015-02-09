@@ -36,6 +36,9 @@ div.uPgridCell{
 
 	var reDrawGridL; // Make reDrawGridL a global var
 
+	var currentlyMouseOverCell = ""; // This is the cell where the mouse cursor "last" was _or_ "is" over.
+	
+	
 /********   END__SECTION__[   Global Variables!!   ]   ********/
 
 
@@ -53,16 +56,16 @@ function reDrawGridLines(){
 			for(ix=0;ix<upPICmaxRows;ix++){
 				id2 = cellPrefix+"C"+iy.toString()+"_R"+ix.toString();
 				document.title = "id2={"+id2+"} and id={"+id+"}";
-				if(id2 != id){
+				if(id2 != currentlyMouseOverCell){
 					document.getElementById(id2).style.borderColor="#0f0f0f";
 					document.getElementById(id2).style.borderStyle="solid";
 					document.getElementById(id2).style.borderWidth="1px";
 					document.getElementById(id2).style.padding="0px";
 				}else{
-					document.getElementById(id).style.borderColor="#4444ff";
-					document.getElementById(id).style.borderStyle="solid";
-					document.getElementById(id).style.borderWidth="1px";
-					document.getElementById(id).style.padding="0px";
+					document.getElementById(currentlyMouseOverCell).style.borderColor="#4444ff";
+					document.getElementById(currentlyMouseOverCell).style.borderStyle="solid";
+					document.getElementById(currentlyMouseOverCell).style.borderWidth="1px";
+					document.getElementById(currentlyMouseOverCell).style.padding="0px";
 				}
 			}
 		}
@@ -73,12 +76,14 @@ function reDrawGridLines(){
 /********   SECTION__GO!__[   JavaScript DOM Event Handling Functions   ]   ********/
 
 function overCell(id){
-//	document.title = "You are hovering over Cell: ["+id+"] and it's color is: ["+document.getElementById(cellPrefix+id).style.backgroundColor+"]";
+	document.title = "You are hovering over Cell: ["+id+"] and it's color is: ["+document.getElementById(cellPrefix+id).style.backgroundColor+"]";
 	
-	document.getElementById(id).style.borderColor="#4444ff";
-	document.getElementById(id).style.borderStyle="solid";
-	document.getElementById(id).style.borderWidth="1px";
-	document.getElementById(id).style.padding="0px";
+	currentlyMouseOverCell = id;
+	
+	document.getElementById(currentlyMouseOverCell).style.borderColor="#4444ff";
+	document.getElementById(currentlyMouseOverCell).style.borderStyle="solid";
+	document.getElementById(currentlyMouseOverCell).style.borderWidth="1px";
+	document.getElementById(currentlyMouseOverCell).style.padding="0px";
 	
 }
 function clickedCell(id){
