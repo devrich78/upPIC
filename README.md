@@ -4,7 +4,7 @@ TABLE of CONTENTS:
 
 [Change_Log](http://DevRich78.github.io/upPIC/change_log.html)
 
-[TO_DO List](https://github.com/devrich78/upPIC#to_do-list)
+[TO_DO List](https://DevRich78.github.io/upPIC/to_do.html)
 
 [Top FAQ Questions about ](https://github.com/devrich78/upPIC#top-faq-questions-about-) [[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)]
 
