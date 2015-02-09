@@ -4,6 +4,9 @@
 <meta charset="UTF-8">
 <title>[:.:] - upPIC - Version 1.0</title>
 <style type="text/css">
+div.primarydivcontainer{
+	text-align:center;
+}
 div.uPgridBox{
 	display:inline-block;
 	border: #00AAFF groove 8px;
@@ -134,7 +137,7 @@ function initMeNow(){
 </head>
 <body>
 
-<div>
+<div class="primarydivcontainer">
 
 
 <div class="uPgridBox" id="uPgridBox">
@@ -146,6 +149,8 @@ function writeInitialGrid(){
 	bgColG = 2;
 	bgColB = 2;
 
+	tmpStr = "";
+	
 	for(ir=0;ir<upPICmaxCols;ir++){
 		for(ic=0;ic<upPICmaxRows;ic++){
 		
@@ -159,26 +164,25 @@ function writeInitialGrid(){
 
 		
 			id = "C"+ic.toString()+"_R"+ir.toString();
-			document.getElementById("uPgridBox").innerHTML+=("<div id=\""+cellPrefix+id+"\" onclick=\"clickedCell('"+cellPrefix+id+"');\" onmousemove=\"overCell('"+cellPrefix+id+"');\" class=\"uPgridCell\" style=\"width:"+upPICcellScaleX+";height:"+upPICcellScaleY+";background-color:#"+bgColR.toString()+bgColR.toString()+bgColG.toString()+bgColG.toString()+bgColB.toString()+bgColB.toString()+";\">1</div>");
+			tmpStr+=("<div id=\""+cellPrefix+id+"\" onclick=\"clickedCell('"+cellPrefix+id+"');\" onmousemove=\"overCell('"+cellPrefix+id+"');\" class=\"uPgridCell\" style=\"width:"+upPICcellScaleX+";height:"+upPICcellScaleY+";background-color:#"+bgColR.toString()+bgColR.toString()+bgColG.toString()+bgColG.toString()+bgColB.toString()+bgColB.toString()+";\">1</div>");
 		}
-		document.getElementById("uPgridBox").innerHTML+="<br>"; // NEW LINE To break each row into it's own row vs all uPgridCell's sticking together!
+		tmpStr+="<br>"; // NEW LINE To break each row into it's own row vs all uPgridCell's sticking together!
 	}
-
+	document.getElementById("uPgridBox").innerHTML=tmpStr;
 }
 
 </script>
 </div>
 
 
-</div>
 
 
-<div>
+
 
 <div class="actionsDiv" id="actionsDiv">
 What do you want to happen when you click/tap on a cell:
 
-(To-Do) Add in a series of option tags in a dropbox to allow the user to select the action that will occur when they click/tap on a cell; i.e.: [Change Color To The Selcted Color From The Color Palette Box Below]
+(To-Do) Add in a series of option tags in a dropbox to allow the user to select the action that will occur when they click/tap on a cell; i.e.: [Change The 'Selected Cell' Color To The 'Selected Color Palette Box' Color From The Color Palette Boxs Below]
 </div>
 
 
