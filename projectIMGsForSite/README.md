@@ -1,1 +1,0 @@
-NOTE: this folder: "projectIMGsForSite" is only to be used for images that will be used on our GitHub Pages site:  [http://devrich78.github.io/upPIC/](http://devrich78.github.io/upPIC/) -thus- don't use these images for anything :-)
