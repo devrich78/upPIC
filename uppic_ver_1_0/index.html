@@ -32,7 +32,7 @@ div.uPgridCell{
 	
 	var cellPrefix = "uPc_"; // ( changed it to "uPc_" short form of "uPgridCell" to improve script responsiveness) This prefix is used to help ensure uniqueness between various HTML tag elements..
 	
-	var reDrawGridLinesInMilliseconds = 1600; // This is the time in milliseconds that the JavaScript engine will reDraw the the grid lines around the cell grid boxes ( aka the cell broders )
+	var reDrawGridLinesInMilliseconds = 500; // This is the time in milliseconds that the JavaScript engine will reDraw the the grid lines around the cell grid boxes ( aka the cell broders )
 
 	var reDrawGridL; // Make reDrawGridL a global var
 
@@ -119,7 +119,7 @@ function writeInitialGrid(){
 
 		
 			id = "C"+iy.toString()+"_R"+ix.toString();
-			document.write("<div id=\"uPgridCell_"+id+"\" onclick=\"clickedCell('"+cellPrefix+id+"');\" onmousemove=\"overCell('"+cellPrefix+id+"');\" class=\"uPgridCell\" style=\"width:"+upPICcellScaleX+";height:"+upPICcellScaleY+";background-color:#"+bgColR.toString()+bgColR.toString()+bgColG.toString()+bgColG.toString()+bgColB.toString()+bgColB.toString()+";\">1</div>");
+			document.write("<div id=\""+cellPrefix+id+"\" onclick=\"clickedCell('"+cellPrefix+id+"');\" onmousemove=\"overCell('"+cellPrefix+id+"');\" class=\"uPgridCell\" style=\"width:"+upPICcellScaleX+";height:"+upPICcellScaleY+";background-color:#"+bgColR.toString()+bgColR.toString()+bgColG.toString()+bgColG.toString()+bgColB.toString()+bgColB.toString()+";\">1</div>");
 		}
 		document.write("<br>"); // NEW LINE To break each row into it's own row vs all uPgridCell's sticking together!
 	}
