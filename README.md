@@ -7,10 +7,9 @@ Quick Links To Our Relevant GitHub Pages:
 
 [TO_DO List](https://DevRich78.github.io/upPIC/to_do.html)
 
-[(General and MISC) FAQ Questions about ](https://DevRich78.github.io/upPIC/faq.html) [[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)]
-
-
 [Credits](https://DevRich78.github.io/upPIC/credits.html)
+
+[(General and MISC) FAQ Questions about ](https://DevRich78.github.io/upPIC/faq.html) [[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)]
 
 
 README.md's TABLE of CONTENTS:
