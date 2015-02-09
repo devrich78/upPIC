@@ -52,10 +52,10 @@ function reDrawGrid(){
 }
 function reDrawGridLines(){
 	window.clearInterval(reDrawGridL);
+	
 		for(iy=0;iy<upPICmaxCols;iy++){
 			for(ix=0;ix<upPICmaxRows;ix++){
 				id2 = cellPrefix+"C"+iy.toString()+"_R"+ix.toString();
-				document.title = "id2={"+id2+"} and id={"+id+"}";
 				if(id2 != currentlyMouseOverCell){
 					document.getElementById(id2).style.borderColor="#0f0f0f";
 					document.getElementById(id2).style.borderStyle="solid";
