@@ -104,6 +104,26 @@ function clickedCell(id){
 
 
 
+
+
+
+
+
+
+
+// THIS    initMeNow( )    function MUST BE AT THE END AND THE VERY LAST FUNCTION BEFORE IT IS CALLED!!
+function initMeNow(){
+	writeInitialGrid(); // Create the first instance of the upPIC grid ( Note that this should be called __ONLY-ONCE__ !!
+	reDrawGrid(); // Create the first instance of the upPIC grid ( Note that this should be called __ONLY-ONCE__ !!
+	reDrawGridLines(); // Redraws all of the borders around the Grid boxes ( NOTE: This should be called sparingly as it uses a lot of JavaScript CPU processing power when called! )
+
+}
+</script>
+</head>
+<body>
+
+
+<script type="text/JavaScript">
 function writeInitialGrid(){
 
 	bgColR = 2;
@@ -135,28 +155,74 @@ function writeInitialGrid(){
 
 
 
-
-
-// THIS    initMeNow( )    function MUST BE AT THE END AND THE VERY LAST FUNCTION BEFORE IT IS CALLED!!
-function initMeNow(){
-	writeInitialGrid(); // Create the first instance of the upPIC grid ( Note that this should be called __ONLY-ONCE__ !!
-	reDrawGrid(); // Create the first instance of the upPIC grid ( Note that this should be called __ONLY-ONCE__ !!
-	reDrawGridLines(); // Redraws all of the borders around the Grid boxes ( NOTE: This should be called sparingly as it uses a lot of JavaScript CPU processing power when called! )
-
-}
-initMeNow(); // Inititalize the upPIC construction system :-)
 </script>
-</head>
-<body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 <script type="text/JavaScript">
+initMeNow(); // Inititalize the upPIC construction system :-)
 </script>
-
-
-
-
-
-
 </body>
 </html>
