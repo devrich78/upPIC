@@ -13,9 +13,11 @@ div.uPgridBox{
 }
 div.uPgridCell{
 	display:inline-block;
+	
+	padding:1px; // NOTE: This is used to allow a border to appear/disappear so liave it as 1px !!
+	
 	font-family:Ubuntu;
 	font-size:8px;
-	
 }
 
 </style>
@@ -24,9 +26,10 @@ div.uPgridCell{
 	upPICmaxCols = 16; // NOTE: this is base-one so 1-64 NOT 0-63 !!!!
 	upPICmaxRows = 16; // NOTE: this is base-one so 1-64 NOT 0-63 !!!!
 	
-	upPICwidth = "10px";
-	upPICheight = "10px";
+	upPICcellScaleX = "10px"; // (MUST BE IN "px") NOTE: This is the scale used to scale the clickable grid
+	upPICcellScaleY = "10px"; // (MUST BE IN "px") NOTE: This is the scale used to scale the clickable grid
 	
+	cellPrefix = "uPgridCell_";
 
 // /Global Variables!!
 function writeInitialGrid(){
@@ -49,7 +52,7 @@ function writeInitialGrid(){
 
 		
 			id = "C"+iy.toString()+"_R"+ix.toString();
-			document.write("<div class=\"uPgridCell\" style=\"width:"+upPICwidth+";height:"+upPICheight+";background-color:#"+bgColR.toString()+bgColR.toString()+bgColG.toString()+bgColG.toString()+bgColB.toString()+bgColB.toString()+";\" id=\"uPgrid_"+id+"\">1</div>");
+			document.write("<div id=\"uPgridCell_"+id+"\" onclick=\"clickedCell('"+cellPrefix+id+"');\" onmousemove=\"overCell('"+id+"');\" class=\"uPgridCell\" style=\"width:"+upPICcellScaleX+";height:"+upPICcellScaleY+";background-color:#"+bgColR.toString()+bgColR.toString()+bgColG.toString()+bgColG.toString()+bgColB.toString()+bgColB.toString()+";\">1</div>");
 		}
 		document.write("<br>"); // NEW LINE To break each row into it's own row vs all uPgridCell's sticking together!
 	}
@@ -59,18 +62,56 @@ function reDrawGrid(){
 	for(iy=0;iy<upPICmaxCols;iy++){
 		for(ix=0;ix<upPICmaxRows;ix++){
 			id = "C"+iy.toString()+"_R"+ix.toString();
-			document.getElementById("uPgrid_"+id).innerHTML = "";// id;
+			document.getElementById(cellPrefix+id).innerHTML = "";// id;
 		}
 	}
 }
+function overCell(id){
+//	document.title = "You are hovering over Cell: ["+id+"] and it's color is: ["+document.getElementById(cellPrefix+id).style.backgroundColor+"]";
+
+	// TO-DO: Clear all of the cells's border's to start them over!
+	
+	for(iy=0;iy<upPICmaxCols;iy++){
+		for(ix=0;ix<upPICmaxRows;ix++){
+			id2 = cellPrefix+"C"+iy.toString()+"_R"+ix.toString();
+			document.title = "id2={"+id2+"} and id={"+id+"}";
+			if(id2 != id){
+				document.getElementById(id2).style.borderColor="#0f0f0f"; // TO-DO: Make this change the border so that the user can see which cell the mouse is over
+				document.getElementById(id2).style.borderStyle="solid"; // TO-DO: Make this change the border so that the user can see which cell the mouse is over
+				document.getElementById(id2).style.borderWidth="1px"; // TO-DO: Make this change the border so that the user can see which cell the mouse is over
+				document.getElementById(id2).style.padding="0px"; // TO-DO: Make this change the border so that the user can see which cell the mouse is over
+			}else{
+				document.getElementById(id2).style.borderColor="#4444ff"; // TO-DO: Make this change the border so that the user can see which cell the mouse is over
+				document.getElementById(id2).style.borderStyle="solid"; // TO-DO: Make this change the border so that the user can see which cell the mouse is over
+				document.getElementById(id2).style.borderWidth="1px"; // TO-DO: Make this change the border so that the user can see which cell the mouse is over
+				document.getElementById(id2).style.padding="0px"; // TO-DO: Make this change the border so that the user can see which cell the mouse is over
+			}
+		}
+	}
+	
+	
+	
+	
+}
+function clickedCell(id){
+	document.title = "You just clicked on Cell: ["+id+"]";
+}
+
+
+
+
+// THIS    initMeNow( )    function MUST BE AT THE END AND THE VERY LAST FUNCTION BEFORE IT IS CALLED!!
+function initMeNow(){
+	writeInitialGrid(); // Create the first instance of the upPIC grid ( Note that this should be called __ONLY-ONCE__ !!
+	reDrawGrid(); // Create the first instance of the upPIC grid ( Note that this should be called __ONLY-ONCE__ !!
+}
+initMeNow(); // Inititalize the upPIC construction system :-)
 </script>
 </head>
 <body>
 
 
 <script type="text/JavaScript">
-writeInitialGrid(); // Create the first instance of the upPIC grid ( Note that this should be called __ONLY-ONCE__ !!
-reDrawGrid(); // Create the first instance of the upPIC grid ( Note that this should be called __ONLY-ONCE__ !!
 </script>
 
 
