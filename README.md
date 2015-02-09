@@ -4,6 +4,8 @@ TABLE of CONTENTS:
 
 [Change_Log](https://github.com/devrich78/upPIC/blob/master/README.md#change_log)
 
+[TO_DO List](https://github.com/devrich78/upPIC#to_do-list)
+
 [Top FAQ Questions about ](https://github.com/devrich78/upPIC#top-faq-questions-about-) [[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)]
 
 #[[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)] - Version: 1.0
@@ -159,10 +161,15 @@ Version 0.0:
 
 #TO_DO List:
 
-___PRIORITY TO_DO LIST ITEMS GO HERE___
+___HIGH-PRIORITY TO_DO LIST ITEMS GO HERE___
 
+***[ To-Do ]*** Change "grid box cell borders" to something more meaningful as to not confuse anyone ( like me )
 
-___Other TO_DO List items:___
+___Regular-Priority TO_DO List items:___
+
+***[ To-Do ]*** Add in a feature to allow the user to specify how often the grid box cell borders are re-drawn
+
+___Additional TO_DO List items:___
 
 
 
