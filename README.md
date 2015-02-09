@@ -2,7 +2,7 @@
 
 TABLE of CONTENTS:
 
-[Change_Log](https://github.com/devrich78/upPIC/blob/master/README.md#change_log)
+[Change_Log](http://DevRich78.github.io/upPIC/change_log.html)
 
 [TO_DO List](https://github.com/devrich78/upPIC#to_do-list)
 
