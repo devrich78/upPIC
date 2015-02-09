@@ -1,6 +1,11 @@
 **_( This README.md and the_** [[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)] **_"upPIC" project are a constant Work-In-Progress ( W.I.P ).  I ask that you please be patient and kind as I don't have a lot of free time these days.  However; I plan to work on_** [[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)] **_as often as I can over time.  Many thanks for your support! )_**
 
 
+#[[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)] user profile Pixelated Image Creator - v:1.0
+Initially created and inspired by me: DevRich78 and currently made available under the Apache 2.0 license
+
+(( formerly -> [:upPIC:] ))
+
 Quick Links To Our Relevant GitHub Pages:
 
 [Change_Log](http://DevRich78.github.io/upPIC/change_log.html)
@@ -16,15 +21,6 @@ README.md's TABLE of CONTENTS:
 
 [(Top) FAQ Questions about ](https://github.com/devrich78/upPIC#top-faq-questions-about-) [[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)]
 
-
-#[[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)] - Version: 1.0
-
-formerly -> [:upPIC:]
-
-
-
-#[[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)] user profile Pixelated Image Creator
-Initially created and inspired by me: DevRich78 and currently made available under the Apache 2.0 license
 
 
 #Top FAQ Questions about [[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)]
