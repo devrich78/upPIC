@@ -53,6 +53,11 @@ div.actionsDiv{
 	var currentlyMouseOverCell = ""; // This is the cell where the mouse cursor "last" was _or_ "is" over.
 	var currentlySelectedCell = ""; // This is the cell that "is" currently selected!
 	
+	var cellBorderGridColor = "#1f1f1f"; var cellBorderGridStyle = "solid"; var cellBorderGridWidth = "2px"; var cellBorderGridMargin = "0px"; var cellBorderGridPadding = "0px";
+	var selectedCellColor   = "#f4f4f4"; var selectedCellStyle   = "solid"; var selectedCellWidth   = "2px"; var selectedCellMargin   = "0px"; var selectedCellPadding   = "0px";
+	var mouseoverCellColor  = "#8888ff"; var mouseoverCellStyle  = "solid"; var mouseoverCellWidth  = "2px"; var mouseoverCellMargin  = "0px"; var mouseoverCellPadding  = "0px";
+	
+	
 /********   END__SECTION__[   Global Variables!!   ]   ********/
 
 
@@ -71,15 +76,17 @@ function reDrawGridLines(){
 			for(ix=0;ix<upPICmaxRows;ix++){
 				id2 = cellPrefix+"C"+iy.toString()+"_R"+ix.toString();
 				if(id2 != currentlySelectedCell){
-					document.getElementById(id2).style.borderColor="#0f0f0f";
-					document.getElementById(id2).style.borderStyle="solid";
-					document.getElementById(id2).style.borderWidth="1px";
-					document.getElementById(id2).style.padding="0px";
+					document.getElementById(id2).style.borderColor = cellBorderGridColor;
+					document.getElementById(id2).style.borderStyle = cellBorderGridStyle;
+					document.getElementById(id2).style.borderWidth = cellBorderGridWidth;
+					document.getElementById(id2).style.margin      = cellBorderGridMargin;
+					document.getElementById(id2).style.padding     = cellBorderGridPadding;
 				}else{
-					document.getElementById(currentlyMouseOverCell).style.borderColor="#4444ff";
-					document.getElementById(currentlyMouseOverCell).style.borderStyle="solid";
-					document.getElementById(currentlyMouseOverCell).style.borderWidth="1px";
-					document.getElementById(currentlyMouseOverCell).style.padding="0px";
+					document.getElementById(currentlyMouseOverCell).style.borderColor = mouseoverCellColor;
+					document.getElementById(currentlyMouseOverCell).style.borderStyle = mouseoverCellStyle;
+					document.getElementById(currentlyMouseOverCell).style.borderWidth = mouseoverCellWidth;
+					document.getElementById(currentlyMouseOverCell).style.margin      = mouseoverCellMargin;
+					document.getElementById(currentlyMouseOverCell).style.padding     = mouseoverCellPadding;
 				}
 			}
 		}
@@ -94,10 +101,11 @@ function overCell(id){
 	
 	currentlyMouseOverCell = id;
 	
-	document.getElementById(currentlyMouseOverCell).style.borderColor="#4444ff";
-	document.getElementById(currentlyMouseOverCell).style.borderStyle="solid";
-	document.getElementById(currentlyMouseOverCell).style.borderWidth="1px";
-	document.getElementById(currentlyMouseOverCell).style.padding="0px";
+	document.getElementById(currentlyMouseOverCell).style.borderColor  = mouseoverCellColor;
+	document.getElementById(currentlyMouseOverCell).style.borderStyle  = mouseoverCellStyle;
+	document.getElementById(currentlyMouseOverCell).style.borderWidth  = mouseoverCellWidth;
+	document.getElementById(currentlyMouseOverCell).style.margin       = mouseoverCellMargin;
+	document.getElementById(currentlyMouseOverCell).style.padding      = mouseoverCellPadding;
 	
 }
 function clickedCell(id){
