@@ -224,7 +224,7 @@ function initMeNow(){
 <div class="div_primarydivcontainer" id="id_primarydivcontainer">
 
 
-<div class="div_uPgridBox" id="id_uPgridBox" style="width:200px;">
+<div class="div_uPgridBox" id="id_uPgridBox">
 
 <script type="text/JavaScript">
 function writeInitialGrid(){
@@ -254,7 +254,7 @@ function writeInitialGrid(){
 			document.title = "id===="+id;
 			//document.title = "bgcolor===="+bgcolor;
 			
-			tmpStr+=("<div class=\"uPgridCell\" id=\""+id+"\" onclick=\"clickedCell('"+id+"');\" onmousemove=\"overCell('"+id+"');\" style=\"width:"+upPICcellScaleX+";height:"+upPICcellScaleY+";background-color:#"+bgcolor+";\">1</div>");
+			tmpStr+=("<div class=\"div_uPgridCell\" id=\""+id+"\" onclick=\"clickedCell('"+id+"');\" onmousemove=\"overCell('"+id+"');\" style=\"width:"+upPICcellScaleX+";height:"+upPICcellScaleY+";background-color:#"+bgcolor+";\">1</div>");
 		}
 		tmpStr+="<br>"; // NEW LINE To break each row into it's own row vs all uPgridCell's sticking together!
 	}
