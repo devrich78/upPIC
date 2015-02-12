@@ -27,7 +27,20 @@ div.uPgridCell{
 }
 
 
-div.pixelBox1{
+div.uPpixelBox1{
+	display:inline-block;
+	border: #00AAFF groove 8px;
+
+	padding:3px;
+	background-color:#1f1f1f;
+
+	width:100px;
+	height:100px;
+	margin:0px;
+	padding:0px;
+	
+}
+div.uPpixelBox1Cell{
 	width:1px;
 	height:1px;
 	margin:0px;
@@ -134,10 +147,10 @@ function clickedCell(id){
 function reDrawPixelBox_1(){
 		for(iy=0;iy<upPICmaxCols;iy++){
 			for(ix=0;ix<upPICmaxRows;ix++){
-				id2 = cellPrefix+"C"+iy.toString()+"_R"+ix.toString();
-				if(id2 != currentlySelectedCell){
+				id = cellPrefix+"C"+iy.toString()+"_R"+ix.toString();
+				if(id != currentlySelectedCell){
 					
-					document.getElementById(pos).style.backGroundColor = document.getElementById(id2).style.backGroundColor;
+					document.getElementById(pos).style.backgroundColor = document.getElementById(id).style.backgroundColor;
 					
 				}
 			}
@@ -235,7 +248,7 @@ function writeInitialGrid(){
 <br><br>
 
 
-<div class="uPgridBox" id="uPgridBox">
+<div class="uPpixelBox1" id="uPpixelBox1">
 
 <script type="text/JavaScript">
 function writeInitialPixelBox_1(){
@@ -246,10 +259,11 @@ function writeInitialPixelBox_1(){
 		
 			id = "C"+ic.toString()+"_R"+ir.toString();
 			idP = "p1_"+ic.toString()+"_R"+ir.toString();
-			tmpStr+=("<div id=\""+idP+"\"   class=\"pixelBox1\" style=\"background-color:"+document.getElementById(cellPrefix+id).style.backGroundColor+";\"></div>");
+			tmpStr+=("<div id=\""+idP+"\"          class=\"uPpixelBox1Cell\" style=\"background-color:"+document.getElementById(cellPrefix+id).style.backgroundColor+";\"></div>");
 		}
 		tmpStr+="<br>"; // NEW LINE To break each row into it's own row vs all uPgridCell's sticking together!
 	}
+	document.getElementById("uPpixelBox1").innerHTML=tmpStr;
 }
 
 </script>
