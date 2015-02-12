@@ -119,11 +119,11 @@ function reDrawGridLines(){
 					document.getElementById(id).style.margin      = cellBorderGridMargin;
 					document.getElementById(id).style.padding     = cellBorderGridPadding;
 				}else{
-					document.getElementById(currentlyMouseOverCell).style.borderColor = mouseoverCellColor;
-					document.getElementById(currentlyMouseOverCell).style.borderStyle = mouseoverCellStyle;
-					document.getElementById(currentlyMouseOverCell).style.borderWidth = mouseoverCellWidth;
-					document.getElementById(currentlyMouseOverCell).style.margin      = mouseoverCellMargin;
-					document.getElementById(currentlyMouseOverCell).style.padding     = mouseoverCellPadding;
+					document.getElementById(id).style.borderColor  = selectedCellColor;
+					document.getElementById(id).style.borderStyle  = selectedCellStyle;
+					document.getElementById(id).style.borderWidth  = selectedCellWidth;
+					document.getElementById(id).style.margin       = selectedCellMargin;
+					document.getElementById(id).style.padding      = selectedCellPadding;
 				}
 			}
 		}
@@ -137,17 +137,33 @@ function overCell(cellId){
 	//document.title = "You are hovering over Cell: ["+id+"] and it's color is: ["+document.getElementById(id).style.backgroundColor+"]";
 	
 	currentlyMouseOverCell = cellId;
+
+	if(currentlyMouseOverCell == currentlySelectedCell){
+		document.getElementById(currentlyMouseOverCell).style.borderColor  = selectedCellColor;
+		document.getElementById(currentlyMouseOverCell).style.borderStyle  = selectedCellStyle;
+		document.getElementById(currentlyMouseOverCell).style.borderWidth  = selectedCellWidth;
+		document.getElementById(currentlyMouseOverCell).style.margin       = selectedCellMargin;
+		document.getElementById(currentlyMouseOverCell).style.padding      = selectedCellPadding;
+
+	}else{
 	
-	document.getElementById(currentlyMouseOverCell).style.borderColor  = mouseoverCellColor;
-	document.getElementById(currentlyMouseOverCell).style.borderStyle  = mouseoverCellStyle;
-	document.getElementById(currentlyMouseOverCell).style.borderWidth  = mouseoverCellWidth;
-	document.getElementById(currentlyMouseOverCell).style.margin       = mouseoverCellMargin;
-	document.getElementById(currentlyMouseOverCell).style.padding      = mouseoverCellPadding;
-	
+		document.getElementById(currentlyMouseOverCell).style.borderColor  = mouseoverCellColor;
+		document.getElementById(currentlyMouseOverCell).style.borderStyle  = mouseoverCellStyle;
+		document.getElementById(currentlyMouseOverCell).style.borderWidth  = mouseoverCellWidth;
+		document.getElementById(currentlyMouseOverCell).style.margin       = mouseoverCellMargin;
+		document.getElementById(currentlyMouseOverCell).style.padding      = mouseoverCellPadding;
+	}
 }
 function clickedCell(cellId){
 	document.title = "You just clicked on Cell: ["+cellId+"]";
 	currentlySelectedCell = cellId;
+	
+	document.getElementById(currentlyMouseOverCell).style.borderColor  = selectedCellColor;
+	document.getElementById(currentlyMouseOverCell).style.borderStyle  = selectedCellStyle;
+	document.getElementById(currentlyMouseOverCell).style.borderWidth  = selectedCellWidth;
+	document.getElementById(currentlyMouseOverCell).style.margin       = selectedCellMargin;
+	document.getElementById(currentlyMouseOverCell).style.padding      = selectedCellPadding;
+	
 }
 /********   END__SECTION__[   JavaScript DOM Event Handling Functions   ]   ********/
 
