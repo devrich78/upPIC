@@ -213,7 +213,26 @@ function reDrawPixelBox_1(){
 					
 					document.getElementById(idP).style.backgroundColor = document.getElementById(id).style.backgroundColor;
 					
-					document.title = document.getElementById(id).style.backgroundColor;
+				}
+			}
+		}
+}
+
+function reDrawPixelBox_2(){
+//					document.title = "Go!";
+		for(ir=0;ir<upPICmaxCols;ir++){
+			for(ic=0;ic<upPICmaxRows;ic++){
+				id = cellPrefix+"C"+ic.toString()+"_R"+ir.toString();
+				idP2 = cellPrefix+"p2_C_"+ic.toString()+"_R"+ir.toString();
+				if(id != currentlySelectedCell){
+					
+					document.getElementById(idP2).style.backgroundColor = document.getElementById(id).style.backgroundColor;
+					document.getElementById(idP2).style.borderColor  = cellBorderGridColor;
+					document.getElementById(idP2).style.borderStyle  = cellBorderGridStyle;
+					document.getElementById(idP2).style.borderWidth  = "1px";
+					document.getElementById(idP2).style.margin       = cellBorderGridMargin;
+					document.getElementById(idP2).style.padding      = cellBorderGridPadding;
+					
 				}
 			}
 		}
@@ -267,6 +286,10 @@ function initMeNow(){
 		documentwriteInitialPixelBox_1(); // MUST BE CALLED _AFTER_ THE CALL TO documentwriteInitialEditGrid() !!!!
 		reDrawPixelBox_1()
 
+	/*  Write and draw the PixelBox for 2px size and with grid */
+		documentwriteInitialPixelBox_2(); // MUST BE CALLED _AFTER_ THE CALL TO documentwriteInitialEditGrid() !!!!
+		reDrawPixelBox_2()
+
 
 }
 </script>
@@ -306,7 +329,7 @@ function documentwriteInitialEditGrid(){
 			document.title = "id===="+id;
 			//document.title = "bgcolor===="+bgcolor;
 			
-			tmpStr+=("<div class=\"div_uPeditCell\" id=\""+id+"\" onclick=\"clickedEditCell('"+id+"');\" onmousemove=\"overEditCell('"+id+"');\" style=\"width:"+upPICcellScaleX+";height:"+upPICcellScaleY+";background-color:#"+bgcolor+";\">1</div>");
+			tmpStr+=("<div class=\"div_uPeditCell\" id=\""+id+"\" onclick=\"clickedEditCell('"+id+"');\" onmousemove=\"overEditCell('"+id+"');\" style=\"width:"+upPICcellScaleX+";height:"+upPICcellScaleY+";background-color:#"+bgcolor+";\"></div>");
 		}
 		tmpStr+="<br>"; // NEW LINE To break each row into it's own row vs all uPgridCell's sticking together!
 	}
@@ -334,7 +357,7 @@ function documentwriteInitialPixelBox_1(){
 		
 			id = cellPrefix+"C"+ic.toString()+"_R"+ir.toString();
 			idP = cellPrefix+"p1_C_"+ic.toString()+"_R"+ir.toString();
-			tmpStr+=("<div id=\""+idP+"\"          class=\"div_uPpixelBox1Cell\" style=\"background-color:"+document.getElementById(id).style.backgroundColor+";\">1</div>");
+			tmpStr+=("<div id=\""+idP+"\"          class=\"div_uPpixelBox1Cell\" style=\"background-color:"+document.getElementById(id).style.backgroundColor+";\"></div>");
 		}
 		tmpStr+="<br>"; // NEW LINE To break each row into it's own row vs all uPgridCell's sticking together!
 	}
@@ -344,6 +367,35 @@ function documentwriteInitialPixelBox_1(){
 </script>
 
 </div>
+
+
+
+
+<div class="div_uPpixelBox2" id="id_uPpixelBox2">
+
+<script type="text/JavaScript">
+function documentwriteInitialPixelBox_2(){
+	tmpStr = "";
+	for(ir=0;ir<upPICmaxCols;ir++){
+		for(ic=0;ic<upPICmaxRows;ic++){
+		
+		
+			id = cellPrefix+"C"+ic.toString()+"_R"+ir.toString();
+			idP2 = cellPrefix+"p2_C_"+ic.toString()+"_R"+ir.toString();
+			tmpStr+=("<div id=\""+idP2+"\"          class=\"div_uPpixelBox2Cell\" style=\"background-color:"+document.getElementById(id).style.backgroundColor+";\"></div>");
+		}
+		tmpStr+="<br>"; // NEW LINE To break each row into it's own row vs all uPgridCell's sticking together!
+	}
+	document.getElementById("id_uPpixelBox2").innerHTML=tmpStr;
+}
+
+</script>
+
+</div>
+
+
+
+
 
 
 
