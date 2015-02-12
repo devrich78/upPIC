@@ -11,8 +11,9 @@ div.div_uPgridBox{
 	display:inline-block;
 	border: #00AAFF groove 8px;
 	font-family:Ubuntu;
-	font-size:8px;
+	font-size:2px;
 	
+	margin:0px;
 	padding:3px;
 	background-color:#1f1f1f;
 
@@ -20,24 +21,26 @@ div.div_uPgridBox{
 div.div_uPgridCell{
 	display:inline-block;
 
+	width:1px;
+	height:1px;
+	margin:0px;
 	padding:1px; /* NOTE: This is used to allow a border to appear/disappear so leave it as 1px !! */
 	
 	font-family:Ubuntu;
-	font-size:8px;
+	font-size:2px;
 }
 
 
 div.div_uPpixelBox1{
 	display:inline-block;
 	border: #00AAFF groove 8px;
+	font-family:Ubuntu;
+	font-size:2px;
 
+	margin:0px;
 	padding:3px;
 	background-color:#1f1f1f;
 
-	width:100px;
-	height:100px;
-	margin:0px;
-	padding:0px;
 	
 }
 div.div_uPpixelBox1Cell{
@@ -45,6 +48,10 @@ div.div_uPpixelBox1Cell{
 	height:1px;
 	margin:0px;
 	padding:0px;
+	
+	font-family:Ubuntu;
+	font-size:2px;
+
 }
 
 
@@ -275,7 +282,7 @@ function writeInitialPixelBox_1(){
 		
 			id = cellPrefix+"C"+ic.toString()+"_R"+ir.toString();
 			idP = cellPrefix+"p1_C_"+ic.toString()+"_R"+ir.toString();
-			tmpStr+=("<div id=\""+idP+"\"          class=\"div_uPpixelBox1Cell\" style=\"background-color:"+document.getElementById(id).style.backgroundColor+";\"></div>");
+			tmpStr+=("<div id=\""+idP+"\"          class=\"div_uPpixelBox1Cell\" style=\"background-color:"+document.getElementById(id).style.backgroundColor+";\">1</div>");
 		}
 		tmpStr+="<br>"; // NEW LINE To break each row into it's own row vs all uPgridCell's sticking together!
 	}
