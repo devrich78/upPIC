@@ -12,6 +12,9 @@ div.uPgridBox{
 	border: #00AAFF groove 8px;
 	font-family:Ubuntu;
 	font-size:8px;
+	
+	padding:3px;
+	background-color:#1f1f1f;
 
 }
 div.uPgridCell{
@@ -22,6 +25,18 @@ div.uPgridCell{
 	font-family:Ubuntu;
 	font-size:8px;
 }
+
+
+div.pixelBox1{
+	width:1px;
+	height:1px;
+	margin:0px;
+	padding:0px;
+}
+
+
+
+
 
 
 div.actionsDiv{
@@ -41,8 +56,8 @@ div.actionsDiv{
 	var upPICmaxCols = 16; // NOTE: this is base-one so 1-64 NOT 0-63 !!!!
 	var upPICmaxRows = 16; // NOTE: this is base-one so 1-64 NOT 0-63 !!!!
 	
-	var upPICcellScaleX = "10px"; // (MUST BE IN "px") NOTE: This is the scale used to scale the clickable grid
-	var upPICcellScaleY = "10px"; // (MUST BE IN "px") NOTE: This is the scale used to scale the clickable grid
+	var upPICcellScaleX = "12px"; // (MUST BE IN "px") NOTE: This is the scale used to scale the clickable grid
+	var upPICcellScaleY = "12px"; // (MUST BE IN "px") NOTE: This is the scale used to scale the clickable grid
 	
 	var cellPrefix = "uPc_"; // ( changed it to "uPc_" short form of "uPgridCell" to improve script responsiveness) This prefix is used to help ensure uniqueness between various HTML tag elements..
 	
@@ -54,7 +69,7 @@ div.actionsDiv{
 	var currentlySelectedCell = ""; // This is the cell that "is" currently selected!
 	
 	var cellBorderGridColor = "#1f1f1f"; var cellBorderGridStyle = "solid"; var cellBorderGridWidth = "2px"; var cellBorderGridMargin = "0px"; var cellBorderGridPadding = "0px";
-	var selectedCellColor   = "#f4f4f4"; var selectedCellStyle   = "solid"; var selectedCellWidth   = "2px"; var selectedCellMargin   = "0px"; var selectedCellPadding   = "0px";
+	var selectedCellColor   = "#f4f4f4"; var selectedCellStyle   = "groove"; var selectedCellWidth   = "2px"; var selectedCellMargin   = "0px"; var selectedCellPadding   = "0px";
 	var mouseoverCellColor  = "#8888ff"; var mouseoverCellStyle  = "solid"; var mouseoverCellWidth  = "2px"; var mouseoverCellMargin  = "0px"; var mouseoverCellPadding  = "0px";
 	
 	
@@ -112,9 +127,40 @@ function clickedCell(id){
 	document.title = "You just clicked on Cell: ["+id+"]";
 	currentlySelectedCell = id;
 }
-/********   SECTION__END__[   JavaScript DOM Event Handling Functions   ]   ********/
+/********   END__SECTION__[   JavaScript DOM Event Handling Functions   ]   ********/
 
-/********   END__SECTION__[   Notes and References   ]   ********/
+/********   SECTION__GO!__[   General Functions   ]   ********/
+
+function reDrawPixelBox_1(){
+		for(iy=0;iy<upPICmaxCols;iy++){
+			for(ix=0;ix<upPICmaxRows;ix++){
+				id2 = cellPrefix+"C"+iy.toString()+"_R"+ix.toString();
+				if(id2 != currentlySelectedCell){
+					
+					document.getElementById(pos).style.backGroundColor = document.getElementById(id2).style.backGroundColor;
+					
+				}
+			}
+		}
+}
+
+
+
+/********   END__SECTION__[   General Functions   ]   ********/
+
+
+
+
+
+
+
+
+
+
+
+
+
+/********   SECTION__GO!__[   Notes and References   ]   ********/
 /*
 
 
@@ -137,6 +183,7 @@ function clickedCell(id){
 // THIS    initMeNow( )    function MUST BE AT THE END AND THE VERY LAST FUNCTION BEFORE IT IS CALLED!!
 function initMeNow(){
 	writeInitialGrid(); // Create the first instance of the upPIC grid ( Note that this should be called __ONLY-ONCE__ !!
+	writeInitialPixelBox_1(); // MUST BE CALLED _AFTER_ THE CALL TO writeInitialGrid() !!!!
 	reDrawGrid(); // Create the first instance of the upPIC grid ( Note that this should be called __ONLY-ONCE__ !!
 	reDrawGridLines(); // Redraws all of the borders around the Grid boxes ( NOTE: This should be called sparingly as it uses a lot of JavaScript CPU processing power when called! )
 
@@ -180,8 +227,34 @@ function writeInitialGrid(){
 }
 
 </script>
+
+
 </div>
 
+
+<br><br>
+
+
+<div class="uPgridBox" id="uPgridBox">
+
+<script type="text/JavaScript">
+function writeInitialPixelBox_1(){
+	tmpStr = "";
+	for(ir=0;ir<upPICmaxCols;ir++){
+		for(ic=0;ic<upPICmaxRows;ic++){
+		
+		
+			id = "C"+ic.toString()+"_R"+ir.toString();
+			idP = "p1_"+ic.toString()+"_R"+ir.toString();
+			tmpStr+=("<div id=\""+idP+"\"   class=\"pixelBox1\" style=\"background-color:"+document.getElementById(cellPrefix+id).style.backGroundColor+";\"></div>");
+		}
+		tmpStr+="<br>"; // NEW LINE To break each row into it's own row vs all uPgridCell's sticking together!
+	}
+}
+
+</script>
+
+</div>
 
 
 
