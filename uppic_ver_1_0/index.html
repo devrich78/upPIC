@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <title>[:.:] - upPIC - Version 1.0</title>
 <style type="text/css">
-div.primarydivcontainer{
+div.div_primarydivcontainer{
 	text-align:center;
 }
-div.uPgridBox{
+div.div_uPgridBox{
 	display:inline-block;
 	border: #00AAFF groove 8px;
 	font-family:Ubuntu;
@@ -17,7 +17,7 @@ div.uPgridBox{
 	background-color:#1f1f1f;
 
 }
-div.uPgridCell{
+div.div_uPgridCell{
 	display:inline-block;
 
 	padding:1px; /* NOTE: This is used to allow a border to appear/disappear so leave it as 1px !! */
@@ -27,7 +27,7 @@ div.uPgridCell{
 }
 
 
-div.uPpixelBox1{
+div.div_uPpixelBox1{
 	display:inline-block;
 	border: #00AAFF groove 8px;
 
@@ -40,7 +40,7 @@ div.uPpixelBox1{
 	padding:0px;
 	
 }
-div.uPpixelBox1Cell{
+div.div_uPpixelBox1Cell{
 	width:1px;
 	height:1px;
 	margin:0px;
@@ -52,7 +52,7 @@ div.uPpixelBox1Cell{
 
 
 
-div.actionsDiv{
+div.div_actionsBox{
 	display:inline-block;
 	width:640px;
 
@@ -72,7 +72,7 @@ div.actionsDiv{
 	var upPICcellScaleX = "12px"; // (MUST BE IN "px") NOTE: This is the scale used to scale the clickable grid
 	var upPICcellScaleY = "12px"; // (MUST BE IN "px") NOTE: This is the scale used to scale the clickable grid
 	
-	var cellPrefix = "uPc_"; // ( changed it to "uPc_" short form of "uPgridCell" to improve script responsiveness) This prefix is used to help ensure uniqueness between various HTML tag elements..
+	var cellPrefix = "id_uPc_"; // ( changed it to "uPc_" short form of "uPgridCell" to improve script responsiveness) This prefix is used to help ensure uniqueness between various HTML tag elements..
 	
 	var reDrawGridLinesInMilliseconds = 200; // This is the time in milliseconds that the JavaScript engine will reDraw the the grid lines around the cell grid boxes ( aka the cell broders )
 
@@ -102,13 +102,13 @@ function reDrawGridLines(){
 	
 		for(iy=0;iy<upPICmaxCols;iy++){
 			for(ix=0;ix<upPICmaxRows;ix++){
-				id2 = cellPrefix+"C"+iy.toString()+"_R"+ix.toString();
-				if(id2 != currentlySelectedCell){
-					document.getElementById(id2).style.borderColor = cellBorderGridColor;
-					document.getElementById(id2).style.borderStyle = cellBorderGridStyle;
-					document.getElementById(id2).style.borderWidth = cellBorderGridWidth;
-					document.getElementById(id2).style.margin      = cellBorderGridMargin;
-					document.getElementById(id2).style.padding     = cellBorderGridPadding;
+				id = cellPrefix+"C"+iy.toString()+"_R"+ix.toString();
+				if(id != currentlySelectedCell){
+					document.getElementById(id).style.borderColor = cellBorderGridColor;
+					document.getElementById(id).style.borderStyle = cellBorderGridStyle;
+					document.getElementById(id).style.borderWidth = cellBorderGridWidth;
+					document.getElementById(id).style.margin      = cellBorderGridMargin;
+					document.getElementById(id).style.padding     = cellBorderGridPadding;
 				}else{
 					document.getElementById(currentlyMouseOverCell).style.borderColor = mouseoverCellColor;
 					document.getElementById(currentlyMouseOverCell).style.borderStyle = mouseoverCellStyle;
@@ -124,10 +124,10 @@ function reDrawGridLines(){
 
 /********   SECTION__GO!__[   JavaScript DOM Event Handling Functions   ]   ********/
 
-function overCell(id){
-	document.title = "You are hovering over Cell: ["+id+"] and it's color is: ["+document.getElementById(id).style.backgroundColor+"]";
+function overCell(cellId){
+	//document.title = "You are hovering over Cell: ["+id+"] and it's color is: ["+document.getElementById(id).style.backgroundColor+"]";
 	
-	currentlyMouseOverCell = id;
+	currentlyMouseOverCell = cellId;
 	
 	document.getElementById(currentlyMouseOverCell).style.borderColor  = mouseoverCellColor;
 	document.getElementById(currentlyMouseOverCell).style.borderStyle  = mouseoverCellStyle;
@@ -136,22 +136,25 @@ function overCell(id){
 	document.getElementById(currentlyMouseOverCell).style.padding      = mouseoverCellPadding;
 	
 }
-function clickedCell(id){
-	document.title = "You just clicked on Cell: ["+id+"]";
-	currentlySelectedCell = id;
+function clickedCell(cellId){
+	document.title = "You just clicked on Cell: ["+cellId+"]";
+	currentlySelectedCell = cellId;
 }
 /********   END__SECTION__[   JavaScript DOM Event Handling Functions   ]   ********/
 
 /********   SECTION__GO!__[   General Functions   ]   ********/
 
 function reDrawPixelBox_1(){
+//					document.title = "Go!";
 		for(iy=0;iy<upPICmaxCols;iy++){
 			for(ix=0;ix<upPICmaxRows;ix++){
-				id = cellPrefix+"C"+iy.toString()+"_R"+ix.toString();
+				id = cellPrefix+"C"+ic.toString()+"_R"+ir.toString();
+				idP = cellPrefix+"p1_"+ic.toString()+"_R"+ir.toString();
 				if(id != currentlySelectedCell){
 					
-					document.getElementById(pos).style.backgroundColor = document.getElementById(id).style.backgroundColor;
+					document.getElementById(idP).style.backgroundColor = "";//document.getElementById(id).style.backgroundColor;
 					
+					document.title = "howdy!";
 				}
 			}
 		}
@@ -193,22 +196,28 @@ function reDrawPixelBox_1(){
 
 
 
+
 // THIS    initMeNow( )    function MUST BE AT THE END AND THE VERY LAST FUNCTION BEFORE IT IS CALLED!!
 function initMeNow(){
-	writeInitialGrid(); // Create the first instance of the upPIC grid ( Note that this should be called __ONLY-ONCE__ !!
-	writeInitialPixelBox_1(); // MUST BE CALLED _AFTER_ THE CALL TO writeInitialGrid() !!!!
-	reDrawGrid(); // Create the first instance of the upPIC grid ( Note that this should be called __ONLY-ONCE__ !!
-	reDrawGridLines(); // Redraws all of the borders around the Grid boxes ( NOTE: This should be called sparingly as it uses a lot of JavaScript CPU processing power when called! )
+	/*  Write and draw the GridBoxCells for with grid */
+		writeInitialGrid(); // Create the first instance of the upPIC grid ( Note that this should be called __ONLY-ONCE__ !!
+		reDrawGrid(); // Create the first instance of the upPIC grid ( Note that this should be called __ONLY-ONCE__ !!
+		reDrawGridLines(); // Redraws all of the borders around the Grid boxes ( NOTE: This should be called sparingly as it uses a lot of JavaScript CPU processing power when called! )
+
+	/*  Write and draw the PixelBox for 1px size and NO GRID */
+//		writeInitialPixelBox_1(); // MUST BE CALLED _AFTER_ THE CALL TO writeInitialGrid() !!!!
+//		reDrawPixelBox_1()
+
 
 }
 </script>
 </head>
 <body>
 
-<div class="primarydivcontainer">
+<div class="div_primarydivcontainer" id="id_primarydivcontainer">
 
 
-<div class="uPgridBox" id="uPgridBox">
+<div class="div_uPgridBox" id="id_uPgridBox" style="width:200px;">
 
 <script type="text/JavaScript">
 function writeInitialGrid(){
@@ -231,12 +240,18 @@ function writeInitialGrid(){
 			if(bgColB > 9){bgColB=2;bgColR = 0;}
 
 		
-			id = "C"+ic.toString()+"_R"+ir.toString();
-			tmpStr+=("<div id=\""+cellPrefix+id+"\" onclick=\"clickedCell('"+cellPrefix+id+"');\" onmousemove=\"overCell('"+cellPrefix+id+"');\" class=\"uPgridCell\" style=\"width:"+upPICcellScaleX+";height:"+upPICcellScaleY+";background-color:#"+bgColR.toString()+bgColR.toString()+bgColG.toString()+bgColG.toString()+bgColB.toString()+bgColB.toString()+";\">1</div>");
+			id = cellPrefix+"C"+ic.toString()+"_R"+ir.toString();
+			
+			bgcolor = bgColR.toString()+bgColR.toString()+bgColG.toString()+bgColG.toString()+bgColB.toString()+bgColB.toString();
+
+			document.title = "id===="+id;
+			//document.title = "bgcolor===="+bgcolor;
+			
+			tmpStr+=("<div class=\"uPgridCell\" id=\""+id+"\" onclick=\"clickedCell('"+id+"');\" onmousemove=\"overCell('"+id+"');\" style=\"width:"+upPICcellScaleX+";height:"+upPICcellScaleY+";background-color:#"+bgcolor+";\">1</div>");
 		}
 		tmpStr+="<br>"; // NEW LINE To break each row into it's own row vs all uPgridCell's sticking together!
 	}
-	document.getElementById("uPgridBox").innerHTML=tmpStr;
+	document.getElementById("id_uPgridBox").innerHTML=tmpStr;
 }
 
 </script>
@@ -245,10 +260,11 @@ function writeInitialGrid(){
 </div>
 
 
+
 <br><br>
 
 
-<div class="uPpixelBox1" id="uPpixelBox1">
+<div class="div_uPpixelBox1" id="id_uPpixelBox1">
 
 <script type="text/JavaScript">
 function writeInitialPixelBox_1(){
@@ -257,13 +273,13 @@ function writeInitialPixelBox_1(){
 		for(ic=0;ic<upPICmaxRows;ic++){
 		
 		
-			id = "C"+ic.toString()+"_R"+ir.toString();
-			idP = "p1_"+ic.toString()+"_R"+ir.toString();
-			tmpStr+=("<div id=\""+idP+"\"          class=\"uPpixelBox1Cell\" style=\"background-color:"+document.getElementById(cellPrefix+id).style.backgroundColor+";\"></div>");
+			id = cellPrefix+"C"+ic.toString()+"_R"+ir.toString();
+			idP = cellPrefix+"p1_"+ic.toString()+"_R"+ir.toString();
+			tmpStr+=("<div id=\""+idP+"\"          class=\"div_uPpixelBox1Cell\" style=\"background-color:#"+document.getElementById(cellPrefix+id).style.backgroundColor+";\"></div>");
 		}
 		tmpStr+="<br>"; // NEW LINE To break each row into it's own row vs all uPgridCell's sticking together!
 	}
-	document.getElementById("uPpixelBox1").innerHTML=tmpStr;
+	document.getElementById("id_uPpixelBox1").innerHTML=tmpStr;
 }
 
 </script>
@@ -274,7 +290,7 @@ function writeInitialPixelBox_1(){
 
 
 
-<div class="actionsDiv" id="actionsDiv">
+<div class="div_actionsBox" id="id_actions">
 What do you want to happen when you click/tap on a cell:
 
 (To-Do) Add in a series of option tags in a dropbox to allow the user to select the action that will occur when they click/tap on a cell; i.e.: [Change The 'Selected Cell' Color To The 'Selected Color Palette Box' Color From The Color Palette Boxs Below]
