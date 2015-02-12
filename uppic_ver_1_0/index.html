@@ -7,7 +7,7 @@
 div.div_primarydivcontainer{
 	text-align:center;
 }
-div.div_uPgridBox{
+div.div_uPeditBox{
 	display:inline-block;
 	border: #00AAFF groove 8px;
 	font-family:Ubuntu;
@@ -18,12 +18,12 @@ div.div_uPgridBox{
 	background-color:#1f1f1f;
 
 }
-div.div_uPgridCell{
+div.div_uPeditCell{
 	display:inline-block;
 
-	width:1px;
-	height:1px;
-	margin:0px;
+	width:1px;  /* NOTE: THIS VALUE IS TO BE AUTOMATICALLY SET MANUALLY IN THE JavaScript GLOBAL VARIABLES SECTION BELOW!! */
+	height:1px; /* NOTE: THIS VALUE IS TO BE AUTOMATICALLY SET MANUALLY IN THE JavaScript GLOBAL VARIABLES SECTION BELOW!! */
+	margin:0px; /* NOTE: THIS VALUE IS TO BE AUTOMATICALLY SET MANUALLY IN THE JavaScript GLOBAL VARIABLES SECTION BELOW!! */
 	padding:1px; /* NOTE: This is used to allow a border to appear/disappear so leave it as 1px !! */
 	
 	font-family:Ubuntu;
@@ -31,9 +31,13 @@ div.div_uPgridCell{
 }
 
 
+
+
+
+
 div.div_uPpixelBox1{
 	display:inline-block;
-	border: #00AAFF groove 8px;
+	border: #00AAFF groove 2px;
 	font-family:Ubuntu;
 	font-size:2px;
 
@@ -55,6 +59,36 @@ div.div_uPpixelBox1Cell{
 	font-size:2px;
 
 }
+
+div.div_uPpixelBox2{
+	display:inline-block;
+	border: #00AAFF groove 2px;
+	font-family:Ubuntu;
+	font-size:2px;
+
+	margin:0px;
+	padding:3px;
+	background-color:#1f1f1f;
+
+	
+}
+div.div_uPpixelBox2Cell{
+	display:inline-block;
+
+	width:2px;
+	height:2px;
+	margin:0px;
+	padding:1px;
+	
+	font-family:Ubuntu;
+	font-size:2px;
+
+}
+
+
+
+
+
 
 
 
@@ -98,7 +132,7 @@ div.div_actionsBox{
 /********   END__SECTION__[   Global Variables!!   ]   ********/
 
 
-function reDrawGrid(){
+function reDrawEditGrid(){
 	for(iy=0;iy<upPICmaxCols;iy++){
 		for(ix=0;ix<upPICmaxRows;ix++){
 			id = cellPrefix+"C"+iy.toString()+"_R"+ix.toString();
@@ -106,7 +140,7 @@ function reDrawGrid(){
 		}
 	}
 }
-function reDrawGridLines(){
+function reDrawEditGridLines(){
 	window.clearInterval(reDrawGridL);
 	
 		for(iy=0;iy<upPICmaxCols;iy++){
@@ -128,12 +162,12 @@ function reDrawGridLines(){
 			}
 		}
 
-	reDrawGridL = window.setInterval("reDrawGridLines()",reDrawGridLinesInMilliseconds); 
+	reDrawGridL = window.setInterval("reDrawEditGridLines()",reDrawGridLinesInMilliseconds); 
 }
 
 /********   SECTION__GO!__[   JavaScript DOM Event Handling Functions   ]   ********/
 
-function overCell(cellId){
+function overEditCell(cellId){
 	//document.title = "You are hovering over Cell: ["+id+"] and it's color is: ["+document.getElementById(id).style.backgroundColor+"]";
 	
 	currentlyMouseOverCell = cellId;
@@ -154,7 +188,7 @@ function overCell(cellId){
 		document.getElementById(currentlyMouseOverCell).style.padding      = mouseoverCellPadding;
 	}
 }
-function clickedCell(cellId){
+function clickedEditCell(cellId){
 	document.title = "You just clicked on Cell: ["+cellId+"]";
 	currentlySelectedCell = cellId;
 	
@@ -225,12 +259,12 @@ function reDrawPixelBox_1(){
 // THIS    initMeNow( )    function MUST BE AT THE END AND THE VERY LAST FUNCTION BEFORE IT IS CALLED!!
 function initMeNow(){
 	/*  Write and draw the GridBoxCells for with grid */
-		writeInitialGrid(); // Create the first instance of the upPIC grid ( Note that this should be called __ONLY-ONCE__ !!
-		reDrawGrid(); // Create the first instance of the upPIC grid ( Note that this should be called __ONLY-ONCE__ !!
-		reDrawGridLines(); // Redraws all of the borders around the Grid boxes ( NOTE: This should be called sparingly as it uses a lot of JavaScript CPU processing power when called! )
+		documentwriteInitialEditGrid(); // Create the first instance of the upPIC grid ( Note that this should be called __ONLY-ONCE__ !!
+		reDrawEditGrid(); // Create the first instance of the upPIC grid ( Note that this should be called __ONLY-ONCE__ !!
+		reDrawEditGridLines(); // Redraws all of the borders around the Grid boxes ( NOTE: This should be called sparingly as it uses a lot of JavaScript CPU processing power when called! )
 
 	/*  Write and draw the PixelBox for 1px size and NO GRID */
-		writeInitialPixelBox_1(); // MUST BE CALLED _AFTER_ THE CALL TO writeInitialGrid() !!!!
+		documentwriteInitialPixelBox_1(); // MUST BE CALLED _AFTER_ THE CALL TO documentwriteInitialEditGrid() !!!!
 		reDrawPixelBox_1()
 
 
@@ -242,10 +276,10 @@ function initMeNow(){
 <div class="div_primarydivcontainer" id="id_primarydivcontainer">
 
 
-<div class="div_uPgridBox" id="id_uPgridBox">
+<div class="div_uPeditBox" id="id_uPeditBox">
 
 <script type="text/JavaScript">
-function writeInitialGrid(){
+function documentwriteInitialEditGrid(){
 
 	bgColR = 0;
 	bgColG = 1;
@@ -272,11 +306,11 @@ function writeInitialGrid(){
 			document.title = "id===="+id;
 			//document.title = "bgcolor===="+bgcolor;
 			
-			tmpStr+=("<div class=\"div_uPgridCell\" id=\""+id+"\" onclick=\"clickedCell('"+id+"');\" onmousemove=\"overCell('"+id+"');\" style=\"width:"+upPICcellScaleX+";height:"+upPICcellScaleY+";background-color:#"+bgcolor+";\">1</div>");
+			tmpStr+=("<div class=\"div_uPeditCell\" id=\""+id+"\" onclick=\"clickedEditCell('"+id+"');\" onmousemove=\"overEditCell('"+id+"');\" style=\"width:"+upPICcellScaleX+";height:"+upPICcellScaleY+";background-color:#"+bgcolor+";\">1</div>");
 		}
 		tmpStr+="<br>"; // NEW LINE To break each row into it's own row vs all uPgridCell's sticking together!
 	}
-	document.getElementById("id_uPgridBox").innerHTML=tmpStr;
+	document.getElementById("id_uPeditBox").innerHTML=tmpStr;
 }
 
 </script>
@@ -292,7 +326,7 @@ function writeInitialGrid(){
 <div class="div_uPpixelBox1" id="id_uPpixelBox1">
 
 <script type="text/JavaScript">
-function writeInitialPixelBox_1(){
+function documentwriteInitialPixelBox_1(){
 	tmpStr = "";
 	for(ir=0;ir<upPICmaxCols;ir++){
 		for(ic=0;ic<upPICmaxRows;ic++){
@@ -315,7 +349,7 @@ function writeInitialPixelBox_1(){
 
 
 
-<div class="div_actionsBox" id="id_actions">
+<div class="div_actionsBox" id="id_actionsBox">
 What do you want to happen when you click/tap on a cell:
 
 (To-Do) Add in a series of option tags in a dropbox to allow the user to select the action that will occur when they click/tap on a cell; i.e.: [Change The 'Selected Cell' Color To The 'Selected Color Palette Box' Color From The Color Palette Boxs Below]
