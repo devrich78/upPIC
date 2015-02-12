@@ -146,15 +146,15 @@ function clickedCell(cellId){
 
 function reDrawPixelBox_1(){
 //					document.title = "Go!";
-		for(iy=0;iy<upPICmaxCols;iy++){
-			for(ix=0;ix<upPICmaxRows;ix++){
+		for(ir=0;ir<upPICmaxCols;ir++){
+			for(ic=0;ic<upPICmaxRows;ic++){
 				id = cellPrefix+"C"+ic.toString()+"_R"+ir.toString();
-				idP = cellPrefix+"p1_"+ic.toString()+"_R"+ir.toString();
+				idP = cellPrefix+"p1_C_"+ic.toString()+"_R"+ir.toString();
 				if(id != currentlySelectedCell){
 					
-					document.getElementById(idP).style.backgroundColor = "";//document.getElementById(id).style.backgroundColor;
+					document.getElementById(idP).style.backgroundColor = document.getElementById(id).style.backgroundColor;
 					
-					document.title = "howdy!";
+					document.title = document.getElementById(id).style.backgroundColor;
 				}
 			}
 		}
@@ -205,8 +205,8 @@ function initMeNow(){
 		reDrawGridLines(); // Redraws all of the borders around the Grid boxes ( NOTE: This should be called sparingly as it uses a lot of JavaScript CPU processing power when called! )
 
 	/*  Write and draw the PixelBox for 1px size and NO GRID */
-//		writeInitialPixelBox_1(); // MUST BE CALLED _AFTER_ THE CALL TO writeInitialGrid() !!!!
-//		reDrawPixelBox_1()
+		writeInitialPixelBox_1(); // MUST BE CALLED _AFTER_ THE CALL TO writeInitialGrid() !!!!
+		reDrawPixelBox_1()
 
 
 }
@@ -274,8 +274,8 @@ function writeInitialPixelBox_1(){
 		
 		
 			id = cellPrefix+"C"+ic.toString()+"_R"+ir.toString();
-			idP = cellPrefix+"p1_"+ic.toString()+"_R"+ir.toString();
-			tmpStr+=("<div id=\""+idP+"\"          class=\"div_uPpixelBox1Cell\" style=\"background-color:#"+document.getElementById(cellPrefix+id).style.backgroundColor+";\"></div>");
+			idP = cellPrefix+"p1_C_"+ic.toString()+"_R"+ir.toString();
+			tmpStr+=("<div id=\""+idP+"\"          class=\"div_uPpixelBox1Cell\" style=\"background-color:"+document.getElementById(id).style.backgroundColor+";\"></div>");
 		}
 		tmpStr+="<br>"; // NEW LINE To break each row into it's own row vs all uPgridCell's sticking together!
 	}
