@@ -231,9 +231,9 @@ function initMeNow(){
 <script type="text/JavaScript">
 function writeInitialGrid(){
 
-	bgColR = 2;
-	bgColG = 2;
-	bgColB = 2;
+	bgColR = 0;
+	bgColG = 1;
+	bgColB = 5;
 
 	tmpStr = "";
 	
@@ -244,9 +244,9 @@ function writeInitialGrid(){
 
 			if(bgColR > 9){bgColR=2;bgColG += 1;}
 			
-			if(bgColG > 9){bgColG=2;bgColB += 1;}
+			if(bgColG > 9){bgColG=1;bgColB += 1;}
 			
-			if(bgColB > 9){bgColB=2;bgColR = 0;}
+			if(bgColB > 9){bgColB=0;bgColR = 0;}
 
 		
 			id = cellPrefix+"C"+ic.toString()+"_R"+ir.toString();
