@@ -19,8 +19,15 @@ Quick Links To Our Relevant GitHub Pages:
 
 README.md's TABLE of CONTENTS:
 
+milestones
+
 [(Top) FAQ Questions about ](https://github.com/devrich78/upPIC#top-faq-questions-about-) [[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)]
 
+
+
+#MileStones!!
+
+Thursday, Feb 12th 2015 __3:45am PST -- Milestone today is that I realized why GIT can be so helpful.  I found that my changes which broke something were easily spotted and allowed me to easily fix them :-D
 
 
 #Top FAQ Questions about [[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)]
