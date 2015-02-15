@@ -124,12 +124,43 @@ div.div_actionsBox{
 div.actionButtonNotSelected{
 	display:inline-block;
 
+	background-color:#f0f0f0;
+	color:#00003f;
+	
 	border:2px solid #0f0f0f;
 	padding:2px;
 	margin:0px;
 	
-	width:24px;
-	height:24px;
+
+	font-family:Ubuntu;
+	font-size:12px;
+	
+	cursor:pointer;
+
+	width:160px;
+	height:32px;
+	
+}
+
+div.actionButtonSelected{
+	display:inline-block;
+
+	background-color:#2222aa;
+	color:#f0f0f0;
+	
+	border:2px inset #4444ff;
+	padding:2px;
+	margin:0px;
+	
+
+	font-family:Ubuntu;
+	font-size:12px;
+	
+	cursor:pointer;
+
+	width:160px;
+	height:32px;
+
 }
 
 
@@ -276,7 +307,7 @@ div.pal126{background-color:#993333;} div.pal127{background-color:#000000;}
 	var currentlySelectedPal = ""; // The div ID of the currently selected color
 	
 	
-	
+	var selectedActionBox = "id_actionBox_nothing"; // This is the html DIV "id" of the Action Box that is currently selected!!
 	
 	
 	
@@ -386,6 +417,25 @@ function clickedEditCell(cellId){
 	document.getElementById(currentlyMouseOverCell).style.margin       = selectedCellMargin;
 	document.getElementById(currentlyMouseOverCell).style.padding      = selectedCellPadding;
 	
+	if(currentlySelectedPal !=""){
+		switch(selectedActionBox){
+			case "id_actionBox_changeCellColor":
+				document.getElementById(cellId).style.backgroundColor = document.getElementById(currentlySelectedPal).style.backgroundColor;
+			break;
+			default: // do nothig!!
+			break;
+		}
+		reDrawPixelBox_1();
+		reDrawPixelBox_2();
+	}
+	
+	
+	
+	
+	
+	
+	
+	
 }
 /********   END__SECTION__[   JavaScript DOM Event Handling Functions   ]   ********/
 
@@ -436,6 +486,53 @@ function changeColorTo(clickedColor){
 	
 	document.title = "clickedColor=["+clickedColor+"] and ["+document.getElementById(clickedColor).style.backgroundColor+"]";
 }
+
+
+
+function selectActionBox(actionBoxId){
+	
+
+	document.getElementById("id_actionBox_nothing").className = "actionButtonNotSelected";
+	document.getElementById("id_actionBox_changeCellColor").className = "actionButtonNotSelected";
+	document.getElementById("id_actionBox_c").className = "actionButtonNotSelected";
+	document.getElementById("id_actionBox_d").className = "actionButtonNotSelected";
+	document.getElementById("id_actionBox_e").className = "actionButtonNotSelected";
+	document.getElementById("id_actionBox_f").className = "actionButtonNotSelected";
+	document.getElementById("id_actionBox_g").className = "actionButtonNotSelected";
+	document.getElementById("id_actionBox_h").className = "actionButtonNotSelected";
+	document.getElementById("id_actionBox_i").className = "actionButtonNotSelected";
+	document.getElementById("id_actionBox_j").className = "actionButtonNotSelected";
+	document.getElementById("id_actionBox_k").className = "actionButtonNotSelected";
+	document.getElementById("id_actionBox_l").className = "actionButtonNotSelected";
+
+	document.getElementById(actionBoxId).className = "actionButtonSelected";
+	selectedActionBox = "id_actionBox_changeCellColor";
+	
+	switch(actionBoxId){
+		case "id_actionBox_changeCellColor":
+		break;
+		default: // Also NOTHING
+			
+			selectedActionBox = "id_actionBox_nothing";
+			document.getElementById("id_actionBox_nothing").className = "actionButtonNotSelected";
+		break;
+	}
+	
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 /********   END__SECTION__[   General Functions   ]   ********/
 
 /********   SECTION__GO!__[   My Utility Functions   ]   ********/
@@ -606,7 +703,7 @@ function documentwriteInitialPixelBox_2(){
 
 
 
-
+<br><br>
 
 
 
@@ -614,22 +711,22 @@ function documentwriteInitialPixelBox_2(){
 What do you want to happen when you click/tap on a cell in the Edit Box:
 
 (To-Do) Add in a series of option tags in a dropbox to allow the user to select the action that will occur when they click/tap on a cell; i.e.: [Change The 'Selected Cell' Color To The 'Selected Color Palette Box' Color From The Color Palette Boxs Below]
+<br><br>
 
-
-
-<div id="a" class="actionButtonNotSelected"></div>
-<div id="b" class="actionButtonNotSelected"></div>
-<div id="c" class="actionButtonNotSelected"></div>
-<div id="d" class="actionButtonNotSelected"></div>
-<div id="e" class="actionButtonNotSelected"></div>
-<div id="f" class="actionButtonNotSelected"></div>
-<div id="g" class="actionButtonNotSelected"></div>
-<div id="h" class="actionButtonNotSelected"></div>
-<div id="i" class="actionButtonNotSelected"></div>
-<div id="j" class="actionButtonNotSelected"></div>
-<div id="k" class="actionButtonNotSelected"></div>
-<div id="l" class="actionButtonNotSelected"></div>
-
+<div style="display:block;vertical-align:top;">
+<div id="id_actionBox_nothing" onclick="selectActionBox(this.id);" class="actionButtonSelected">ONLY&nbsp;Select (change&nbsp;nothing!)</div>
+<div id="id_actionBox_changeCellColor" onclick="selectActionBox(this.id);" class="actionButtonNotSelected">Change&nbsp;Cell&nbsp;Color<br><br></div>
+<div id="id_actionBox_c" onclick="selectActionBox(this.id);" class="actionButtonNotSelected"><br><br></div>
+<div id="id_actionBox_d" onclick="selectActionBox(this.id);" class="actionButtonNotSelected"><br><br></div>
+<div id="id_actionBox_e" onclick="selectActionBox(this.id);" class="actionButtonNotSelected"><br><br></div>
+<div id="id_actionBox_f" onclick="selectActionBox(this.id);" class="actionButtonNotSelected"><br><br></div>
+<div id="id_actionBox_g" onclick="selectActionBox(this.id);" class="actionButtonNotSelected"><br><br></div>
+<div id="id_actionBox_h" onclick="selectActionBox(this.id);" class="actionButtonNotSelected"><br><br></div>
+<div id="id_actionBox_i" onclick="selectActionBox(this.id);" class="actionButtonNotSelected"><br><br></div>
+<div id="id_actionBox_j" onclick="selectActionBox(this.id);" class="actionButtonNotSelected"><br><br></div>
+<div id="id_actionBox_k" onclick="selectActionBox(this.id);" class="actionButtonNotSelected"><br><br></div>
+<div id="id_actionBox_l" onclick="selectActionBox(this.id);" class="actionButtonNotSelected"><br><br></div>
+</div>
 
 
 
@@ -641,7 +738,7 @@ What do you want to happen when you click/tap on a cell in the Edit Box:
 
 
 
-
+<br><br>
 
 
 
@@ -669,7 +766,7 @@ function documentwriteInitialColorPal(){
 	colB = 0;
 	
 	
-	i = 1;
+	i = 0;
 	
 	for(ir=0;ir<8;ir++){
 		for(ic=0;ic<16;ic++){
