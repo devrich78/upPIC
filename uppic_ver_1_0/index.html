@@ -121,6 +121,34 @@ div.div_actionsBox{
 	font-size:14px;
 }
 
+div.actionButtonNotSelected{
+	border:2px solid #0f0f0f;
+	padding:2px;
+	margin:0px;
+	
+	width:24px;
+	height:24px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*  0 ~ 127 ( 128 total colors in the 'Basic Color Palette'  GENERAL SETTINGS FOR ALL OF THEM!!  */
@@ -575,44 +603,57 @@ function documentwriteInitialPixelBox_2(){
 
 
 
+
+
+
+
+
+<div class="div_actionsBox" id="id_actionsBox">
+What do you want to happen when you click/tap on a cell in the Edit Box:
+
+(To-Do) Add in a series of option tags in a dropbox to allow the user to select the action that will occur when they click/tap on a cell; i.e.: [Change The 'Selected Cell' Color To The 'Selected Color Palette Box' Color From The Color Palette Boxs Below]
+
+
+
+<div id="a" class="actionButtonNotSelected"></div>
+<div id="b" class="actionButtonNotSelected"></div>
+<div id="c" class="actionButtonNotSelected"></div>
+<div id="d" class="actionButtonNotSelected"></div>
+<div id="e" class="actionButtonNotSelected"></div>
+<div id="f" class="actionButtonNotSelected"></div>
+<div id="g" class="actionButtonNotSelected"></div>
+<div id="h" class="actionButtonNotSelected"></div>
+<div id="i" class="actionButtonNotSelected"></div>
+<div id="j" class="actionButtonNotSelected"></div>
+<div id="k" class="actionButtonNotSelected"></div>
+<div id="l" class="actionButtonNotSelected"></div>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <div class="div_uPcolorPal" id="id_uPcolorPal">
 
 <script type="text/JavaScript">
-/*
-function documentwriteInitialColorPal(){
-	tmpStr = "";
-	colIncrement = 80;
-	colR = -colIncrement;
-	colG = 64;
-	colB = 128;
-	for(ir=0;ir<256;ir++){
-		for(ic=0;ic<64;ic++){
-			colR += colIncrement;
-			if(colR > 255){
-				colR = 0;
-				colG += colIncrement;
-				if(colG > 255){
-					colG = 0;
-					colB += colIncrement;
-					if(colB > 255){
-						colB = 255;
-					}
-				}
-			}
-			tmpStr+=("<div id=\""+""+"\"          class=\"div_colorPal\" style=\"background-color:RGB("+colR.toString()+","+colG.toString()+","+colB.toString()+");\"></div>");
-		}
-		tmpStr+="<br>"; // NEW LINE To break each row into it's own row vs all uPgridCell's sticking together!
-	}
-	document.getElementById("id_uPcolorPal").innerHTML=tmpStr;
-}
-
-documentwriteInitialColorPal();
-*/
-
-
-
-
-
 
 
 
@@ -660,67 +701,21 @@ documentwriteInitialColorPal();
 
 
 
-<div class="div_actionsBox" id="id_actionsBox">
-What do you want to happen when you click/tap on a cell:
 
-(To-Do) Add in a series of option tags in a dropbox to allow the user to select the action that will occur when they click/tap on a cell; i.e.: [Change The 'Selected Cell' Color To The 'Selected Color Palette Box' Color From The Color Palette Boxs Below]
-</div>
+
+
+
+
+
+
+
+
+
 
 
 
 
 </div><br>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
