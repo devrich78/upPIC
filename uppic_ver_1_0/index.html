@@ -4,6 +4,26 @@
 <meta charset="UTF-8">
 <title>[:.:] - upPIC - Version 1.0</title>
 <style type="text/css">
+
+	/* DON'T ALLOW SELECTING! */
+			div.div_uPeditBox,div.div_uPeditCell,div.div_uPpixelBox1,div.div_uPpixelBox1Cell,div.div_uPpixelBox2,div.div_uPpixelBox2Cell,div.div_uPpixelBox4,div.div_uPpixelBox4Cell,div.css_colorPalBox,div.css_colorPalCell,
+			div.actionButtonNotSelected,div.actionButtonSelected,
+			div.pal0,div.pal1,div.pal2,div.pal3,div.pal4,div.pal5,div.pal6,div.pal7,div.pal8,div.pal9,div.pal10,div.pal11,div.pal12,div.pal13,div.pal14,div.pal15,div.pal16,div.pal17,div.pal18,div.pal19,div.pal20,div.pal21,div.pal22,div.pal23,div.pal24,div.pal25,
+div.pal26,div.pal27,div.pal28,div.pal29,div.pal30,div.pal31,div.pal32,div.pal33,div.pal34,div.pal35,div.pal36,div.pal37,div.pal38,div.pal39,div.pal40,div.pal41,div.pal42,div.pal43,div.pal44,div.pal45,div.pal46,div.pal47,div.pal48,div.pal49,div.pal50,
+div.pal51,div.pal52,div.pal53,div.pal54,div.pal55,div.pal56,div.pal57,div.pal58,div.pal59,div.pal60,div.pal61,div.pal62,div.pal63,div.pal64,div.pal65,div.pal66,div.pal67,div.pal68,div.pal69,div.pal70,div.pal71,div.pal72,div.pal73,div.pal74,div.pal75,
+div.pal76,div.pal77,div.pal78,div.pal79,div.pal80,div.pal81,div.pal82,div.pal83,div.pal84,div.pal85,div.pal86,div.pal87,div.pal88,div.pal89,div.pal90,div.pal91,div.pal92,div.pal93,div.pal94,div.pal95,div.pal96,div.pal97,div.pal98,div.pal99,div.pal100,
+div.pal101,div.pal102,div.pal103,div.pal104,div.pal105,div.pal106,div.pal107,div.pal108,div.pal109,div.pal110,div.pal111,div.pal112,div.pal113,div.pal114,div.pal115,div.pal116,div.pal117,div.pal118,div.pal119,div.pal120,div.pal121,div.pal122,div.pal123,
+div.pal124,div.pal125,div.pal126,div.pal127 {
+				-webkit-touch-callout: none;
+				-webkit-user-select: none;
+				-khtml-user-select: none;
+				-moz-user-select: none;
+				-ms-user-select: none;
+
+			}
+	/* DON'T ALLOW SELECTING! */
+
+
 div.div_primarydivcontainer{
 	text-align:center;
 }
@@ -27,7 +47,15 @@ div.div_uPeditCell{
 	padding:1px; /* NOTE: This is used to allow a border to appear/disappear so leave it as 1px !! */
 	
 	font-family:Ubuntu;
-	font-size:2px;
+	font-size:10px;
+	
+	
+	
+	
+	
+	
+	
+	
 }
 
 
@@ -342,8 +370,8 @@ div.pal126{background-color:#993333;} div.pal127{background-color:#000000;}
 			
 
 
-	var currentlySelectedColor; // The RGB/HEX color value of the selected color
-	var currentlySelectedPal = ""; // The div ID of the currently selected color
+	var currentlySelectedColor = "000000"; // The RGB/HEX color value of the selected color
+	var currentlySelectedPal = "id_pal127"; // The div ID of the currently selected color
 	
 	
 	var selectedActionBox = "id_actionBox_nothing"; // This is the html DIV "id" of the Action Box that is currently selected!!
@@ -380,7 +408,10 @@ function reDrawEditGrid(){
 	for(iy=0;iy<upPICmaxCols;iy++){
 		for(ix=0;ix<upPICmaxRows;ix++){
 			id = cellPrefix+"C"+iy.toString()+"_R"+ix.toString();
-			document.getElementById(id).innerHTML = "";// id;
+			if(parseFloat(document.getElementById(id).style.opacity) < 1.0){
+			}else{
+				document.getElementById(id).innerHTML = "&nbsp;";
+			}
 		}
 	}
 }
@@ -463,10 +494,14 @@ function clickedEditCell(cellId){
 				document.getElementById(cellId).style.backgroundColor = document.getElementById(currentlySelectedPal).style.backgroundColor;
 			break;
 			case "id_actionBox_setAlphaValue":
+				document.getElementById(cellId).innerHTML = "<span style=\"margin:0px;padding:0px;display:inline;\">A="+alphaAmount.toString()+"</span>";
 				document.getElementById(cellId).style.opacity = alphaAmount;
-				document.getElementById(cellId).innerHTML = "A="+alphaAmount.toString();
+
+				reDrawEditGrid(); // REDRAW the edit grid here so that the   A=   values can have a chance to get removed if the cell's style.opacity = 1.0
+
 			break;
 			default: // do nothig!!
+			document.title = "default and no action chosen.........................";
 			break;
 		}
 		reDrawPixelBox_1();
@@ -574,7 +609,6 @@ function selectActionBox(actionBoxId){
 	document.getElementById("id_actionBox_l").className = "actionButtonNotSelected";
 
 	document.getElementById(actionBoxId).className = "actionButtonSelected";
-	selectedActionBox = "id_actionBox_changeCellColor";
 	
 	switch(actionBoxId){
 		case "id_actionBox_changeCellColor":
@@ -582,6 +616,7 @@ function selectActionBox(actionBoxId){
 		break;
 		case "id_actionBox_setAlphaValue":
 			selectedActionBox = "id_actionBox_setAlphaValue";
+		break;
 		default: // Also NOTHING
 			
 			selectedActionBox = "id_actionBox_nothing";
@@ -688,7 +723,7 @@ function initMeNow(){
 <div class="div_primarydivcontainer" id="id_primarydivcontainer" style="display:block;text-align:center;width:100%;">
 
 <div style="display:inline-block;">
-<div class="div_uPeditBox" id="id_uPeditBox" style="display:table-cell">
+<div class="div_uPeditBox" id="id_uPeditBox" style="display:table-cell;background-image:url('bg8x8.jpg');">
 
 <script type="text/JavaScript">
 function documentwriteInitialEditGrid(){
@@ -718,7 +753,7 @@ function documentwriteInitialEditGrid(){
 			document.title = "id===="+id;
 			//document.title = "bgcolor===="+bgcolor;
 			
-			tmpStr+=("<div class=\"div_uPeditCell\" id=\""+id+"\" onclick=\"clickedEditCell('"+id+"');\" onmousemove=\"overEditCell('"+id+"');\" style=\"width:"+upPICcellScaleX+";height:"+upPICcellScaleY+";background-color:#"+bgcolor+";\"></div>");
+			tmpStr+=("<div class=\"div_uPeditCell\" id=\""+id+"\" onclick=\"clickedEditCell('"+id+"');\" onmousemove=\"overEditCell('"+id+"');\" style=\"width:"+upPICcellScaleX+";height:"+upPICcellScaleY+";background-color:#"+bgcolor+";\">a</div>");
 		}
 		tmpStr+="<br>"; // NEW LINE To break each row into it's own row vs all uPgridCell's sticking together!
 	}
@@ -876,7 +911,14 @@ What do you want to happen when you click/tap on a cell in the Edit Box:
 <div style="display:block;vertical-align:top;">
 <div id="id_actionBox_nothing" onclick="selectActionBox(this.id);" class="actionButtonSelected">ONLY&nbsp;Select (change&nbsp;nothing!)</div>
 <div id="id_actionBox_changeCellColor" onclick="selectActionBox(this.id);" class="actionButtonNotSelected">Change&nbsp;Cell&nbsp;Color<br><br></div>
+
+<br><br>
+<div style="display:inline-block;width:320px;padding:8px;border:2px solid #44449F;">NOTE: Set to 1.0 to remove the Alpha altogether!<br><br>
 <div id="id_actionBox_setAlphaValue" onclick="selectActionBox(this.id);" class="actionButtonNotSelected">Set&nbsp;The&nbsp;Alpha&nbsp;Value<br>A:<input type="text" id="input_alphaAmount" value="1.0" onchange="verifyMyAlpha(this.value);" style="width:100px;"><br></div>
+<br><br>NOTE: Any cell you click on with an Alpha value less than 1.0 will keep that Alpha Value!<br>This is veyr useful if you want to keep the Alpha Value but want to try different colors to see which color better fits ;-)
+</div>
+<br><br>
+
 <div id="id_actionBox_d" onclick="selectActionBox(this.id);" class="actionButtonNotSelected"><br><br></div>
 <div id="id_actionBox_e" onclick="selectActionBox(this.id);" class="actionButtonNotSelected"><br><br></div>
 <div id="id_actionBox_f" onclick="selectActionBox(this.id);" class="actionButtonNotSelected"><br><br></div>
