@@ -118,11 +118,23 @@ div.div_uPpixelBox4Cell{
 
 
 
-div.div_colorPal{
+div.css_colorPalBox{
+	display:inline-block;
+
+	border: #44aaff groove 4px;
+	
+	margin:0px;
+	padding:3px;
+
+	font-family:Ubuntu;
+	font-size:2px;
+
+}
+div.css_colorPalCell{
 	display:inline-block;
 	
-	width:16px;
-	height:16px;
+	width:12px;
+	height:12px;
 	margin:0px;
 	padding:0px;
 
@@ -336,6 +348,7 @@ div.pal126{background-color:#993333;} div.pal127{background-color:#000000;}
 	
 	var selectedActionBox = "id_actionBox_nothing"; // This is the html DIV "id" of the Action Box that is currently selected!!
 	
+	var alphaAmount = 1.0; // 0.0 ~ 1.0 -- the amount of alpha that the editbox cell has to it ( 0.0 == 100% trnasparent and 1.0 == fully solid )
 	
 	
 	
@@ -449,6 +462,10 @@ function clickedEditCell(cellId){
 			case "id_actionBox_changeCellColor":
 				document.getElementById(cellId).style.backgroundColor = document.getElementById(currentlySelectedPal).style.backgroundColor;
 			break;
+			case "id_actionBox_setAlphaValue":
+				document.getElementById(cellId).style.opacity = alphaAmount;
+				document.getElementById(cellId).innerHTML = "A="+alphaAmount.toString();
+			break;
 			default: // do nothig!!
 			break;
 		}
@@ -545,7 +562,7 @@ function selectActionBox(actionBoxId){
 
 	document.getElementById("id_actionBox_nothing").className = "actionButtonNotSelected";
 	document.getElementById("id_actionBox_changeCellColor").className = "actionButtonNotSelected";
-	document.getElementById("id_actionBox_c").className = "actionButtonNotSelected";
+	document.getElementById("id_actionBox_setAlphaValue").className = "actionButtonNotSelected";
 	document.getElementById("id_actionBox_d").className = "actionButtonNotSelected";
 	document.getElementById("id_actionBox_e").className = "actionButtonNotSelected";
 	document.getElementById("id_actionBox_f").className = "actionButtonNotSelected";
@@ -561,7 +578,10 @@ function selectActionBox(actionBoxId){
 	
 	switch(actionBoxId){
 		case "id_actionBox_changeCellColor":
+			selectedActionBox = "id_actionBox_changeCellColor";
 		break;
+		case "id_actionBox_setAlphaValue":
+			selectedActionBox = "id_actionBox_setAlphaValue";
 		default: // Also NOTHING
 			
 			selectedActionBox = "id_actionBox_nothing";
@@ -575,7 +595,15 @@ function selectActionBox(actionBoxId){
 
 
 
-
+function verifyMyAlpha(alphaValue){
+	alphaValue = parseFloat(alphaValue);
+	
+	if(alphaValue < 0.0){alphaValue = 0.0;}
+	if(alphaValue > 1.0){alphaValue = 1.0;}
+	
+	alphaAmount = alphaValue;
+	document.getElementById("input_alphaAmount").value = alphaValue;
+}
 
 
 
@@ -657,10 +685,10 @@ function initMeNow(){
 </head>
 <body>
 
-<div class="div_primarydivcontainer" id="id_primarydivcontainer">
+<div class="div_primarydivcontainer" id="id_primarydivcontainer" style="display:block;text-align:center;width:100%;">
 
-
-<div class="div_uPeditBox" id="id_uPeditBox">
+<div style="display:inline-block;">
+<div class="div_uPeditBox" id="id_uPeditBox" style="display:table-cell">
 
 <script type="text/JavaScript">
 function documentwriteInitialEditGrid(){
@@ -701,6 +729,58 @@ function documentwriteInitialEditGrid(){
 
 
 </div>
+
+
+
+
+
+
+
+<div class="css_uPcolorPalBox" id="id_uPcolorPalBox" style="display:table-cell;width:320px;">
+
+<script type="text/JavaScript">
+
+
+
+
+function documentwriteInitialColorPal(){
+	tmpStr = "";
+	colDir = 1; // 1 goes UP and !1 goes DOWN
+	colIncrement = 32;
+	colR = 0;
+	colG = 255;
+	colB = 0;
+	
+	
+	i = 0;
+	
+	for(ir=0;ir<8;ir++){
+		for(ic=0;ic<16;ic++){
+			tmpStr+=("<div id=\"id_pal"+i.toString()+"\"     onclick=\"changeColorTo(this.id);\"     class=\"pal"+i.toString()+"\" style=\"background-color:#"+colorPalArr[i]+";\"></div>");
+			i++;
+			if(i > 127){i=127;}
+		}
+//		tmpStr+="<br>"; // NEW LINE To break each row into it's own row vs all uPgridCell's sticking together!
+	}
+	document.getElementById("id_uPcolorPalBox").innerHTML=tmpStr;
+}
+
+documentwriteInitialColorPal();
+
+
+</script>
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+
 
 
 
@@ -796,7 +876,7 @@ What do you want to happen when you click/tap on a cell in the Edit Box:
 <div style="display:block;vertical-align:top;">
 <div id="id_actionBox_nothing" onclick="selectActionBox(this.id);" class="actionButtonSelected">ONLY&nbsp;Select (change&nbsp;nothing!)</div>
 <div id="id_actionBox_changeCellColor" onclick="selectActionBox(this.id);" class="actionButtonNotSelected">Change&nbsp;Cell&nbsp;Color<br><br></div>
-<div id="id_actionBox_c" onclick="selectActionBox(this.id);" class="actionButtonNotSelected"><br><br></div>
+<div id="id_actionBox_setAlphaValue" onclick="selectActionBox(this.id);" class="actionButtonNotSelected">Set&nbsp;The&nbsp;Alpha&nbsp;Value<br>A:<input type="text" id="input_alphaAmount" value="1.0" onchange="verifyMyAlpha(this.value);" style="width:100px;"><br></div>
 <div id="id_actionBox_d" onclick="selectActionBox(this.id);" class="actionButtonNotSelected"><br><br></div>
 <div id="id_actionBox_e" onclick="selectActionBox(this.id);" class="actionButtonNotSelected"><br><br></div>
 <div id="id_actionBox_f" onclick="selectActionBox(this.id);" class="actionButtonNotSelected"><br><br></div>
@@ -830,49 +910,6 @@ What do you want to happen when you click/tap on a cell in the Edit Box:
 
 
 
-<div class="div_uPcolorPal" id="id_uPcolorPal">
-
-<script type="text/JavaScript">
-
-
-
-
-function documentwriteInitialColorPal(){
-	tmpStr = "";
-	colDir = 1; // 1 goes UP and !1 goes DOWN
-	colIncrement = 32;
-	colR = 0;
-	colG = 255;
-	colB = 0;
-	
-	
-	i = 0;
-	
-	for(ir=0;ir<8;ir++){
-		for(ic=0;ic<16;ic++){
-			tmpStr+=("<div id=\"id_pal"+i.toString()+"\"     onclick=\"changeColorTo(this.id);\"     class=\"pal"+i.toString()+"\" style=\"background-color:#"+colorPalArr[i]+";\"></div>");
-			i++;
-			if(i > 127){i=127;}
-		}
-		tmpStr+="<br>"; // NEW LINE To break each row into it's own row vs all uPgridCell's sticking together!
-	}
-	document.getElementById("id_uPcolorPal").innerHTML=tmpStr;
-}
-
-documentwriteInitialColorPal();
-
-
-
-
-
-
-
-
-
-
-</script>
-
-</div>
 
 
 
