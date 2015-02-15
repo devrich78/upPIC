@@ -60,6 +60,7 @@ div.div_uPpixelBox1Cell{
 
 }
 
+
 div.div_uPpixelBox2{
 	display:inline-block;
 	border: #00AAFF groove 2px;
@@ -79,6 +80,32 @@ div.div_uPpixelBox2Cell{
 	height:2px;
 	margin:0px;
 	padding:1px;
+	
+	font-family:Ubuntu;
+	font-size:2px;
+
+}
+
+
+div.div_uPpixelBox4{
+	display:inline-block;
+	border: #00AAFF groove 2px;
+	font-family:Ubuntu;
+	font-size:2px;
+
+	margin:0px;
+	padding:3px;
+	background-color:#1f1f1f;
+
+	
+}
+div.div_uPpixelBox4Cell{
+	display:inline-block;
+
+	width:4px;
+	height:4px;
+	margin:0px;
+	padding:0px;
 	
 	font-family:Ubuntu;
 	font-size:2px;
@@ -263,8 +290,8 @@ div.pal126{background-color:#993333;} div.pal127{background-color:#000000;}
 	var upPICmaxCols = 16; // NOTE: this is base-one so 1-64 NOT 0-63 !!!!
 	var upPICmaxRows = 16; // NOTE: this is base-one so 1-64 NOT 0-63 !!!!
 	
-	var upPICcellScaleX = "16px"; // (MUST BE IN "px") NOTE: This is the scale used to scale the clickable grid
-	var upPICcellScaleY = "16px"; // (MUST BE IN "px") NOTE: This is the scale used to scale the clickable grid
+	var upPICcellScaleX = "27px"; // (MUST BE IN "px") NOTE: This is the scale used to scale the clickable grid
+	var upPICcellScaleY = "27px"; // (MUST BE IN "px") NOTE: This is the scale used to scale the clickable grid
 	
 	var cellPrefix = "id_uPc_"; // ( changed it to "uPc_" short form of "uPgridCell" to improve script responsiveness) This prefix is used to help ensure uniqueness between various HTML tag elements..
 	
@@ -427,6 +454,7 @@ function clickedEditCell(cellId){
 		}
 		reDrawPixelBox_1();
 		reDrawPixelBox_2();
+		reDrawPixelBox_4();
 	}
 	
 	
@@ -447,11 +475,11 @@ function reDrawPixelBox_1(){
 			for(ic=0;ic<upPICmaxRows;ic++){
 				id = cellPrefix+"C"+ic.toString()+"_R"+ir.toString();
 				idP = cellPrefix+"p1_C_"+ic.toString()+"_R"+ir.toString();
-				if(id != currentlySelectedCell){
+//				if(id != currentlySelectedCell){
 					
 					document.getElementById(idP).style.backgroundColor = document.getElementById(id).style.backgroundColor;
 					
-				}
+//				}
 			}
 		}
 }
@@ -462,16 +490,39 @@ function reDrawPixelBox_2(){
 			for(ic=0;ic<upPICmaxRows;ic++){
 				id = cellPrefix+"C"+ic.toString()+"_R"+ir.toString();
 				idP2 = cellPrefix+"p2_C_"+ic.toString()+"_R"+ir.toString();
-				if(id != currentlySelectedCell){
+//				if(id != currentlySelectedCell){
 					
 					document.getElementById(idP2).style.backgroundColor = document.getElementById(id).style.backgroundColor;
+/*
 					document.getElementById(idP2).style.borderColor  = cellBorderGridP2Color;
 					document.getElementById(idP2).style.borderStyle  = cellBorderGridP2Style;
 					document.getElementById(idP2).style.borderWidth  = cellBorderGridP2Width;
 					document.getElementById(idP2).style.margin       = cellBorderGridP2Margin;
 					document.getElementById(idP2).style.padding      = cellBorderGridP2Padding;
+*/
+//				}
+			}
+		}
+}
+
+
+function reDrawPixelBox_4(){
+//					document.title = "Go!";
+		for(ir=0;ir<upPICmaxCols;ir++){
+			for(ic=0;ic<upPICmaxRows;ic++){
+				id = cellPrefix+"C"+ic.toString()+"_R"+ir.toString();
+				idP4 = cellPrefix+"p4_C_"+ic.toString()+"_R"+ir.toString();
+//				if(id != currentlySelectedCell){
 					
-				}
+					document.getElementById(idP4).style.backgroundColor = document.getElementById(id).style.backgroundColor;
+/*
+					document.getElementById(idP4).style.borderColor  = cellBorderGridP4Color;
+					document.getElementById(idP4).style.borderStyle  = cellBorderGridP4Style;
+					document.getElementById(idP4).style.borderWidth  = cellBorderGridP4Width;
+					document.getElementById(idP4).style.margin       = cellBorderGridP4Margin;
+					document.getElementById(idP4).style.padding      = cellBorderGridP4Padding;
+*/
+//				}
 			}
 		}
 }
@@ -481,10 +532,10 @@ function changeColorTo(clickedColor){
 	currentlySelectedColor = document.getElementById(clickedColor).style.backgroundColor;
 	currentlySelectedPal = clickedColor;
 	if(currentlySelectedCell != ""){
-		document.getElementById(currentlySelectedCell).style.backgroundColor = document.getElementById(clickedColor).style.backgroundColor;
+		//document.getElementById(currentlySelectedCell).style.backgroundColor = document.getElementById(clickedColor).style.backgroundColor;
 	}
 	
-	document.title = "clickedColor=["+clickedColor+"] and ["+document.getElementById(clickedColor).style.backgroundColor+"]";
+//	document.title = "clickedColor=["+clickedColor+"] and ["+document.getElementById(clickedColor).style.backgroundColor+"]";
 }
 
 
@@ -591,6 +642,10 @@ function initMeNow(){
 		documentwriteInitialPixelBox_2(); // MUST BE CALLED _AFTER_ THE CALL TO documentwriteInitialEditGrid() !!!!
 		reDrawPixelBox_2()
 
+	/*  Write and draw the PixelBox for 2px size and with grid */
+		documentwriteInitialPixelBox_4(); // MUST BE CALLED _AFTER_ THE CALL TO documentwriteInitialEditGrid() !!!!
+		reDrawPixelBox_4()
+
 
 	/*  This must be called __AFTER__ all of the pixel boxes and the edit box are all drawn */
 		reDrawEditGridLines(); // Redraws all of the borders around the Grid boxes ( NOTE: This should be called sparingly as it uses a lot of JavaScript CPU processing power when called! )
@@ -693,6 +748,31 @@ function documentwriteInitialPixelBox_2(){
 		tmpStr+="<br>"; // NEW LINE To break each row into it's own row vs all uPgridCell's sticking together!
 	}
 	document.getElementById("id_uPpixelBox2").innerHTML=tmpStr;
+}
+
+</script>
+
+</div>
+
+
+
+
+<div class="div_uPpixelBox4" id="id_uPpixelBox4">
+
+<script type="text/JavaScript">
+function documentwriteInitialPixelBox_4(){
+	tmpStr = "";
+	for(ir=0;ir<upPICmaxCols;ir++){
+		for(ic=0;ic<upPICmaxRows;ic++){
+		
+		
+			id = cellPrefix+"C"+ic.toString()+"_R"+ir.toString();
+			idP4 = cellPrefix+"p4_C_"+ic.toString()+"_R"+ir.toString();
+			tmpStr+=("<div id=\""+idP4+"\"          class=\"div_uPpixelBox4Cell\" style=\"background-color:"+document.getElementById(id).style.backgroundColor+";\"></div>");
+		}
+		tmpStr+="<br>"; // NEW LINE To break each row into it's own row vs all uPgridCell's sticking together!
+	}
+	document.getElementById("id_uPpixelBox4").innerHTML=tmpStr;
 }
 
 </script>
