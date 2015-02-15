@@ -21,7 +21,16 @@ div.pal124,div.pal125,div.pal126,div.pal127 {
 				-ms-user-select: none;
 
 			}
-	/* DON'T ALLOW SELECTING! */
+	/* end:DON'T ALLOW SELECTING! */
+
+
+	/*  Add Rounded Borders  */
+		div.actionButtonSelected,div.actionButtonNotSelected {
+			-webkit-border-radius: 10px;  
+			border-radius: 10px;
+		}
+	/*  end:Add Rounded Borders  */
+
 
 
 div.div_primarydivcontainer{
@@ -914,7 +923,7 @@ What do you want to happen when you click/tap on a cell in the Edit Box:
 
 <br><br>
 <div style="display:inline-block;width:320px;padding:8px;border:2px solid #44449F;">NOTE: Set to 1.0 to remove the Alpha altogether!<br><br>
-<div id="id_actionBox_setAlphaValue" onclick="selectActionBox(this.id);" class="actionButtonNotSelected">Set&nbsp;The&nbsp;Alpha&nbsp;Value<br>A:<input type="text" id="input_alphaAmount" value="1.0" onchange="verifyMyAlpha(this.value);" style="width:100px;"><br></div>
+<div id="id_actionBox_setAlphaValue" onclick="selectActionBox(this.id);" class="actionButtonNotSelected">Set&nbsp;The&nbsp;Alpha&nbsp;Value<br>A:<input type="text" id="input_alphaAmount" value="1.0" onchange="verifyMyAlpha(this.value);" style="width:100px;"></div>
 <br><br>NOTE: Any cell you click on with an Alpha value less than 1.0 will keep that Alpha Value!<br>This is veyr useful if you want to keep the Alpha Value but want to try different colors to see which color better fits ;-)
 </div>
 <br><br>
@@ -974,6 +983,12 @@ What do you want to happen when you click/tap on a cell in the Edit Box:
 
 
 </div><br>
+
+
+
+
+
+
 
 
 
