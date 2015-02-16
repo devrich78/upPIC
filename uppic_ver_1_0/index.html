@@ -606,21 +606,24 @@ function changeColorTo(clickedColor){
 	currentlySelectedColor = document.getElementById(clickedColor).style.backgroundColor;
 	currentlySelectedPal = clickedColor;
 	
-	//document.getElementById(clickedColor).className="css_colorPalCellSelected";
-	
 	/*  Change the border to show it is selected -- MUST BE DONE IN JavaScript AS THE DIV ALREADY USES A SPECIFIC CSS CLASSNAME  */
 	
 		document.getElementById(clickedColor).style.borderStyle="groove";
 		document.getElementById(clickedColor).style.borderColor="#00afff";
 		
+		reDrawColorPal();
 	
-	
-	
-	if(currentlySelectedCell != ""){
-		//document.getElementById(currentlySelectedCell).style.backgroundColor = document.getElementById(clickedColor).style.backgroundColor;
+}
+
+
+function reDrawColorPal(){
+	i = 0;
+	for(i=0;i<127;i++){
+		if("id_pal"+i.toString() != currentlySelectedPal){
+			document.getElementById("id_pal"+i.toString()).style.borderStyle="solid";
+			document.getElementById("id_pal"+i.toString()).style.borderColor="#0f0f0f";
+		}
 	}
-	
-//	document.title = "clickedColor=["+clickedColor+"] and ["+document.getElementById(clickedColor).style.backgroundColor+"]";
 }
 
 
@@ -672,6 +675,13 @@ function verifyMyAlpha(alphaValue){
 	alphaAmount = alphaValue;
 	document.getElementById("input_alphaAmount").value = alphaValue;
 }
+
+
+
+
+
+
+
 
 
 
@@ -824,7 +834,7 @@ function documentwriteInitialColorPal(){
 	
 	for(ir=0;ir<8;ir++){
 		for(ic=0;ic<16;ic++){
-			tmpStr+=("<div id=\"id_pal"+i.toString()+"\"     onclick=\"changeColorTo(this.id);\"     class=\"pal"+i.toString()+"\" style=\"background-color:#"+colorPalArr[i]+";border-width:4px;;border-style:solid;border-color:#0f0f0f;\"></div>");
+			tmpStr+=("<div id=\"id_pal"+i.toString()+"\"     onclick=\"changeColorTo(this.id);\"     class=\"pal"+i.toString()+"\" style=\"background-color:#"+colorPalArr[i]+";border-width:4px;border-style:solid;border-color:#0f0f0f;\"></div>");
 			i++;
 			if(i > 127){i=127;}
 		}
