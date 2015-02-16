@@ -41,7 +41,7 @@ div.div_uPeditBox{
 	display:inline-block;
 	border: #00AAFF groove 8px;
 	font-family:Ubuntu;
-	font-size:2px;
+	font-size:8px;
 	
 	margin:0px;
 	padding:3px;
@@ -444,6 +444,7 @@ function reDrawEditGridLines(){
 			for(ir=0;ir<upPICmaxRows;ir++){
 				id = cellPrefix+"C"+ic.toString()+"_R"+ir.toString();
 				idP2 = cellPrefix+"p2_C_"+ic.toString()+"_R"+ir.toString();
+				idP2a = cellPrefix+"p2a_C_"+ic.toString()+"_R"+ir.toString();
 				if(id != currentlySelectedCell){
 					document.getElementById(id).style.borderColor = cellBorderGridColor;
 					document.getElementById(id).style.borderStyle = cellBorderGridStyle;
@@ -456,6 +457,12 @@ function reDrawEditGridLines(){
 					document.getElementById(idP2).style.borderWidth = cellBorderGridP2Width;
 					document.getElementById(idP2).style.margin      = cellBorderGridP2Margin;
 					document.getElementById(idP2).style.padding     = cellBorderGridP2Padding;
+
+					document.getElementById(idP2a).style.borderColor = cellBorderGridP2Color;
+					document.getElementById(idP2a).style.borderStyle = cellBorderGridP2Style;
+					document.getElementById(idP2a).style.borderWidth = cellBorderGridP2Width;
+					document.getElementById(idP2a).style.margin      = cellBorderGridP2Margin;
+					document.getElementById(idP2a).style.padding     = cellBorderGridP2Padding;
 				}else{
 					document.getElementById(id).style.borderColor  = selectedCellColor;
 					document.getElementById(id).style.borderStyle  = selectedCellStyle;
@@ -468,6 +475,12 @@ function reDrawEditGridLines(){
 					document.getElementById(idP2).style.borderWidth  = selectedCellP2Width;
 					document.getElementById(idP2).style.margin       = selectedCellP2Margin;
 					document.getElementById(idP2).style.padding      = selectedCellP2Padding;
+					
+					document.getElementById(idP2a).style.borderColor  = selectedCellP2Color;
+					document.getElementById(idP2a).style.borderStyle  = selectedCellP2Style;
+					document.getElementById(idP2a).style.borderWidth  = selectedCellP2Width;
+					document.getElementById(idP2a).style.margin       = selectedCellP2Margin;
+					document.getElementById(idP2a).style.padding      = selectedCellP2Padding;
 					
 					
 				}
@@ -516,7 +529,7 @@ function clickedEditCell(cellId){
 				document.getElementById(cellId).style.backgroundColor = document.getElementById(currentlySelectedPal).style.backgroundColor;
 			break;
 			case "id_actionBox_setAlphaValue":
-				document.getElementById(cellId).innerHTML = "<span style=\"margin:0px;padding:0px;display:inline;\">A="+alphaAmount.toString()+"</span>";
+				document.getElementById(cellId).innerHTML = "<div style=\"display:inline-block;margin:0px;padding:0px;display:inline;color:#000000;opacity:1.0;\">A="+alphaAmount.toString()+"</div>";
 				document.getElementById(cellId).style.opacity = alphaAmount;
 
 				reDrawEditGrid(); // REDRAW the edit grid here so that the   A=   values can have a chance to get removed if the cell's style.opacity = 1.0
@@ -544,59 +557,41 @@ function clickedEditCell(cellId){
 /********   SECTION__GO!__[   General Functions   ]   ********/
 
 function reDrawPixelBox_1(){
-//					document.title = "Go!";
 		for(ir=0;ir<upPICmaxCols;ir++){
 			for(ic=0;ic<upPICmaxRows;ic++){
 				id = cellPrefix+"C"+ic.toString()+"_R"+ir.toString();
 				idP = cellPrefix+"p1_C_"+ic.toString()+"_R"+ir.toString();
-//				if(id != currentlySelectedCell){
-					
+				idPa = cellPrefix+"p1a_C_"+ic.toString()+"_R"+ir.toString();
 					document.getElementById(idP).style.backgroundColor = document.getElementById(id).style.backgroundColor;
-					
-//				}
+					document.getElementById(idPa).style.backgroundColor = document.getElementById(id).style.backgroundColor;
+					document.getElementById(idPa).style.opacity = document.getElementById(id).style.opacity;
 			}
 		}
 }
 
 function reDrawPixelBox_2(){
-//					document.title = "Go!";
 		for(ir=0;ir<upPICmaxCols;ir++){
 			for(ic=0;ic<upPICmaxRows;ic++){
 				id = cellPrefix+"C"+ic.toString()+"_R"+ir.toString();
 				idP2 = cellPrefix+"p2_C_"+ic.toString()+"_R"+ir.toString();
-//				if(id != currentlySelectedCell){
-					
+				idP2a = cellPrefix+"p2a_C_"+ic.toString()+"_R"+ir.toString();
 					document.getElementById(idP2).style.backgroundColor = document.getElementById(id).style.backgroundColor;
-/*
-					document.getElementById(idP2).style.borderColor  = cellBorderGridP2Color;
-					document.getElementById(idP2).style.borderStyle  = cellBorderGridP2Style;
-					document.getElementById(idP2).style.borderWidth  = cellBorderGridP2Width;
-					document.getElementById(idP2).style.margin       = cellBorderGridP2Margin;
-					document.getElementById(idP2).style.padding      = cellBorderGridP2Padding;
-*/
-//				}
+					document.getElementById(idP2a).style.backgroundColor = document.getElementById(id).style.backgroundColor;
+					document.getElementById(idP2a).style.opacity = document.getElementById(id).style.opacity;
 			}
 		}
 }
 
 
 function reDrawPixelBox_4(){
-//					document.title = "Go!";
 		for(ir=0;ir<upPICmaxCols;ir++){
 			for(ic=0;ic<upPICmaxRows;ic++){
 				id = cellPrefix+"C"+ic.toString()+"_R"+ir.toString();
 				idP4 = cellPrefix+"p4_C_"+ic.toString()+"_R"+ir.toString();
-//				if(id != currentlySelectedCell){
-					
+				idP4a = cellPrefix+"p4a_C_"+ic.toString()+"_R"+ir.toString();
 					document.getElementById(idP4).style.backgroundColor = document.getElementById(id).style.backgroundColor;
-/*
-					document.getElementById(idP4).style.borderColor  = cellBorderGridP4Color;
-					document.getElementById(idP4).style.borderStyle  = cellBorderGridP4Style;
-					document.getElementById(idP4).style.borderWidth  = cellBorderGridP4Width;
-					document.getElementById(idP4).style.margin       = cellBorderGridP4Margin;
-					document.getElementById(idP4).style.padding      = cellBorderGridP4Padding;
-*/
-//				}
+					document.getElementById(idP4a).style.backgroundColor = document.getElementById(id).style.backgroundColor;
+					document.getElementById(idP4a).style.opacity = document.getElementById(id).style.opacity;
 			}
 		}
 }
@@ -678,7 +673,30 @@ function verifyMyAlpha(alphaValue){
 
 
 
+function changeBGimage(imgNum){
+	switch(imgNum){
+		case 1:   // bg8x8.jpg        ( this is the 4 shades of blue horizontal lines )
+			bgIMG = "bg8x8.jpg";
+		break;
+		case 2:   // bg16x16v2.jpg    ( this is the grey and white  checkerboard )
+			bgIMG = "bg16x16v2.jpg";
+		break;
+		default: // bg16x16.jpg       ( this is the grey and dark grey checkerboard )
+			bgIMG = "bg16x16.jpg";
+		break;
+	}
+	document.getElementById("id_uPeditBox").style.backgroundImage = "URL('"+bgIMG+"');";
 
+	document.getElementById("id_uPpixelBox1").style.backgroundImage = "URL('"+bgIMG+"');";
+	document.getElementById("id_uPpixelBox2").style.backgroundImage = "URL('"+bgIMG+"');";
+	document.getElementById("id_uPpixelBox4").style.backgroundImage = "URL('"+bgIMG+"');";
+
+	document.getElementById("id_uPpixelBox1alpha").style.backgroundImage = "URL('"+bgIMG+"');";
+	document.getElementById("id_uPpixelBox2alpha").style.backgroundImage = "URL('"+bgIMG+"');";
+	document.getElementById("id_uPpixelBox4alpha").style.backgroundImage = "URL('"+bgIMG+"');";
+	
+	
+}
 
 
 
@@ -742,15 +760,18 @@ function initMeNow(){
 
 	/*  Write and draw the PixelBox for 1px size and NO GRID */
 		documentwriteInitialPixelBox_1(); // MUST BE CALLED _AFTER_ THE CALL TO documentwriteInitialEditGrid() !!!!
-		reDrawPixelBox_1()
+		documentwriteInitialPixelBox_1alpha(); // MUST BE CALLED _AFTER_ THE CALL TO documentwriteInitialEditGrid() !!!!
+		reDrawPixelBox_1();
 
 	/*  Write and draw the PixelBox for 2px size and with grid */
 		documentwriteInitialPixelBox_2(); // MUST BE CALLED _AFTER_ THE CALL TO documentwriteInitialEditGrid() !!!!
-		reDrawPixelBox_2()
+		documentwriteInitialPixelBox_2alpha(); // MUST BE CALLED _AFTER_ THE CALL TO documentwriteInitialEditGrid() !!!!
+		reDrawPixelBox_2();
 
 	/*  Write and draw the PixelBox for 2px size and with grid */
 		documentwriteInitialPixelBox_4(); // MUST BE CALLED _AFTER_ THE CALL TO documentwriteInitialEditGrid() !!!!
-		reDrawPixelBox_4()
+		documentwriteInitialPixelBox_4alpha(); // MUST BE CALLED _AFTER_ THE CALL TO documentwriteInitialEditGrid() !!!!
+		reDrawPixelBox_4();
 
 
 	/*  This must be called __AFTER__ all of the pixel boxes and the edit box are all drawn */
@@ -766,7 +787,7 @@ function initMeNow(){
 <div class="div_primarydivcontainer" id="id_primarydivcontainer" style="display:block;text-align:center;width:100%;">
 <h1>[:.:] - upPIC</h1><h4>user profile Pixelated Image Creator - ver 1.0 ( Currently a W.I.P. )</h4>NOTE: You must _FIRST_ Select what Action you would like to do.<br>By Default "Nothing" is selected as the click/tap action!<br><br>
 <div style="display:inline-block;">
-<div class="div_uPeditBox" id="id_uPeditBox" style="display:table-cell;background-image:url('bg8x8.jpg');">
+<div class="div_uPeditBox" id="id_uPeditBox" style="display:table-cell;background-image:url('bg16x16.jpg');">
 
 <script type="text/JavaScript">
 function documentwriteInitialEditGrid(){
@@ -865,6 +886,8 @@ documentwriteInitialColorPal();
 <br><br>
 
 
+<div>
+
 <div class="div_uPpixelBox1" id="id_uPpixelBox1">
 
 <script type="text/JavaScript">
@@ -937,11 +960,114 @@ function documentwriteInitialPixelBox_4(){
 
 </div>
 
+</div>
 
 
+
+<br>
+
+<div>
+
+<div class="div_uPpixelBox1" id="id_uPpixelBox1alpha" style="background-image:url('bg16x16.jpg');">
+
+<script type="text/JavaScript">
+function documentwriteInitialPixelBox_1alpha(){
+	tmpStr = "";
+	for(ir=0;ir<upPICmaxCols;ir++){
+		for(ic=0;ic<upPICmaxRows;ic++){
+		
+		
+			id = cellPrefix+"C"+ic.toString()+"_R"+ir.toString();
+			idPa = cellPrefix+"p1a_C_"+ic.toString()+"_R"+ir.toString();
+			tmpStr+=("<div id=\""+idPa+"\"          class=\"div_uPpixelBox1Cell\" style=\"background-color:"+document.getElementById(id).style.backgroundColor+";\"></div>");
+		}
+		tmpStr+="<br>"; // NEW LINE To break each row into it's own row vs all uPgridCell's sticking together!
+	}
+	document.getElementById("id_uPpixelBox1alpha").innerHTML=tmpStr;
+}
+
+</script>
+
+</div>
+
+
+
+
+<div class="div_uPpixelBox2" id="id_uPpixelBox2alpha" style="background-image:url('bg16x16.jpg');">
+
+<script type="text/JavaScript">
+function documentwriteInitialPixelBox_2alpha(){
+	tmpStr = "";
+	for(ir=0;ir<upPICmaxCols;ir++){
+		for(ic=0;ic<upPICmaxRows;ic++){
+		
+		
+			id = cellPrefix+"C"+ic.toString()+"_R"+ir.toString();
+			idP2a = cellPrefix+"p2a_C_"+ic.toString()+"_R"+ir.toString();
+			tmpStr+=("<div id=\""+idP2a+"\"          class=\"div_uPpixelBox2Cell\" style=\"background-color:"+document.getElementById(id).style.backgroundColor+";\"></div>");
+		}
+		tmpStr+="<br>"; // NEW LINE To break each row into it's own row vs all uPgridCell's sticking together!
+	}
+	document.getElementById("id_uPpixelBox2alpha").innerHTML=tmpStr;
+}
+
+</script>
+
+</div>
+
+
+
+
+<div class="div_uPpixelBox4" id="id_uPpixelBox4alpha" style="background-image:url('bg16x16.jpg');">
+
+<script type="text/JavaScript">
+function documentwriteInitialPixelBox_4alpha(){
+	tmpStr = "";
+	for(ir=0;ir<upPICmaxCols;ir++){
+		for(ic=0;ic<upPICmaxRows;ic++){
+		
+		
+			id = cellPrefix+"C"+ic.toString()+"_R"+ir.toString();
+			idP4a = cellPrefix+"p4a_C_"+ic.toString()+"_R"+ir.toString();
+			tmpStr+=("<div id=\""+idP4a+"\"          class=\"div_uPpixelBox4Cell\" style=\"background-color:"+document.getElementById(id).style.backgroundColor+";\"></div>");
+		}
+		tmpStr+="<br>"; // NEW LINE To break each row into it's own row vs all uPgridCell's sticking together!
+	}
+	document.getElementById("id_uPpixelBox4alpha").innerHTML=tmpStr;
+}
+
+</script>
+
+</div>
+
+</div>
 
 
 <br><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
