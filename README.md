@@ -14,11 +14,11 @@ Quick Links To Our Relevant GitHub Pages:
 
 [Change_Log](http://DevRich78.github.io/upPIC/change_log.html)
 
-[TO_DO List](https://DevRich78.github.io/upPIC/to_do.html)
+[TO_DO List](http://DevRich78.github.io/upPIC/to_do.html)
 
-[Credits](https://DevRich78.github.io/upPIC/credits.html)
+[Credits](http://DevRich78.github.io/upPIC/credits.html)
 
-[(General and MISC) FAQ Questions about ](https://DevRich78.github.io/upPIC/faq.html) [[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)]
+[(General and MISC) FAQ Questions about ](http://DevRich78.github.io/upPIC/faq.html) [[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)]
 
 
 README.md's TABLE of CONTENTS:
