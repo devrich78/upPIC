@@ -260,8 +260,21 @@ div.actionButtonSelected{
 
 
 
+div.div_nineBox{
+	display:inline-block;
+	margin:0px;
+	padding:0px;
 
+}
 
+div.css_uPNineBox1Cell{
+	display:inline-block;
+	width:4px;
+	height:4px;
+	margin:0px;
+	padding:0px;
+	
+}
 
 
 
@@ -363,6 +376,7 @@ div.pal126{background-color:#993333;} div.pal127{background-color:#000000;}
 
 	var currentlyMouseOverCell = ""; // This is the cell where the mouse cursor "last" was _or_ "is" over.
 	var currentlySelectedCell = ""; // This is the cell that "is" currently selected!
+	var currentlySelectedCellFrag = ""; // This is the cell that "is" currently selected! <- but this is only the part including and after the edit box cell's "c_" which we use for every other 'cell'-like box ( pixelbox, ninebox, etc )
 	
 	var cellBorderGridColor = "#1f1f1f";   var cellBorderGridStyle = "solid";   var cellBorderGridWidth = "2px";   var cellBorderGridMargin = "0px";   var cellBorderGridPadding = "0px";
 	var selectedCellColor   = "#f4f4f4";   var selectedCellStyle   = "groove";  var selectedCellWidth   = "2px";   var selectedCellMargin   = "0px";   var selectedCellPadding   = "0px";
@@ -443,8 +457,8 @@ function reDrawEditGridLines(){
 		for(ic=0;ic<upPICmaxCols;ic++){
 			for(ir=0;ir<upPICmaxRows;ir++){
 				id = cellPrefix+"C"+ic.toString()+"_R"+ir.toString();
-				idP2 = cellPrefix+"p2_C_"+ic.toString()+"_R"+ir.toString();
-				idP2a = cellPrefix+"p2a_C_"+ic.toString()+"_R"+ir.toString();
+				idP2 = cellPrefix+"p2_C"+ic.toString()+"_R"+ir.toString();
+				idP2a = cellPrefix+"p2a_C"+ic.toString()+"_R"+ir.toString();
 				if(id != currentlySelectedCell){
 					document.getElementById(id).style.borderColor = cellBorderGridColor;
 					document.getElementById(id).style.borderStyle = cellBorderGridStyle;
@@ -513,9 +527,11 @@ function overEditCell(cellId){
 		document.getElementById(currentlyMouseOverCell).style.padding      = mouseoverCellPadding;
 	}
 }
-function clickedEditCell(cellId){
+function clickedEditCell(cellId,cellFrag){
 	document.title = "You just clicked on Cell: ["+cellId+"]";
 	currentlySelectedCell = cellId;
+	currentlySelectedCellFrag = cellFrag;
+	
 	
 	document.getElementById(currentlyMouseOverCell).style.borderColor  = selectedCellColor;
 	document.getElementById(currentlyMouseOverCell).style.borderStyle  = selectedCellStyle;
@@ -524,13 +540,53 @@ function clickedEditCell(cellId){
 	document.getElementById(currentlyMouseOverCell).style.padding      = selectedCellPadding;
 	
 	if(currentlySelectedPal !=""){
+				id = cellPrefix+cellFrag;
+				idP = cellPrefix+"p1_"+cellFrag;
+				idPa = cellPrefix+"p1a_"+cellFrag;
+				idP2 = cellPrefix+"p2_"+cellFrag;
+				idP2a = cellPrefix+"p2a_"+cellFrag;
+				idP4 = cellPrefix+"p4_"+cellFrag;
+				idP4a = cellPrefix+"p4a_"+cellFrag;
+
 		switch(selectedActionBox){
 			case "id_actionBox_changeCellColor":
 				document.getElementById(cellId).style.backgroundColor = document.getElementById(currentlySelectedPal).style.backgroundColor;
+				for(ii=1;ii<=9;ii++){
+					idNBii = cellPrefix+"NB"+ii.toString()+"_"+cellFrag;
+					idNBiia = cellPrefix+"NB"+ii.toString()+"a_"+cellFrag;
+//					document.title = "i=["+idNBii+"]";
+					document.getElementById(idNBii).style.backgroundColor = document.getElementById(id).style.backgroundColor;
+					document.getElementById(idNBiia).style.backgroundColor = document.getElementById(id).style.backgroundColor;
+				}
+				
+					document.getElementById(idP).style.backgroundColor = document.getElementById(id).style.backgroundColor;
+					document.getElementById(idP2).style.backgroundColor = document.getElementById(id).style.backgroundColor;
+					document.getElementById(idP4).style.backgroundColor = document.getElementById(id).style.backgroundColor;
+					
+					document.getElementById(idPa).style.backgroundColor = document.getElementById(id).style.backgroundColor;
+					document.getElementById(idP2a).style.backgroundColor = document.getElementById(id).style.backgroundColor;
+					document.getElementById(idP4a).style.backgroundColor = document.getElementById(id).style.backgroundColor;
+					
 			break;
 			case "id_actionBox_setAlphaValue":
 				document.getElementById(cellId).innerHTML = "<div style=\"display:inline-block;margin:0px;padding:0px;display:inline;color:#000000;opacity:1.0;\">A="+alphaAmount.toString()+"</div>";
 				document.getElementById(cellId).style.opacity = alphaAmount;
+
+//				document.getElementById(cellId).style.backgroundColor = document.getElementById(currentlySelectedPal).style.backgroundColor;
+				for(ii=1;ii<=9;ii++){
+					idNBii = cellPrefix+"NB"+ii.toString()+"_"+cellFrag;
+					idNBiia = cellPrefix+"NB"+ii.toString()+"a_"+cellFrag;
+//					document.title = "i=["+idNBii+"]";
+					document.getElementById(idNBiia).style.backgroundColor = document.getElementById(id).style.backgroundColor;
+					document.getElementById(idNBiia).style.opacity = document.getElementById(id).style.opacity;
+				}
+
+					document.getElementById(idPa).style.backgroundColor = document.getElementById(id).style.backgroundColor;
+					document.getElementById(idPa).style.opacity = document.getElementById(id).style.opacity;
+					document.getElementById(idP2a).style.backgroundColor = document.getElementById(id).style.backgroundColor;
+					document.getElementById(idP2a).style.opacity = document.getElementById(id).style.opacity;
+					document.getElementById(idP4a).style.backgroundColor = document.getElementById(id).style.backgroundColor;
+					document.getElementById(idP4a).style.opacity = document.getElementById(id).style.opacity;
 
 				reDrawEditGrid(); // REDRAW the edit grid here so that the   A=   values can have a chance to get removed if the cell's style.opacity = 1.0
 
@@ -539,9 +595,9 @@ function clickedEditCell(cellId){
 			document.title = "default and no action chosen.........................";
 			break;
 		}
-		reDrawPixelBox_1();
-		reDrawPixelBox_2();
-		reDrawPixelBox_4();
+		//reDrawPixelBox_1();
+//		reDrawPixelBox_2();
+//		reDrawPixelBox_4();
 	}
 	
 	
@@ -556,45 +612,7 @@ function clickedEditCell(cellId){
 
 /********   SECTION__GO!__[   General Functions   ]   ********/
 
-function reDrawPixelBox_1(){
-		for(ir=0;ir<upPICmaxCols;ir++){
-			for(ic=0;ic<upPICmaxRows;ic++){
-				id = cellPrefix+"C"+ic.toString()+"_R"+ir.toString();
-				idP = cellPrefix+"p1_C_"+ic.toString()+"_R"+ir.toString();
-				idPa = cellPrefix+"p1a_C_"+ic.toString()+"_R"+ir.toString();
-					document.getElementById(idP).style.backgroundColor = document.getElementById(id).style.backgroundColor;
-					document.getElementById(idPa).style.backgroundColor = document.getElementById(id).style.backgroundColor;
-					document.getElementById(idPa).style.opacity = document.getElementById(id).style.opacity;
-			}
-		}
-}
 
-function reDrawPixelBox_2(){
-		for(ir=0;ir<upPICmaxCols;ir++){
-			for(ic=0;ic<upPICmaxRows;ic++){
-				id = cellPrefix+"C"+ic.toString()+"_R"+ir.toString();
-				idP2 = cellPrefix+"p2_C_"+ic.toString()+"_R"+ir.toString();
-				idP2a = cellPrefix+"p2a_C_"+ic.toString()+"_R"+ir.toString();
-					document.getElementById(idP2).style.backgroundColor = document.getElementById(id).style.backgroundColor;
-					document.getElementById(idP2a).style.backgroundColor = document.getElementById(id).style.backgroundColor;
-					document.getElementById(idP2a).style.opacity = document.getElementById(id).style.opacity;
-			}
-		}
-}
-
-
-function reDrawPixelBox_4(){
-		for(ir=0;ir<upPICmaxCols;ir++){
-			for(ic=0;ic<upPICmaxRows;ic++){
-				id = cellPrefix+"C"+ic.toString()+"_R"+ir.toString();
-				idP4 = cellPrefix+"p4_C_"+ic.toString()+"_R"+ir.toString();
-				idP4a = cellPrefix+"p4a_C_"+ic.toString()+"_R"+ir.toString();
-					document.getElementById(idP4).style.backgroundColor = document.getElementById(id).style.backgroundColor;
-					document.getElementById(idP4a).style.backgroundColor = document.getElementById(id).style.backgroundColor;
-					document.getElementById(idP4a).style.opacity = document.getElementById(id).style.opacity;
-			}
-		}
-}
 
 
 function changeColorTo(clickedColor){
@@ -755,23 +773,23 @@ function changeBGimage(imgNum){
 // THIS    initMeNow( )    function MUST BE AT THE END AND THE VERY LAST FUNCTION BEFORE IT IS CALLED!!
 function initMeNow(){
 	/*  Write and draw the GridBoxCells for with grid */
-		documentwriteInitialEditGrid(); // Create the first instance of the upPIC grid ( Note that this should be called __ONLY-ONCE__ !!
+//		documentwriteInitialEditGrid(); // Create the first instance of the upPIC grid ( Note that this should be called __ONLY-ONCE__ !!
 		reDrawEditGrid(); // Create the first instance of the upPIC grid ( Note that this should be called __ONLY-ONCE__ !!
 
 	/*  Write and draw the PixelBox for 1px size and NO GRID */
 		documentwriteInitialPixelBox_1(); // MUST BE CALLED _AFTER_ THE CALL TO documentwriteInitialEditGrid() !!!!
 		documentwriteInitialPixelBox_1alpha(); // MUST BE CALLED _AFTER_ THE CALL TO documentwriteInitialEditGrid() !!!!
-		reDrawPixelBox_1();
+//		reDrawPixelBox_1();
 
 	/*  Write and draw the PixelBox for 2px size and with grid */
 		documentwriteInitialPixelBox_2(); // MUST BE CALLED _AFTER_ THE CALL TO documentwriteInitialEditGrid() !!!!
 		documentwriteInitialPixelBox_2alpha(); // MUST BE CALLED _AFTER_ THE CALL TO documentwriteInitialEditGrid() !!!!
-		reDrawPixelBox_2();
+//		reDrawPixelBox_2();
 
 	/*  Write and draw the PixelBox for 2px size and with grid */
 		documentwriteInitialPixelBox_4(); // MUST BE CALLED _AFTER_ THE CALL TO documentwriteInitialEditGrid() !!!!
 		documentwriteInitialPixelBox_4alpha(); // MUST BE CALLED _AFTER_ THE CALL TO documentwriteInitialEditGrid() !!!!
-		reDrawPixelBox_4();
+//		reDrawPixelBox_4();
 
 
 	/*  This must be called __AFTER__ all of the pixel boxes and the edit box are all drawn */
@@ -811,19 +829,20 @@ function documentwriteInitialEditGrid(){
 
 		
 			id = cellPrefix+"C"+ic.toString()+"_R"+ir.toString();
+			idFrag = "C"+ic.toString()+"_R"+ir.toString();
 			
 			bgcolor = bgColR.toString()+bgColR.toString()+bgColG.toString()+bgColG.toString()+bgColB.toString()+bgColB.toString();
 
 			document.title = "id===="+id;
 			//document.title = "bgcolor===="+bgcolor;
 			
-			tmpStr+=("<div class=\"div_uPeditCell\" id=\""+id+"\" onclick=\"clickedEditCell('"+id+"');\" onmousemove=\"overEditCell('"+id+"');\" style=\"width:"+upPICcellScaleX+";height:"+upPICcellScaleY+";background-color:#"+bgcolor+";\">a</div>");
+			tmpStr+=("<div class=\"div_uPeditCell\" id=\""+id+"\" onclick=\"clickedEditCell('"+id+"','"+idFrag+"');\" onmousemove=\"overEditCell('"+id+"');\" style=\"width:"+upPICcellScaleX+";height:"+upPICcellScaleY+";background-color:#"+bgcolor+";\">a</div>");
 		}
 		tmpStr+="<br>"; // NEW LINE To break each row into it's own row vs all uPgridCell's sticking together!
 	}
 	document.getElementById("id_uPeditBox").innerHTML=tmpStr;
 }
-
+documentwriteInitialEditGrid(); // Added this call here so that the edit Grid Box will be written in order for the other boxes to be able to call this one's cells...
 </script>
 
 
@@ -883,9 +902,192 @@ documentwriteInitialColorPal();
 
 
 
+
+
+
+
+
+
+
+
+
+
 <br><br>
 
 
+<div style="display:inline-block;width:900px;border:4px groove #00aaff;text-align:center;"><div style="display:inline-block;text-align:center;">
+
+<div style="display:table-cell;background-color:#ff0000;padding:0px;margin:0px;">
+<div class="div_nineBox" id="nineBox_1">
+<script type="text/JavaScript">
+function documentwriteInitialNineBox_1(){
+	tmpStr = "";
+	for(ir=0;ir<upPICmaxCols;ir++){
+		for(ic=0;ic<upPICmaxRows;ic++){
+		
+		
+			id = cellPrefix+"C"+ic.toString()+"_R"+ir.toString();
+			idNB1 = cellPrefix+"NB1_C"+ic.toString()+"_R"+ir.toString();
+			tmpStr+=("<div id=\""+idNB1+"\"          class=\"css_uPNineBox1Cell\" style=\"background-color:"+document.getElementById(id).style.backgroundColor+";\"></div>");
+		}
+		tmpStr+="<br>"; // NEW LINE To break each row into it's own row
+	}
+	document.getElementById("nineBox_1").innerHTML=tmpStr;
+}
+documentwriteInitialNineBox_1();
+</script>
+</div><div class="div_nineBox" id="nineBox_2">
+<script type="text/JavaScript">
+function documentwriteInitialNineBox_2(){
+	tmpStr = "";
+	for(ir=0;ir<upPICmaxCols;ir++){
+		for(ic=0;ic<upPICmaxRows;ic++){
+		
+		
+			id = cellPrefix+"C"+ic.toString()+"_R"+ir.toString();
+			idNB2 = cellPrefix+"NB2_C"+ic.toString()+"_R"+ir.toString();
+			tmpStr+=("<div id=\""+idNB2+"\"          class=\"css_uPNineBox1Cell\" style=\"background-color:"+document.getElementById(id).style.backgroundColor+";\"></div>");
+		}
+		tmpStr+="<br>"; // NEW LINE To break each row into it's own row
+	}
+	document.getElementById("nineBox_2").innerHTML=tmpStr;
+}
+documentwriteInitialNineBox_2();
+</script>
+</div><div class="div_nineBox" id="nineBox_3">
+<script type="text/JavaScript">
+function documentwriteInitialNineBox_3(){
+	tmpStr = "";
+	for(ir=0;ir<upPICmaxCols;ir++){
+		for(ic=0;ic<upPICmaxRows;ic++){
+		
+		
+			id = cellPrefix+"C"+ic.toString()+"_R"+ir.toString();
+			idNB3 = cellPrefix+"NB3_C"+ic.toString()+"_R"+ir.toString();
+			tmpStr+=("<div id=\""+idNB3+"\"          class=\"css_uPNineBox1Cell\" style=\"background-color:"+document.getElementById(id).style.backgroundColor+";\"></div>");
+		}
+		tmpStr+="<br>"; // NEW LINE To break each row into it's own row
+	}
+	document.getElementById("nineBox_3").innerHTML=tmpStr;
+}
+documentwriteInitialNineBox_3();
+</script>
+</div>
+<br>
+<div class="div_nineBox" id="nineBox_4">
+<script type="text/JavaScript">
+function documentwriteInitialNineBox_4(){
+	tmpStr = "";
+	for(ir=0;ir<upPICmaxCols;ir++){
+		for(ic=0;ic<upPICmaxRows;ic++){
+		
+		
+			id = cellPrefix+"C"+ic.toString()+"_R"+ir.toString();
+			idNB4 = cellPrefix+"NB4_C"+ic.toString()+"_R"+ir.toString();
+			tmpStr+=("<div id=\""+idNB4+"\"          class=\"css_uPNineBox1Cell\" style=\"background-color:"+document.getElementById(id).style.backgroundColor+";\"></div>");
+		}
+		tmpStr+="<br>"; // NEW LINE To break each row into it's own row
+	}
+	document.getElementById("nineBox_4").innerHTML=tmpStr;
+}
+documentwriteInitialNineBox_4();
+</script>
+</div><div class="div_nineBox" id="nineBox_5">
+<script type="text/JavaScript">
+function documentwriteInitialNineBox_5(){
+	tmpStr = "";
+	for(ir=0;ir<upPICmaxCols;ir++){
+		for(ic=0;ic<upPICmaxRows;ic++){
+		
+		
+			id = cellPrefix+"C"+ic.toString()+"_R"+ir.toString();
+			idNB5 = cellPrefix+"NB5_C"+ic.toString()+"_R"+ir.toString();
+			tmpStr+=("<div id=\""+idNB5+"\"          class=\"css_uPNineBox1Cell\" style=\"background-color:"+document.getElementById(id).style.backgroundColor+";\"></div>");
+		}
+		tmpStr+="<br>"; // NEW LINE To break each row into it's own row
+	}
+	document.getElementById("nineBox_5").innerHTML=tmpStr;
+}
+documentwriteInitialNineBox_5();
+</script>
+</div><div class="div_nineBox" id="nineBox_6">
+<script type="text/JavaScript">
+function documentwriteInitialNineBox_6(){
+	tmpStr = "";
+	for(ir=0;ir<upPICmaxCols;ir++){
+		for(ic=0;ic<upPICmaxRows;ic++){
+		
+		
+			id = cellPrefix+"C"+ic.toString()+"_R"+ir.toString();
+			idNB6 = cellPrefix+"NB6_C"+ic.toString()+"_R"+ir.toString();
+			tmpStr+=("<div id=\""+idNB6+"\"          class=\"css_uPNineBox1Cell\" style=\"background-color:"+document.getElementById(id).style.backgroundColor+";\"></div>");
+		}
+		tmpStr+="<br>"; // NEW LINE To break each row into it's own row
+	}
+	document.getElementById("nineBox_6").innerHTML=tmpStr;
+}
+documentwriteInitialNineBox_6();
+</script>
+</div>
+<br>
+<div class="div_nineBox" id="nineBox_7">
+<script type="text/JavaScript">
+function documentwriteInitialNineBox_7(){
+	tmpStr = "";
+	for(ir=0;ir<upPICmaxCols;ir++){
+		for(ic=0;ic<upPICmaxRows;ic++){
+		
+		
+			id = cellPrefix+"C"+ic.toString()+"_R"+ir.toString();
+			idNB7 = cellPrefix+"NB7_C"+ic.toString()+"_R"+ir.toString();
+			tmpStr+=("<div id=\""+idNB7+"\"          class=\"css_uPNineBox1Cell\" style=\"background-color:"+document.getElementById(id).style.backgroundColor+";\"></div>");
+		}
+		tmpStr+="<br>"; // NEW LINE To break each row into it's own row
+	}
+	document.getElementById("nineBox_7").innerHTML=tmpStr;
+}
+documentwriteInitialNineBox_7();
+</script>
+</div><div class="div_nineBox" id="nineBox_8">
+<script type="text/JavaScript">
+function documentwriteInitialNineBox_8(){
+	tmpStr = "";
+	for(ir=0;ir<upPICmaxCols;ir++){
+		for(ic=0;ic<upPICmaxRows;ic++){
+		
+		
+			id = cellPrefix+"C"+ic.toString()+"_R"+ir.toString();
+			idNB8 = cellPrefix+"NB8_C"+ic.toString()+"_R"+ir.toString();
+			tmpStr+=("<div id=\""+idNB8+"\"          class=\"css_uPNineBox1Cell\" style=\"background-color:"+document.getElementById(id).style.backgroundColor+";\"></div>");
+		}
+		tmpStr+="<br>"; // NEW LINE To break each row into it's own row
+	}
+	document.getElementById("nineBox_8").innerHTML=tmpStr;
+}
+documentwriteInitialNineBox_8();
+</script>
+</div><div class="div_nineBox" id="nineBox_9">
+<script type="text/JavaScript">
+function documentwriteInitialNineBox_9(){
+	tmpStr = "";
+	for(ir=0;ir<upPICmaxCols;ir++){
+		for(ic=0;ic<upPICmaxRows;ic++){
+		
+		
+			id = cellPrefix+"C"+ic.toString()+"_R"+ir.toString();
+			idNB9 = cellPrefix+"NB9_C"+ic.toString()+"_R"+ir.toString();
+			tmpStr+=("<div id=\""+idNB9+"\"          class=\"css_uPNineBox1Cell\" style=\"background-color:"+document.getElementById(id).style.backgroundColor+";\"></div>");
+		}
+		tmpStr+="<br>"; // NEW LINE To break each row into it's own row
+	}
+	document.getElementById("nineBox_9").innerHTML=tmpStr;
+}
+documentwriteInitialNineBox_9();
+</script>
+</div>
+</div>
+
+<div style="display:table-cell;background-color:#00ffff;padding:20px;">
 <div>
 
 <div class="div_uPpixelBox1" id="id_uPpixelBox1">
@@ -898,7 +1100,7 @@ function documentwriteInitialPixelBox_1(){
 		
 		
 			id = cellPrefix+"C"+ic.toString()+"_R"+ir.toString();
-			idP = cellPrefix+"p1_C_"+ic.toString()+"_R"+ir.toString();
+			idP = cellPrefix+"p1_C"+ic.toString()+"_R"+ir.toString();
 			tmpStr+=("<div id=\""+idP+"\"          class=\"div_uPpixelBox1Cell\" style=\"background-color:"+document.getElementById(id).style.backgroundColor+";\"></div>");
 		}
 		tmpStr+="<br>"; // NEW LINE To break each row into it's own row vs all uPgridCell's sticking together!
@@ -923,7 +1125,7 @@ function documentwriteInitialPixelBox_2(){
 		
 		
 			id = cellPrefix+"C"+ic.toString()+"_R"+ir.toString();
-			idP2 = cellPrefix+"p2_C_"+ic.toString()+"_R"+ir.toString();
+			idP2 = cellPrefix+"p2_C"+ic.toString()+"_R"+ir.toString();
 			tmpStr+=("<div id=\""+idP2+"\"          class=\"div_uPpixelBox2Cell\" style=\"background-color:"+document.getElementById(id).style.backgroundColor+";\"></div>");
 		}
 		tmpStr+="<br>"; // NEW LINE To break each row into it's own row vs all uPgridCell's sticking together!
@@ -948,7 +1150,7 @@ function documentwriteInitialPixelBox_4(){
 		
 		
 			id = cellPrefix+"C"+ic.toString()+"_R"+ir.toString();
-			idP4 = cellPrefix+"p4_C_"+ic.toString()+"_R"+ir.toString();
+			idP4 = cellPrefix+"p4_C"+ic.toString()+"_R"+ir.toString();
 			tmpStr+=("<div id=\""+idP4+"\"          class=\"div_uPpixelBox4Cell\" style=\"background-color:"+document.getElementById(id).style.backgroundColor+";\"></div>");
 		}
 		tmpStr+="<br>"; // NEW LINE To break each row into it's own row vs all uPgridCell's sticking together!
@@ -978,7 +1180,7 @@ function documentwriteInitialPixelBox_1alpha(){
 		
 		
 			id = cellPrefix+"C"+ic.toString()+"_R"+ir.toString();
-			idPa = cellPrefix+"p1a_C_"+ic.toString()+"_R"+ir.toString();
+			idPa = cellPrefix+"p1a_C"+ic.toString()+"_R"+ir.toString();
 			tmpStr+=("<div id=\""+idPa+"\"          class=\"div_uPpixelBox1Cell\" style=\"background-color:"+document.getElementById(id).style.backgroundColor+";\"></div>");
 		}
 		tmpStr+="<br>"; // NEW LINE To break each row into it's own row vs all uPgridCell's sticking together!
@@ -1003,7 +1205,7 @@ function documentwriteInitialPixelBox_2alpha(){
 		
 		
 			id = cellPrefix+"C"+ic.toString()+"_R"+ir.toString();
-			idP2a = cellPrefix+"p2a_C_"+ic.toString()+"_R"+ir.toString();
+			idP2a = cellPrefix+"p2a_C"+ic.toString()+"_R"+ir.toString();
 			tmpStr+=("<div id=\""+idP2a+"\"          class=\"div_uPpixelBox2Cell\" style=\"background-color:"+document.getElementById(id).style.backgroundColor+";\"></div>");
 		}
 		tmpStr+="<br>"; // NEW LINE To break each row into it's own row vs all uPgridCell's sticking together!
@@ -1028,7 +1230,7 @@ function documentwriteInitialPixelBox_4alpha(){
 		
 		
 			id = cellPrefix+"C"+ic.toString()+"_R"+ir.toString();
-			idP4a = cellPrefix+"p4a_C_"+ic.toString()+"_R"+ir.toString();
+			idP4a = cellPrefix+"p4a_C"+ic.toString()+"_R"+ir.toString();
 			tmpStr+=("<div id=\""+idP4a+"\"          class=\"div_uPpixelBox4Cell\" style=\"background-color:"+document.getElementById(id).style.backgroundColor+";\"></div>");
 		}
 		tmpStr+="<br>"; // NEW LINE To break each row into it's own row vs all uPgridCell's sticking together!
@@ -1039,6 +1241,185 @@ function documentwriteInitialPixelBox_4alpha(){
 </script>
 
 </div>
+
+</div>
+
+</div>
+
+
+
+<div style="display:table-cell;background-color:#ff0000;padding:0px;margin:0px;background-image:url('bg16x16.jpg');">
+<div class="div_nineBox" id="nineBox_1a">
+<script type="text/JavaScript">
+function documentwriteInitialNineBox_1a(){
+	tmpStr = "";
+	for(ir=0;ir<upPICmaxCols;ir++){
+		for(ic=0;ic<upPICmaxRows;ic++){
+		
+		
+			id = cellPrefix+"C"+ic.toString()+"_R"+ir.toString();
+			idNB1a = cellPrefix+"NB1a_C"+ic.toString()+"_R"+ir.toString();
+			tmpStr+=("<div id=\""+idNB1a+"\"          class=\"css_uPNineBox1Cell\" style=\"background-color:"+document.getElementById(id).style.backgroundColor+";\"></div>");
+		}
+		tmpStr+="<br>"; // NEW LINE To break each row into it's own row
+	}
+	document.getElementById("nineBox_1a").innerHTML=tmpStr;
+}
+documentwriteInitialNineBox_1a();
+</script>
+</div><div class="div_nineBox" id="nineBox_2a">
+<script type="text/JavaScript">
+function documentwriteInitialNineBox_2a(){
+	tmpStr = "";
+	for(ir=0;ir<upPICmaxCols;ir++){
+		for(ic=0;ic<upPICmaxRows;ic++){
+		
+		
+			id = cellPrefix+"C"+ic.toString()+"_R"+ir.toString();
+			idNB2a = cellPrefix+"NB2a_C"+ic.toString()+"_R"+ir.toString();
+			tmpStr+=("<div id=\""+idNB2a+"\"          class=\"css_uPNineBox1Cell\" style=\"background-color:"+document.getElementById(id).style.backgroundColor+";\"></div>");
+		}
+		tmpStr+="<br>"; // NEW LINE To break each row into it's own row
+	}
+	document.getElementById("nineBox_2a").innerHTML=tmpStr;
+}
+documentwriteInitialNineBox_2a();
+</script>
+</div><div class="div_nineBox" id="nineBox_3a">
+<script type="text/JavaScript">
+function documentwriteInitialNineBox_3a(){
+	tmpStr = "";
+	for(ir=0;ir<upPICmaxCols;ir++){
+		for(ic=0;ic<upPICmaxRows;ic++){
+		
+		
+			id = cellPrefix+"C"+ic.toString()+"_R"+ir.toString();
+			idNB3a = cellPrefix+"NB3a_C"+ic.toString()+"_R"+ir.toString();
+			tmpStr+=("<div id=\""+idNB3a+"\"          class=\"css_uPNineBox1Cell\" style=\"background-color:"+document.getElementById(id).style.backgroundColor+";\"></div>");
+		}
+		tmpStr+="<br>"; // NEW LINE To break each row into it's own row
+	}
+	document.getElementById("nineBox_3a").innerHTML=tmpStr;
+}
+documentwriteInitialNineBox_3a();
+</script>
+</div>
+<br>
+<div class="div_nineBox" id="nineBox_4a">
+<script type="text/JavaScript">
+function documentwriteInitialNineBox_4a(){
+	tmpStr = "";
+	for(ir=0;ir<upPICmaxCols;ir++){
+		for(ic=0;ic<upPICmaxRows;ic++){
+		
+		
+			id = cellPrefix+"C"+ic.toString()+"_R"+ir.toString();
+			idNB4a = cellPrefix+"NB4a_C"+ic.toString()+"_R"+ir.toString();
+			tmpStr+=("<div id=\""+idNB4a+"\"          class=\"css_uPNineBox1Cell\" style=\"background-color:"+document.getElementById(id).style.backgroundColor+";\"></div>");
+		}
+		tmpStr+="<br>"; // NEW LINE To break each row into it's own row
+	}
+	document.getElementById("nineBox_4a").innerHTML=tmpStr;
+}
+documentwriteInitialNineBox_4a();
+</script>
+</div><div class="div_nineBox" id="nineBox_5a">
+<script type="text/JavaScript">
+function documentwriteInitialNineBox_5a(){
+	tmpStr = "";
+	for(ir=0;ir<upPICmaxCols;ir++){
+		for(ic=0;ic<upPICmaxRows;ic++){
+		
+		
+			id = cellPrefix+"C"+ic.toString()+"_R"+ir.toString();
+			idNB5a = cellPrefix+"NB5a_C"+ic.toString()+"_R"+ir.toString();
+			tmpStr+=("<div id=\""+idNB5a+"\"          class=\"css_uPNineBox1Cell\" style=\"background-color:"+document.getElementById(id).style.backgroundColor+";\"></div>");
+		}
+		tmpStr+="<br>"; // NEW LINE To break each row into it's own row
+	}
+	document.getElementById("nineBox_5a").innerHTML=tmpStr;
+}
+documentwriteInitialNineBox_5a();
+</script>
+</div><div class="div_nineBox" id="nineBox_6a">
+<script type="text/JavaScript">
+function documentwriteInitialNineBox_6a(){
+	tmpStr = "";
+	for(ir=0;ir<upPICmaxCols;ir++){
+		for(ic=0;ic<upPICmaxRows;ic++){
+		
+		
+			id = cellPrefix+"C"+ic.toString()+"_R"+ir.toString();
+			idNB6a = cellPrefix+"NB6a_C"+ic.toString()+"_R"+ir.toString();
+			tmpStr+=("<div id=\""+idNB6a+"\"          class=\"css_uPNineBox1Cell\" style=\"background-color:"+document.getElementById(id).style.backgroundColor+";\"></div>");
+		}
+		tmpStr+="<br>"; // NEW LINE To break each row into it's own row
+	}
+	document.getElementById("nineBox_6a").innerHTML=tmpStr;
+}
+documentwriteInitialNineBox_6a();
+</script>
+</div>
+<br>
+<div class="div_nineBox" id="nineBox_7a">
+<script type="text/JavaScript">
+function documentwriteInitialNineBox_7a(){
+	tmpStr = "";
+	for(ir=0;ir<upPICmaxCols;ir++){
+		for(ic=0;ic<upPICmaxRows;ic++){
+		
+		
+			id = cellPrefix+"C"+ic.toString()+"_R"+ir.toString();
+			idNB7a = cellPrefix+"NB7a_C"+ic.toString()+"_R"+ir.toString();
+			tmpStr+=("<div id=\""+idNB7a+"\"          class=\"css_uPNineBox1Cell\" style=\"background-color:"+document.getElementById(id).style.backgroundColor+";\"></div>");
+		}
+		tmpStr+="<br>"; // NEW LINE To break each row into it's own row
+	}
+	document.getElementById("nineBox_7a").innerHTML=tmpStr;
+}
+documentwriteInitialNineBox_7a();
+</script>
+</div><div class="div_nineBox" id="nineBox_8a">
+<script type="text/JavaScript">
+function documentwriteInitialNineBox_8a(){
+	tmpStr = "";
+	for(ir=0;ir<upPICmaxCols;ir++){
+		for(ic=0;ic<upPICmaxRows;ic++){
+		
+		
+			id = cellPrefix+"C"+ic.toString()+"_R"+ir.toString();
+			idNB8a = cellPrefix+"NB8a_C"+ic.toString()+"_R"+ir.toString();
+			tmpStr+=("<div id=\""+idNB8a+"\"          class=\"css_uPNineBox1Cell\" style=\"background-color:"+document.getElementById(id).style.backgroundColor+";\"></div>");
+		}
+		tmpStr+="<br>"; // NEW LINE To break each row into it's own row
+	}
+	document.getElementById("nineBox_8a").innerHTML=tmpStr;
+}
+documentwriteInitialNineBox_8a();
+</script>
+</div><div class="div_nineBox" id="nineBox_9a">
+<script type="text/JavaScript">
+function documentwriteInitialNineBox_9a(){
+	tmpStr = "";
+	for(ir=0;ir<upPICmaxCols;ir++){
+		for(ic=0;ic<upPICmaxRows;ic++){
+		
+		
+			id = cellPrefix+"C"+ic.toString()+"_R"+ir.toString();
+			idNB9a = cellPrefix+"NB9a_C"+ic.toString()+"_R"+ir.toString();
+			tmpStr+=("<div id=\""+idNB9a+"\"          class=\"css_uPNineBox1Cell\" style=\"background-color:"+document.getElementById(id).style.backgroundColor+";\"></div>");
+		}
+		tmpStr+="<br>"; // NEW LINE To break each row into it's own row
+	}
+	document.getElementById("nineBox_9a").innerHTML=tmpStr;
+}
+documentwriteInitialNineBox_9a();
+</script>
+</div>
+</div>
+	
+
+
 
 </div>
 
