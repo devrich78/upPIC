@@ -6,7 +6,8 @@
 <style type="text/css">
 
 	/* DON'T ALLOW SELECTING! */
-			div.div_uPeditBox,div.div_uPeditCell,div.div_uPpixelBox1,div.div_uPpixelBox1Cell,div.div_uPpixelBox2,div.div_uPpixelBox2Cell,div.div_uPpixelBox4,div.div_uPpixelBox4Cell,div.css_colorPalBox,div.css_colorPalCell,
+			div.div_uPeditBox,div.div_uPeditCell,div.div_uPpixelBox1,div.div_uPpixelBox1Cell,div.div_uPpixelBox2,div.div_uPpixelBox2Cell,div.div_uPpixelBox4,div.div_uPpixelBox4Cell,
+			div.css_colorPalBox,div.css_colorPalCell,div.css_colorPalCellSelected, div.css_colorPalCellNotSelected,
 			div.actionButtonNotSelected,div.actionButtonSelected,
 			div.pal0,div.pal1,div.pal2,div.pal3,div.pal4,div.pal5,div.pal6,div.pal7,div.pal8,div.pal9,div.pal10,div.pal11,div.pal12,div.pal13,div.pal14,div.pal15,div.pal16,div.pal17,div.pal18,div.pal19,div.pal20,div.pal21,div.pal22,div.pal23,div.pal24,div.pal25,
 div.pal26,div.pal27,div.pal28,div.pal29,div.pal30,div.pal31,div.pal32,div.pal33,div.pal34,div.pal35,div.pal36,div.pal37,div.pal38,div.pal39,div.pal40,div.pal41,div.pal42,div.pal43,div.pal44,div.pal45,div.pal46,div.pal47,div.pal48,div.pal49,div.pal50,
@@ -161,19 +162,31 @@ div.css_colorPalBox{
 	border: #44aaff groove 4px;
 	
 	margin:0px;
+	padding:2px;
+
+	font-family:Ubuntu;
+	font-size:2px;
+
+}
+div.css_colorPalCellNotSelected{
+	display:inline-block;
+	
+	border: 2px solid #000000;
+	
+	margin:0px;
 	padding:3px;
 
 	font-family:Ubuntu;
 	font-size:2px;
 
 }
-div.css_colorPalCell{
+div.css_colorPalCellSelected{
 	display:inline-block;
 	
-	width:12px;
-	height:12px;
+	border: 2px groove #00afff;
+	
 	margin:0px;
-	padding:0px;
+	padding:2px;
 
 	font-family:Ubuntu;
 	font-size:2px;
@@ -269,8 +282,8 @@ div.pal76,div.pal77,div.pal78,div.pal79,div.pal80,div.pal81,div.pal82,div.pal83,
 div.pal101,div.pal102,div.pal103,div.pal104,div.pal105,div.pal106,div.pal107,div.pal108,div.pal109,div.pal110,div.pal111,div.pal112,div.pal113,div.pal114,div.pal115,div.pal116,div.pal117,div.pal118,div.pal119,div.pal120,div.pal121,div.pal122,div.pal123,
 div.pal124,div.pal125,div.pal126,div.pal127 {
 	display:inline-block;
-	width:32px;
-	height:32px;
+	width:24px;
+	height:24px;
 	
 	background-color:#000000;
 	
@@ -592,6 +605,17 @@ function reDrawPixelBox_4(){
 function changeColorTo(clickedColor){
 	currentlySelectedColor = document.getElementById(clickedColor).style.backgroundColor;
 	currentlySelectedPal = clickedColor;
+	
+	//document.getElementById(clickedColor).className="css_colorPalCellSelected";
+	
+	/*  Change the border to show it is selected -- MUST BE DONE IN JavaScript AS THE DIV ALREADY USES A SPECIFIC CSS CLASSNAME  */
+	
+		document.getElementById(clickedColor).style.borderStyle="groove";
+		document.getElementById(clickedColor).style.borderColor="#00afff";
+		
+	
+	
+	
 	if(currentlySelectedCell != ""){
 		//document.getElementById(currentlySelectedCell).style.backgroundColor = document.getElementById(clickedColor).style.backgroundColor;
 	}
@@ -629,7 +653,7 @@ function selectActionBox(actionBoxId){
 		default: // Also NOTHING
 			
 			selectedActionBox = "id_actionBox_nothing";
-			document.getElementById("id_actionBox_nothing").className = "actionButtonNotSelected";
+			document.getElementById("id_actionBox_nothing").className = "actionButtonSelected";
 		break;
 	}
 	
@@ -800,7 +824,7 @@ function documentwriteInitialColorPal(){
 	
 	for(ir=0;ir<8;ir++){
 		for(ic=0;ic<16;ic++){
-			tmpStr+=("<div id=\"id_pal"+i.toString()+"\"     onclick=\"changeColorTo(this.id);\"     class=\"pal"+i.toString()+"\" style=\"background-color:#"+colorPalArr[i]+";\"></div>");
+			tmpStr+=("<div id=\"id_pal"+i.toString()+"\"     onclick=\"changeColorTo(this.id);\"     class=\"pal"+i.toString()+"\" style=\"background-color:#"+colorPalArr[i]+";border-width:4px;;border-style:solid;border-color:#0f0f0f;\"></div>");
 			i++;
 			if(i > 127){i=127;}
 		}
