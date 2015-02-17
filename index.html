@@ -27,7 +27,37 @@ p {
 /*                    4px border-radius                                                       */
 /*                    64px font-size and font family of 'freesans'                            */
 
-div._logoBox{
+
+/* ----------------------------- */
+/* BELOW IS FOR 240px font-size */
+/* ----------------------------- */
+
+div._logoBox240{
+display:inline-block;
+background-color:#0070b0;
+background: -moz-linear-gradient(#0070b0, #77d0ff); /* For Firefox 3.6 to 15 */
+background: linear-gradient(#0070b0, #77d0ff); /* Standard syntax (must be last) */
+margin:0px;
+padding-top:0px;
+padding-left:26px;
+padding-right:26px;
+padding-bottom:44px;
+border-radius:4px;
+}
+span._logo1240,span._logo2240,span._logo3240,span._logo4240,span._logo5240 {
+background-color:transparent; /* 70b0ff */ /* 222277 */ /* 4499ff */ /* 77d0ff */
+font-family:freesans,Ubuntu,Helvetica,'Liberation Serif',Verdana,Consolas,Arial;
+font-size:240px;
+}
+span._logo1240{color:#fdfdfd;} /* [ */
+span._logo2240{color:#e0e0e0;} /* : */ /* 77d0ff */
+span._logo3240{color:#e0e0e0;} /* . */
+span._logo4240{color:#e0e0e0;} /* : */
+span._logo5240{color:#fdfdfd;} /* ] */
+
+
+
+div._logoBox400{
   display:inline-block;
   background-color:#0070b0;
     background: -moz-linear-gradient(#0070b0, #77d0ff); /* For Firefox 3.6 to 15 */
@@ -42,23 +72,24 @@ div._logoBox{
   border-radius:4px;
 }
 
-span._logo1,span._logo2,span._logo3,span._logo4,span._logo5 {
+span._logo1400,span._logo2400,span._logo3400,span._logo4400,span._logo5400 {
   background-color:transparent; /* 70b0ff */ /* 222277 */ /* 4499ff */      /* 77d0ff */
   font-family:freesans,Ubuntu,Helvetica,'Liberation Serif',Verdana,Consolas,Arial;
   font-size:400px;
 }
-span._logo1{color:#fdfdfd;} /*  [  */
-span._logo2{color:#e0e0e0;} /*  :  */  /*  77d0ff  */
-span._logo3{color:#e0e0e0;} /*  .  */
-span._logo4{color:#e0e0e0;} /*  :  */
-span._logo5{color:#fdfdfd;} /*  ]  */
+span._logo1400{color:#fdfdfd;} /*  [  */
+span._logo2400{color:#e0e0e0;} /*  :  */  /*  77d0ff  */
+span._logo3400{color:#e0e0e0;} /*  .  */
+span._logo4400{color:#e0e0e0;} /*  :  */
+span._logo5400{color:#fdfdfd;} /*  ]  */
 
 </style>
 </head>
 <body>
 OK! "freesans" is our font of choice for our logo and general text :-)
 <br><br><br>
-<div class="_logoBox"><span class="_logo1">[</span><span class="_logo2">:</span><span class="_logo3">.</span><span class="_logo4">:</span><span class="_logo5">]</span></div>
+<div class="_logoBox400"><span class="_logo1400">[</span><span class="_logo2400">:</span><span class="_logo3400">.</span><span class="_logo4400">:</span><span class="_logo5400">]</span></div>
+<div class="_logoBox240"><span class="_logo1240">[</span><span class="_logo2240">:</span><span class="_logo3240">.</span><span class="_logo4240">:</span><span class="_logo5240">]</span></div>
 <br><br><br>
 
 <p style="text-align:center;font-family:Ubuntu;font-size: 64;"><span class="_logo1">[</span><span class="_logo2">:</span><span class="_logo3">.</span><span class="_logo4">:</span><span class="_logo5">]</span></p>
