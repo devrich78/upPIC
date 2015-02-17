@@ -5,7 +5,10 @@
 **_( This README.md and the_** [[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)] **_"upPIC" project are a constant Work-In-Progress ( W.I.P ).  I ask that you please be patient and kind as I don't have a lot of free time these days.  However; I plan to work on_** [[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)] **_as often as I can over time.  Many thanks for your support! )_**
 
 
-#[[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)] user profile Pixelated Image Creator - ver 1.0 ( NOte that ver 1.0 is CURRENTLY A W.I.P. )
+#[[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)] upPIC -- ver: 1.0 
+
+user profile Pixelated Image Creator - ( Note that ver 1.0 is CURRENTLY A W.I.P. )
+
 Initially created and inspired by me: DevRich78 and currently made available under the Apache 2.0 license
 
 (( formerly -> [:upPIC:] ))
