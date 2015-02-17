@@ -13,13 +13,25 @@ p {
   font-size:24;
 }
 
-div._logoBox{
+div._logoBoxOutside{
   display:inline-block;
+  background-color:#ff0000;
+  
   vertical-align:middle;
   text-align:center;
   margin:0px;
   padding:14px;
 }
+div._logoBoxInside{
+  display:inline-block;
+  background-color:#00ffaa;
+  
+  vertical-align:middle;
+  text-align:center;
+  margin:0px;
+  padding:14px;
+}
+
 span._logo1,span._logo2,span._logo3,span._logo4,span._logo5 {
   background-color:#70b0ff;
   font-family:freesans,Ubuntu,Helvetica,'Liberation Serif',Verdana,Consolas,Arial;
@@ -46,7 +58,7 @@ span._logo5{ /*  ]  */
 <body>
 OK! "freesans" is our font of choice for our logo and general text :-)
 <br><br><br>
-<div class="_logoBox"><div style="display:inline-block;margin:0px;padding:4px;background-color:#ff0000;"><span class="_logo1">[</span><span class="_logo2">:</span><span class="_logo3">.</span><span class="_logo4">:</span><span class="_logo5">]</span></div><div>
+<div class="_logoBoxOutside"><divclass="_logoBoxInside"><span class="_logo1">[</span><span class="_logo2">:</span><span class="_logo3">.</span><span class="_logo4">:</span><span class="_logo5">]</span></div><div>
 <br><br><br>
 
 <p style="text-align:center;font-family:Ubuntu;font-size: 64;"><span class="_logo1">[</span><span class="_logo2">:</span><span class="_logo3">.</span><span class="_logo4">:</span><span class="_logo5">]</span></p>
