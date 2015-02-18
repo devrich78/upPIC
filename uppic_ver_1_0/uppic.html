@@ -511,7 +511,7 @@ function reDrawEditGridLines(){
 /********   SECTION__GO!__[   JavaScript DOM Event Handling Functions   ]   ********/
 
 function overEditCell(cellId){
-	//document.title = "You are hovering over Cell: ["+id+"] and it's color is: ["+document.getElementById(id).style.backgroundColor+"]";
+
 	
 	currentlyMouseOverCell = cellId;
 
@@ -532,7 +532,7 @@ function overEditCell(cellId){
 	}
 }
 function clickedEditCell(cellId,cellFrag){
-	document.title = "You just clicked on Cell: ["+cellId+"]";
+
 	currentlySelectedCell = cellId;
 	currentlySelectedCellFrag = cellFrag;
 	
@@ -558,7 +558,7 @@ function clickedEditCell(cellId,cellFrag){
 				for(ii=1;ii<=9;ii++){
 					idNBii = cellPrefix+"NB"+ii.toString()+"_"+cellFrag;
 					idNBiia = cellPrefix+"NB"+ii.toString()+"a_"+cellFrag;
-//					document.title = "i=["+idNBii+"]";
+
 					document.getElementById(idNBii).style.backgroundColor = document.getElementById(id).style.backgroundColor;
 					document.getElementById(idNBiia).style.backgroundColor = document.getElementById(id).style.backgroundColor;
 				}
@@ -580,7 +580,7 @@ function clickedEditCell(cellId,cellFrag){
 				for(ii=1;ii<=9;ii++){
 					idNBii = cellPrefix+"NB"+ii.toString()+"_"+cellFrag;
 					idNBiia = cellPrefix+"NB"+ii.toString()+"a_"+cellFrag;
-//					document.title = "i=["+idNBii+"]";
+
 					document.getElementById(idNBiia).style.backgroundColor = document.getElementById(id).style.backgroundColor;
 					document.getElementById(idNBiia).style.opacity = document.getElementById(id).style.opacity;
 				}
@@ -596,12 +596,10 @@ function clickedEditCell(cellId,cellFrag){
 
 			break;
 			default: // do nothig!!
-			document.title = "default and no action chosen.........................";
+//			document.title = "default and no action chosen.........................";
 			break;
 		}
-		//reDrawPixelBox_1();
-//		reDrawPixelBox_2();
-//		reDrawPixelBox_4();
+
 	}
 	
 	
@@ -783,17 +781,14 @@ function initMeNow(){
 	/*  Write and draw the PixelBox for 1px size and NO GRID */
 		documentwriteInitialPixelBox_1(); // MUST BE CALLED _AFTER_ THE CALL TO documentwriteInitialEditGrid() !!!!
 		documentwriteInitialPixelBox_1alpha(); // MUST BE CALLED _AFTER_ THE CALL TO documentwriteInitialEditGrid() !!!!
-//		reDrawPixelBox_1();
 
 	/*  Write and draw the PixelBox for 2px size and with grid */
 		documentwriteInitialPixelBox_2(); // MUST BE CALLED _AFTER_ THE CALL TO documentwriteInitialEditGrid() !!!!
 		documentwriteInitialPixelBox_2alpha(); // MUST BE CALLED _AFTER_ THE CALL TO documentwriteInitialEditGrid() !!!!
-//		reDrawPixelBox_2();
 
 	/*  Write and draw the PixelBox for 2px size and with grid */
 		documentwriteInitialPixelBox_4(); // MUST BE CALLED _AFTER_ THE CALL TO documentwriteInitialEditGrid() !!!!
 		documentwriteInitialPixelBox_4alpha(); // MUST BE CALLED _AFTER_ THE CALL TO documentwriteInitialEditGrid() !!!!
-//		reDrawPixelBox_4();
 
 
 	/*  This must be called __AFTER__ all of the pixel boxes and the edit box are all drawn */
@@ -805,6 +800,7 @@ function initMeNow(){
 </script>
 </head>
 <body>
+
 
 <div class="div_primarydivcontainer" id="id_primarydivcontainer" style="display:block;text-align:center;width:100%;">
 <a href="http://devrich78.com/uppic" target="_blank"><a style="text-decoration:none;font-style:normal;font-weight:normal;background-color:transparent;color:#ffffff;font-size:10px;font-family:freesans,arial;" href="http://devrich78.com/uppic" target="_blank">
@@ -842,9 +838,7 @@ function documentwriteInitialEditGrid(){
 			
 			bgcolor = bgColR.toString()+bgColR.toString()+bgColG.toString()+bgColG.toString()+bgColB.toString()+bgColB.toString();
 
-			document.title = "id===="+id;
-			//document.title = "bgcolor===="+bgcolor;
-			
+		
 			tmpStr+=("<div class=\"div_uPeditCell\" id=\""+id+"\" onclick=\"clickedEditCell('"+id+"','"+idFrag+"');\" onmousemove=\"overEditCell('"+id+"');\" style=\"width:"+upPICcellScaleX+";height:"+upPICcellScaleY+";background-color:#"+bgcolor+";\">a</div>");
 		}
 		tmpStr+="<br>"; // NEW LINE To break each row into it's own row vs all uPgridCell's sticking together!
