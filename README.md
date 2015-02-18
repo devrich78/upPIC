@@ -1,6 +1,7 @@
 
 #PROJECT_STATUS: (UPDATE): Version 1.0 Is close to Initial Release!
 
+___NOTE: For those of you new to GitHub as I have been; a excellent place to start understand "how" GitHub does Project Mangament ( or Repo Management) is this page here: [https://guides.github.com/features/issues/](https://guides.github.com/features/issues/)___
 
 **_( This README.md and the_** [[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)] **_"upPIC" project are a constant Work-In-Progress ( W.I.P ).  I ask that you please be patient and kind as I don't have a lot of free time these days.  However; I plan to work on_** [[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)] **_as often as I can over time.  Many thanks for your support! )_**
 
