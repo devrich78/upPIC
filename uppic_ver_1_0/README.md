@@ -11,3 +11,9 @@ NEXT: Just make a URL link to the file -> "uppic.html".
 Done.
 
 Enjoy! :-)
+
+
+#Requirements:
+
+To create the images; your server must be running php version 5.4.0 or higher becasue by default we use the alpha component which as described here --> [http://php.net/manual/en/function.imagecolorset.php](http://php.net/manual/en/function.imagecolorset.php) <-- php 5.4.0 is required since that is the version of php when they added support for the alpha ( transparent ) component.
+
