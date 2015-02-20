@@ -717,6 +717,48 @@ function changeBGimage(imgNum){
 
 
 
+function sendData(buttonClicked){
+	switch(buttonClicked){
+		case "sendToJPG":
+			/* FIRST: Create a string of the EditBox cell color values */
+			uPd = "";
+			for(ir=0;ir<upPICmaxCols;ir++){
+				for(ic=0;ic<upPICmaxRows;ic++){
+					id = cellPrefix+"C"+ic.toString()+"_R"+ir.toString();
+					
+					/* SECOND: We recreate the code from RGB() to individal color values for R G B */
+						
+						uPtmp = document.getElementById(id).style.backgroundColor; // get the RGB(r,g,b) string
+						uPtmp = uPtmp.substring(4); // remove the "RGB("
+						uPtmp = uPtmp.substring(0,(uPtmp.length-1)); // remove the last ")"
+						
+						uPtmpArr = uPtmp.split(","); // explode the "R,G,B" string into an array
+						uPtmpR = parseFloat(uPtmpArr[0]); // The RED Component as a float with any whitespace remove
+						uPtmpG = parseFloat(uPtmpArr[1]); // The GREEN Component as a float with any whitespace remove
+						uPtmpB = parseFloat(uPtmpArr[2]); // The BLUE Component as a float with any whitespace remove
+
+						uPtmp = uPtmpR.toString()+"@"+uPtmpG.toString()+"@"+uPtmpB.toString();
+					
+					
+					uPd += uPtmp +";";
+				}
+			}
+			uPd = uPd.substring(0,(uPd.length-1)); // remove the last ";"
+			document.getElementById("phpimgframe").src = "process_uppic.php?ut=1&uPmc="+upPICmaxCols+"&uPmr="+upPICmaxRows+"&uPd="+uPd;
+		break;
+		case "sendToPNG":
+			document.getElementById("phpimgframe").src = "process_uppic.php?ut=2&uPmc="+upPICmaxCols+"&uPmr="+upPICmaxRows+"&uPd="+uPd;
+		break;
+		default: // do nothing because we don't know how we got here O_o
+			document.title = "sendData(default section) buttonClicked = ["+buttonClicked+"]";
+		break;
+	}
+}
+
+
+
+
+
 
 
 /********   END__SECTION__[   General Functions   ]   ********/
@@ -726,7 +768,7 @@ function changeBGimage(imgNum){
 	// These two functions: found at http://stackoverflow.com/questions/57803/how-to-convert-decimal-to-hex-in-javascript by Prestaul, Thanks man!
 		function toHex(d){return d.toString(16);}// MUST BE EXACTLY 8-BIT ( 000 ~ 255 )
 		function toDec(h){return parseInt(h, 16);}// MUST BE EXACTLY 2 characters ( "00" ~ "FF" )
-
+	//  ^---- NOTE These need some work!!
 
 /********   END__SECTION__[   My Utility Functions   ]   ********/
 
@@ -803,35 +845,40 @@ function initMeNow(){
 <br>
 <h2>[:.:] - upPIC user profile Pixelated Image Creator - ver 1.0 ( Currently a W.I.P. )</h2>
 <div style="display:inline-block;text-align:center;padding:16px;border-radius:8px;background-color:#00aaff;border:4px solid #f0f0cf;">
-Spread The Word! Copy The Following Code<br>
-<div style="display:inline-block;border:2px solid #0f0f77;padding:7px;">To Your Website:<textarea rows="1" cols="27" readonly onclick="this.select();"><a href="http://devrich78.com/uppic" target="_blank"><div style="display:inline-block;background-color:#0070b0;background: -moz-linear-gradient(#0070b0, #77d0ff);background: linear-gradient(#0070b0, #77d0ff);margin:0px;padding-top:1px;padding-left:3px;padding-right:4px;padding-bottom:4px;border-radius:4px;"><span style="background-color:transparent;font-family:freesans,Ubuntu,Helvetica,'Liberation Serif',Verdana,Consolas,Arial;font-size:16px;color:#fdfdfd;">[</span><span style="background-color:transparent;font-family:freesans,Ubuntu,Helvetica,'Liberation Serif',Verdana,Consolas,Arial;font-size:16px;color:#e0e0e0;">:</span><span style="background-color:transparent;font-family:freesans,Ubuntu,Helvetica,'Liberation Serif',Verdana,Consolas,Arial;font-size:16px;color:#e0e0e0;">.</span><span style="background-color:transparent;font-family:freesans,Ubuntu,Helvetica,'Liberation Serif',Verdana,Consolas,Arial;font-size:16px;color:#e0e0e0;">:</span><span style="background-color:transparent;font-family:freesans,Ubuntu,Helvetica,'Liberation Serif',Verdana,Consolas,Arial;font-size:16px;color:#fdfdfd;">]</span></div></a></textarea></div>
-<div style="display:inline-block;border:2px solid #0f0f77;padding:7px;">To Your phpBB/vBulletin Posting Signature:<textarea rows="1" cols="27" readonly onclick="this.select();">Don't settle for whatever someone else made -- Create your own [size=125][b][color=#0040FF][[/color][color=#00AFFF]:.:[/color][color=#0040FF]][/color][/b][/size] ( user pixelated Profile Image ) with [b][i]upPIC[/i][/b] at: [b][i][url]http://devrich78.com/uppic[/url][/i][/b]</textarea></div>
+Spread The Word! Copy and USE The Following Code<br>
+<div style="display:inline-block;border:2px solid #0f0f77;padding:7px;">On Your Website:<textarea rows="2" cols="16" readonly onclick="this.select();" style="width:128px;overflow-x:hidden;"><a href="http://devrich78.com/uppic" target="_blank"><div style="display:inline-block;background-color:#0070b0;background: -moz-linear-gradient(#0070b0, #77d0ff);background: linear-gradient(#0070b0, #77d0ff);margin:0px;padding-top:1px;padding-left:3px;padding-right:4px;padding-bottom:4px;border-radius:4px;"><span style="background-color:transparent;font-family:freesans,Ubuntu,Helvetica,'Liberation Serif',Verdana,Consolas,Arial;font-size:16px;color:#fdfdfd;">[</span><span style="background-color:transparent;font-family:freesans,Ubuntu,Helvetica,'Liberation Serif',Verdana,Consolas,Arial;font-size:16px;color:#e0e0e0;">:</span><span style="background-color:transparent;font-family:freesans,Ubuntu,Helvetica,'Liberation Serif',Verdana,Consolas,Arial;font-size:16px;color:#e0e0e0;">.</span><span style="background-color:transparent;font-family:freesans,Ubuntu,Helvetica,'Liberation Serif',Verdana,Consolas,Arial;font-size:16px;color:#e0e0e0;">:</span><span style="background-color:transparent;font-family:freesans,Ubuntu,Helvetica,'Liberation Serif',Verdana,Consolas,Arial;font-size:16px;color:#fdfdfd;">]</span></div></a></textarea></div>
+<div style="display:inline-block;border:2px solid #0f0f77;padding:7px;">In Your phpBB/vBulletin Posting Signature:<textarea rows="2" cols="16" readonly onclick="this.select();" style="width:128px;overflow-x:hidden;">Don't settle for whatever someone else made -- upPIC your own [size=125][b][color=#0040FF][[/color][color=#00AFFF]:.:[/color][color=#0040FF]][/color][/b][/size] at: [b][i][url]http://devrich78.com/uppic[/url][/i][/b]</textarea></div>
 </div>
 <br><br>
 
-
-<div class="div_primarydivcontainer" id="id_primarydivcontainer" style="display:inline-block;text-align:center;border-radius:8px;background-color:#ffffdf;border:4px groove #00aaff;padding:20px;">
-
+<div style="display:inline-block;"><div style="display:table-cell;vertical-align:top;text-align:center;border-radius:8px;background-color:#ffffdf;border:4px groove #00aaff;padding:10px;">
 
 
-NOTE: You must _FIRST_ Select what Action you would like to do. By Default "Nothing" is selected as the click/tap action!<br><br>
+NOTE: You must _FIRST_ Select what Action you would like to do.<br>By Default "Nothing" is selected as the click/tap action!<br><br>
 
-What you click/tap on a cell in the Edit Box:
+What you click/tap on a cell in the Edit Box:<br>
 
 
 
-<div style="display:block;vertical-align:top;">
+<div style="display:inline-block;width:480px;vertical-align:top;">
 <div id="id_actionBox_nothing" onclick="selectActionBox(this.id);" class="actionButtonSelected">ONLY&nbsp;Select (change&nbsp;nothing!)</div>
 <div id="id_actionBox_changeCellColor" onclick="selectActionBox(this.id);" class="actionButtonNotSelected">Change&nbsp;Cell&nbsp;Color<br><br></div>
 
 <br><br>
-<div style="display:inline-block;width:820px;padding:8px;border:2px solid #44449F;">NOTE: Set to 1.0 to remove the Alpha altogether!<br><br>
+<div style="display:inline-block;width:90%;padding:8px;border:2px solid #44449F;">NOTE: Set to 1.0 to remove the Alpha altogether!<br><br>
 <div id="id_actionBox_setAlphaValue" onclick="selectActionBox(this.id);" class="actionButtonNotSelected">Set&nbsp;The&nbsp;Alpha&nbsp;Value<br>A:<input type="text" id="input_alphaAmount" value="1.0" onchange="verifyMyAlpha(this.value);" style="width:100px;"></div>
 <br><br>NOTE: Any cell you click on with an Alpha value less than 1.0 will keep that Alpha Value!<br>This is very useful if you want to keep the Alpha Value but want to try different colors to see which color better fits ;-)
 </div>
 <br><br>
 
-</div></div><br><br>
+</div></div><div style="display:table-cell;vertical-align:top;width:480px;height:360px;text-align:center;padding:10px;border-radius:8px;background-color:#77dfff;border:4px solid #f0f0cf;">
+<div style="display:inline-block;width:100%;height:300px;"><iframe id="phpimgframe" src="bg8x8.jpg" style="width:100%;height:100%;">I need an iframe! ;..-(</iframe></div>
+<br><br>
+<div style="display:inline-block;width:100%;height:40px;"><input type="button" id="sendToJPG" onclick="sendData(this.id);" value="Create a JPG !"><input type="button" id="sendToPNG" onclick="sendData(this.id);" value="Create a PNG !"><input type="button" id="sendToAnimatedPNG" onclick="sendData(this.id);" value="(planned) Create a Animated PNG !" disabled></div>
+</div>
+
+</div>
+<br><br>
 
 
 
@@ -1531,6 +1578,15 @@ documentwriteInitialNineBox_9a();
 
 
 </div><br>
+
+
+
+
+
+
+
+
+
 
 
 <br><br><br><br>
