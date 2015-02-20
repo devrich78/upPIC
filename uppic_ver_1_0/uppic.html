@@ -573,8 +573,13 @@ function clickedEditCell(cellId,cellFrag){
 					
 			break;
 			case "id_actionBox_setAlphaValue":
-				document.getElementById(cellId).innerHTML = "<div style=\"display:inline-block;margin:0px;padding:0px;display:inline;color:#000000;opacity:1.0;\">A="+alphaAmount.toString()+"</div>";
-				document.getElementById(cellId).style.opacity = alphaAmount;
+				if(document.getElementById("input_alphaAmount").value < 0.01){
+					document.getElementById("input_alphaAmount").value = 0;
+					document.getElementById(cellId).innerHTML = "<div style=\"display:inline-block;margin:0px;padding:0px;display:inline;color:#000000;opacity:1.0;\">&nbsp;</div>";
+				}else{
+					document.getElementById(cellId).innerHTML = "<div style=\"display:inline-block;margin:0px;padding:0px;display:inline;color:#000000;opacity:1.0;\">"+document.getElementById("input_alphaAmount").value.toString()+"</div>";
+				}
+				document.getElementById(cellId).style.opacity = compatArr[document.getElementById("input_alphaAmount").value];
 
 //				document.getElementById(cellId).style.backgroundColor = document.getElementById(currentlySelectedPal).style.backgroundColor;
 				for(ii=1;ii<=9;ii++){
@@ -670,16 +675,56 @@ function selectActionBox(actionBoxId){
 }
 
 
+compatArr = []; // make global
+function createCompatibilityArray(){
+	ii=127;
+	for(i=0;i<=127;i++){
+		compatArr[i] = ii;
+		ii--;
+	}
+	for(i=0;i<=127;i++){
+		t = compatArr[i];
+		t = t * 2;
+		t = parseFloat(t) / 255;
+		t = ""+t;
+		t = t.substring(0,4);
+		t = parseFloat(t);
+		if(t < 0){t = 0;}
+		if(t > .99){t = 1;}
+		compatArr[i] = t;
+
+
+		document.getElementById("testbox").innerHTML += "compatArr["+i.toString()+"]==["+compatArr[i]+"]<br>";
+		
+	}
+	
+}
+
+
 
 
 function verifyMyAlpha(alphaValue){
-	alphaValue = parseFloat(alphaValue);
+//	alphaValue = parseFloat(alphaValue);
 	
-	if(alphaValue < 0.0){alphaValue = 0.0;}
-	if(alphaValue > 1.0){alphaValue = 1.0;}
-	
-	alphaAmount = alphaValue;
-	document.getElementById("input_alphaAmount").value = alphaValue;
+	if(alphaValue < 0){alphaValue = 0;}
+	if(alphaValue > 127){alphaValue = 127;} // <- we need to range betwen 0 and 127 in whole numbers not float so that the php's GD image system is happy.... umm.. now to convert to float for style.backgroundColor  X-|
+	/*
+	alphaAmount = alphaValue * 2; // <- multiplay by 2 so that we get a true hex value 00~FF or 0~255
+	alphaAmount = parseFloat(alphaAmount) / 255;
+	alphaAmount = "" + alphaAmount; // convert alphaAmount to a string
+	alphaAmount = alphaAmount.substring(0,4); // only keep the   0   the   .   and the first two digits :-)
+	alphaAmount = parseFloat(alphaAmount); // and convert it back to a float
+	if(alphaAmount < 0.02){alphaAmount = 0.0;}
+	if(alphaAmount > 0.98){alphaAmount = 1.0;}
+	alphaAmount = -alphaAmount; // 'flip' the value in the other direction O_o
+	document.title = "alphaAmount=["+alphaAmount+"]";
+	alphaAmount = ""+alphaAmount; // convert to a string
+	alphaAmount = alphaAmount.substring(1); // only get everything AFTER the minus sign
+	alphaAmount = parseFloat(alphaAmount);
+	if(alphaAmount < 0.02){alphaAmount = 0.0;} // duplicate on purpose, don't remove!!
+	if(alphaAmount > 0.98){alphaAmount = 1.0;} // duplicate on purpose, don't remove!!
+	*/
+//	document.getElementById("input_alphaAmount").value = alphaAmount;
 }
 
 
@@ -747,6 +792,46 @@ function sendData(buttonClicked){
 			document.getElementById("phpimgframe").src = "process_uppic.php?ut=1&uPmc="+upPICmaxCols+"&uPmr="+upPICmaxRows+"&uPd="+uPd;
 		break;
 		case "sendToPNG":
+			/* FIRST: Create a string of the EditBox cell color values */
+			uPd = "";
+			for(ir=0;ir<upPICmaxCols;ir++){
+				for(ic=0;ic<upPICmaxRows;ic++){
+					id = cellPrefix+"C"+ic.toString()+"_R"+ir.toString();
+					
+					/* SECOND: We recreate the code from RGB() to individal color values for R G B and then recombine these values as pure string-based numberical data */
+											
+						uPtmp = document.getElementById(id).style.backgroundColor; // get the RGB(r,g,b) string
+						uPtmp = uPtmp.substring(4); // remove the "RGB("
+						uPtmp = uPtmp.substring(0,(uPtmp.length-1)); // remove the last ")"
+						
+						uPtmpArr = uPtmp.split(","); // explode the "R,G,B" string into an array
+						uPtmpR = parseFloat(uPtmpArr[0]); // The RED Component as a float with any whitespace remove
+						uPtmpG = parseFloat(uPtmpArr[1]); // The GREEN Component as a float with any whitespace remove
+						uPtmpB = parseFloat(uPtmpArr[2]); // The BLUE Component as a float with any whitespace remove
+
+						uPtmp = uPtmpR.toString()+"@"+uPtmpG.toString()+"@"+uPtmpB.toString();
+					
+					/* THIRD: We add the alpha color from style.opacity _BUT_ we have to FIRST convert that into 0 ~ 127 usability where 0 is solid and 127 is 100% transparent :-/  ( thanks php's GD ) */
+					
+						uPalpha = document.getElementById(id).style.opacity;
+						if(uPalpha !=""){
+							tt = ""+uPalpha
+							tt = tt.substring(0,4);
+							tt = parseFloat(tt);
+							uPalpha = compatArr.indexOf(tt);
+							if(uPalpha < 0 || document.getElementById(id).style.opacity > .99){uPalpha = 0;}
+							if(uPalpha > 127 || document.getElementById(id).style.opacity < .01 ){uPalpha = 127;}
+						}else{
+							uPalpha = 0;
+						}
+						
+						
+						uPtmp += "@" + uPalpha.toString();
+					
+					uPd += uPtmp +";";
+				}
+			}
+			uPd = uPd.substring(0,(uPd.length-1)); // remove the last ";" thus preventing server errors or extra unneeded server load
 			document.getElementById("phpimgframe").src = "process_uppic.php?ut=2&uPmc="+upPICmaxCols+"&uPmr="+upPICmaxRows+"&uPd="+uPd;
 		break;
 		default: // do nothing because we don't know how we got here O_o
@@ -807,6 +892,9 @@ function sendData(buttonClicked){
 
 // THIS    initMeNow( )    function MUST BE AT THE END AND THE VERY LAST FUNCTION BEFORE IT IS CALLED!!
 function initMeNow(){
+
+	 	createCompatibilityArray(); // This is needed because of converitng from float values to 0~127 values
+	 	
 	/*  Write and draw the GridBoxCells for with grid */
 //		documentwriteInitialEditGrid(); // Create the first instance of the upPIC grid ( Note that this should be called __ONLY-ONCE__ !!
 		reDrawEditGrid(); // Create the first instance of the upPIC grid ( Note that this should be called __ONLY-ONCE__ !!
@@ -866,7 +954,11 @@ What you click/tap on a cell in the Edit Box:<br>
 
 <br><br>
 <div style="display:inline-block;width:90%;padding:8px;border:2px solid #44449F;">NOTE: Set to 1.0 to remove the Alpha altogether!<br><br>
-<div id="id_actionBox_setAlphaValue" onclick="selectActionBox(this.id);" class="actionButtonNotSelected">Set&nbsp;The&nbsp;Alpha&nbsp;Value<br>A:<input type="text" id="input_alphaAmount" value="1.0" onchange="verifyMyAlpha(this.value);" style="width:100px;"></div>
+<div id="id_actionBox_setAlphaValue" onclick="selectActionBox(this.id);" class="actionButtonNotSelected">Set&nbsp;The&nbsp;Alpha&nbsp;Value<br>A:
+
+<input type="number" id="input_alphaAmount" min="0" max="127" value="0" onchange="verifyMyAlpha(this.value);" style="width:100px;">
+
+</div>
 <br><br>NOTE: Any cell you click on with an Alpha value less than 1.0 will keep that Alpha Value!<br>This is very useful if you want to keep the Alpha Value but want to try different colors to see which color better fits ;-)
 </div>
 <br><br>
@@ -1625,6 +1717,11 @@ Possible Button Values Are:<br><br>0 = Left<br>1 = Middle/Wheel_Click<br>2 = rig
 <br><br>Many Thanks for your help :-)
 </div>
 
+<br><br><br><br>
+<div id="testbox" style="display:inline-block;text-align:center;width:900px;border:8px groove #ffff00;background-color:#992200;color:#f0f0f0;padding:20px;">
+<h3>SUPPORT AREA FOR TESTING FOR PROBLEMS AND TWEAKING:</h3>
+<br>
+</div>
 
 
 
