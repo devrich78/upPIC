@@ -726,8 +726,8 @@ function sendData(buttonClicked){
 				for(ic=0;ic<upPICmaxRows;ic++){
 					id = cellPrefix+"C"+ic.toString()+"_R"+ir.toString();
 					
-					/* SECOND: We recreate the code from RGB() to individal color values for R G B */
-						
+					/* SECOND: We recreate the code from RGB() to individal color values for R G B and then recombine these values as pure string-based numberical data */
+											
 						uPtmp = document.getElementById(id).style.backgroundColor; // get the RGB(r,g,b) string
 						uPtmp = uPtmp.substring(4); // remove the "RGB("
 						uPtmp = uPtmp.substring(0,(uPtmp.length-1)); // remove the last ")"
@@ -743,7 +743,7 @@ function sendData(buttonClicked){
 					uPd += uPtmp +";";
 				}
 			}
-			uPd = uPd.substring(0,(uPd.length-1)); // remove the last ";"
+			uPd = uPd.substring(0,(uPd.length-1)); // remove the last ";" thus preventing server errors or extra unneeded server load
 			document.getElementById("phpimgframe").src = "process_uppic.php?ut=1&uPmc="+upPICmaxCols+"&uPmr="+upPICmaxRows+"&uPd="+uPd;
 		break;
 		case "sendToPNG":
