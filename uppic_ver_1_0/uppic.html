@@ -694,38 +694,13 @@ function createCompatibilityArray(){
 		compatArr[i] = t;
 
 
-		document.getElementById("testbox").innerHTML += "compatArr["+i.toString()+"]==["+compatArr[i]+"]<br>";
+		//document.getElementById("testbox").innerHTML += "compatArr["+i.toString()+"]==["+compatArr[i]+"]<br>";
 		
 	}
 	
 }
 
 
-
-
-function verifyMyAlpha(alphaValue){
-//	alphaValue = parseFloat(alphaValue);
-	
-	if(alphaValue < 0){alphaValue = 0;}
-	if(alphaValue > 127){alphaValue = 127;} // <- we need to range betwen 0 and 127 in whole numbers not float so that the php's GD image system is happy.... umm.. now to convert to float for style.backgroundColor  X-|
-	/*
-	alphaAmount = alphaValue * 2; // <- multiplay by 2 so that we get a true hex value 00~FF or 0~255
-	alphaAmount = parseFloat(alphaAmount) / 255;
-	alphaAmount = "" + alphaAmount; // convert alphaAmount to a string
-	alphaAmount = alphaAmount.substring(0,4); // only keep the   0   the   .   and the first two digits :-)
-	alphaAmount = parseFloat(alphaAmount); // and convert it back to a float
-	if(alphaAmount < 0.02){alphaAmount = 0.0;}
-	if(alphaAmount > 0.98){alphaAmount = 1.0;}
-	alphaAmount = -alphaAmount; // 'flip' the value in the other direction O_o
-	document.title = "alphaAmount=["+alphaAmount+"]";
-	alphaAmount = ""+alphaAmount; // convert to a string
-	alphaAmount = alphaAmount.substring(1); // only get everything AFTER the minus sign
-	alphaAmount = parseFloat(alphaAmount);
-	if(alphaAmount < 0.02){alphaAmount = 0.0;} // duplicate on purpose, don't remove!!
-	if(alphaAmount > 0.98){alphaAmount = 1.0;} // duplicate on purpose, don't remove!!
-	*/
-//	document.getElementById("input_alphaAmount").value = alphaAmount;
-}
 
 
 
@@ -835,7 +810,7 @@ function sendData(buttonClicked){
 			document.getElementById("phpimgframe").src = "process_uppic.php?ut=2&uPmc="+upPICmaxCols+"&uPmr="+upPICmaxRows+"&uPd="+uPd;
 		break;
 		default: // do nothing because we don't know how we got here O_o
-			document.title = "sendData(default section) buttonClicked = ["+buttonClicked+"]";
+//			document.title = "sendData(default section) buttonClicked = ["+buttonClicked+"]";
 		break;
 	}
 }
@@ -956,7 +931,7 @@ What you click/tap on a cell in the Edit Box:<br>
 <div style="display:inline-block;width:90%;padding:8px;border:2px solid #44449F;">NOTE: Set to 1.0 to remove the Alpha altogether!<br><br>
 <div id="id_actionBox_setAlphaValue" onclick="selectActionBox(this.id);" class="actionButtonNotSelected">Set&nbsp;The&nbsp;Alpha&nbsp;Value<br>A:
 
-<input type="number" id="input_alphaAmount" min="0" max="127" value="0" onchange="verifyMyAlpha(this.value);" style="width:100px;">
+<input type="number" id="input_alphaAmount" min="0" max="127" value="0" style="width:100px;">
 
 </div>
 <br><br>NOTE: Any cell you click on with an Alpha value less than 1.0 will keep that Alpha Value!<br>This is very useful if you want to keep the Alpha Value but want to try different colors to see which color better fits ;-)
@@ -1683,19 +1658,20 @@ documentwriteInitialNineBox_9a();
 
 <br><br><br><br>
 
+<div style="display:inline-block;text-align:center;padding:16px;border-radius:8px;background-color:#00aaff;border:4px solid #f0f0cf;">
+Spread The Word! Copy and USE The Following Code<br>
+<div style="display:inline-block;border:2px solid #0f0f77;padding:7px;">On Your Website:<textarea rows="2" cols="16" readonly onclick="this.select();" style="width:128px;overflow-x:hidden;"><a href="http://devrich78.com/uppic" target="_blank"><div style="display:inline-block;background-color:#0070b0;background: -moz-linear-gradient(#0070b0, #77d0ff);background: linear-gradient(#0070b0, #77d0ff);margin:0px;padding-top:1px;padding-left:3px;padding-right:4px;padding-bottom:4px;border-radius:4px;"><span style="background-color:transparent;font-family:freesans,Ubuntu,Helvetica,'Liberation Serif',Verdana,Consolas,Arial;font-size:16px;color:#fdfdfd;">[</span><span style="background-color:transparent;font-family:freesans,Ubuntu,Helvetica,'Liberation Serif',Verdana,Consolas,Arial;font-size:16px;color:#e0e0e0;">:</span><span style="background-color:transparent;font-family:freesans,Ubuntu,Helvetica,'Liberation Serif',Verdana,Consolas,Arial;font-size:16px;color:#e0e0e0;">.</span><span style="background-color:transparent;font-family:freesans,Ubuntu,Helvetica,'Liberation Serif',Verdana,Consolas,Arial;font-size:16px;color:#e0e0e0;">:</span><span style="background-color:transparent;font-family:freesans,Ubuntu,Helvetica,'Liberation Serif',Verdana,Consolas,Arial;font-size:16px;color:#fdfdfd;">]</span></div></a></textarea></div>
+<div style="display:inline-block;border:2px solid #0f0f77;padding:7px;">In Your phpBB/vBulletin Posting Signature:<textarea rows="2" cols="16" readonly onclick="this.select();" style="width:128px;overflow-x:hidden;">Don't settle for whatever someone else made -- upPIC your own [size=125][b][color=#0040FF][[/color][color=#00AFFF]:.:[/color][color=#0040FF]][/color][/b][/size] at: [b][i][url]http://devrich78.com/uppic[/url][/i][/b]</textarea></div>
+</div>
+
+<br><br>
+
 <div style="display:inline-block;text-align:center;padding:16px;border-radius:8px;background-color:#77dfff;border:4px solid #f0f0cf;">
 
 Copyright (C) DevRich78.com -- All Rights Reserved -- You can find out about Licensing upPIC under the Apache 2.0 License<br>as well as Check out my repo at GitHub.com: <a href="http://github.com/DevRich78/upPIC/" target="_blank">https://github.com/DevRich78/upPIC/</a>
 <br><br>
 &quot;upPIC&quot; and the <a href="http://devrich78.com/uppic" target="_blank"><div style="display:inline-block;background-color:#0070b0;background: -moz-linear-gradient(#0070b0, #77d0ff);background: linear-gradient(#0070b0, #77d0ff);margin:0px;padding-top:1px;padding-left:3px;padding-right:4px;padding-bottom:4px;border-radius:4px;"><span style="background-color:transparent;font-family:freesans,Ubuntu,Helvetica,'Liberation Serif',Verdana,Consolas,Arial;font-size:16px;color:#fdfdfd;">[</span><span style="background-color:transparent;font-family:freesans,Ubuntu,Helvetica,'Liberation Serif',Verdana,Consolas,Arial;font-size:16px;color:#e0e0e0;">:</span><span style="background-color:transparent;font-family:freesans,Ubuntu,Helvetica,'Liberation Serif',Verdana,Consolas,Arial;font-size:16px;color:#e0e0e0;">.</span><span style="background-color:transparent;font-family:freesans,Ubuntu,Helvetica,'Liberation Serif',Verdana,Consolas,Arial;font-size:16px;color:#e0e0e0;">:</span><span style="background-color:transparent;font-family:freesans,Ubuntu,Helvetica,'Liberation Serif',Verdana,Consolas,Arial;font-size:16px;color:#fdfdfd;">]</span></div></a> logo are TradeMarks of DevRich78 and all other copyrights/trademarks are the property of their respective owners.
-
-<br><br>Spread The Word! Copy The Following Code<br>
-<div style="display:inline-block;border:2px solid #0f0f77;padding:7px;">To Your Website:<textarea rows="1" cols="27" readonly onclick="this.select();"><a href="http://devrich78.com/uppic" target="_blank"><div style="display:inline-block;background-color:#0070b0;background: -moz-linear-gradient(#0070b0, #77d0ff);background: linear-gradient(#0070b0, #77d0ff);margin:0px;padding-top:1px;padding-left:3px;padding-right:4px;padding-bottom:4px;border-radius:4px;"><span style="background-color:transparent;font-family:freesans,Ubuntu,Helvetica,'Liberation Serif',Verdana,Consolas,Arial;font-size:16px;color:#fdfdfd;">[</span><span style="background-color:transparent;font-family:freesans,Ubuntu,Helvetica,'Liberation Serif',Verdana,Consolas,Arial;font-size:16px;color:#e0e0e0;">:</span><span style="background-color:transparent;font-family:freesans,Ubuntu,Helvetica,'Liberation Serif',Verdana,Consolas,Arial;font-size:16px;color:#e0e0e0;">.</span><span style="background-color:transparent;font-family:freesans,Ubuntu,Helvetica,'Liberation Serif',Verdana,Consolas,Arial;font-size:16px;color:#e0e0e0;">:</span><span style="background-color:transparent;font-family:freesans,Ubuntu,Helvetica,'Liberation Serif',Verdana,Consolas,Arial;font-size:16px;color:#fdfdfd;">]</span></div></a></textarea></div>
-<div style="display:inline-block;border:2px solid #0f0f77;padding:7px;">To Your phpBB/vBulletin Posting Signature:<textarea rows="1" cols="27" readonly onclick="this.select();">Don't settle for whatever someone else made -- Create your own [size=125][b][color=#0040FF][[/color][color=#00AFFF]:.:[/color][color=#0040FF]][/color][/b][/size] ( user pixelated Profile Image ) with [b][i]upPIC[/i][/b] at: [b][i][url]http://devrich78.com/uppic[/url][/i][/b]</textarea></div>
 </div>
-
-
-
 
 <br><br>
 <br><br>
@@ -1715,7 +1691,7 @@ Possible Button Values Are:<br><br>0 = Left<br>1 = Middle/Wheel_Click<br>2 = rig
 <br>3: Is your Operating System 32-bit _or_ 64-bit ?
 <br>4: The URL of where you found this webpage at ( so I can verify if it is something 'i' did or not )
 <br><br>Many Thanks for your help :-)
-</div>
+</div></div>
 
 <br><br><br><br>
 <div id="testbox" style="display:inline-block;text-align:center;width:900px;border:8px groove #ffff00;background-color:#992200;color:#f0f0f0;padding:20px;">
