@@ -764,7 +764,7 @@ function sendData(buttonClicked){
 				}
 			}
 			uPd = uPd.substring(0,(uPd.length-1)); // remove the last ";" thus preventing server errors or extra unneeded server load
-			document.getElementById("phpimgframe").src = "process_uppic.php?ut=1&uPfn="+document.getElementByID("uPfilenameBox").value+"&uPmc="+upPICmaxCols+"&uPmr="+upPICmaxRows+"&uPd="+uPd;
+			document.getElementById("phpimgframe").src = "process_uppic.php?ut=1&uPfn="+document.getElementByID('uPfilenameBox').value+"&uPmc="+upPICmaxCols+"&uPmr="+upPICmaxRows+"&uPd="+uPd;
 		break;
 		case "sendToPNG":
 			/* FIRST: Create a string of the EditBox cell color values */
@@ -807,7 +807,7 @@ function sendData(buttonClicked){
 				}
 			}
 			uPd = uPd.substring(0,(uPd.length-1)); // remove the last ";" thus preventing server errors or extra unneeded server load
-			document.getElementById("phpimgframe").src = "process_uppic.php?ut=2&uPfn="+document.getElementByID("uPfilenameBox").value+"&uPmc="+upPICmaxCols+"&uPmr="+upPICmaxRows+"&uPd="+uPd;
+			document.getElementById("phpimgframe").src = "process_uppic.php?ut=2&uPfn="+document.getElementByID('uPfilenameBox').value+"&uPmc="+upPICmaxCols+"&uPmr="+upPICmaxRows+"&uPd="+uPd;
 		break;
 		default: // do nothing because we don't know how we got here O_o
 //			document.title = "sendData(default section) buttonClicked = ["+buttonClicked+"]";
