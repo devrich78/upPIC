@@ -54,6 +54,9 @@ VALENTINE's 2015 NOTE: Make a simple chart/table in html for "Features and To-Do
 
 ___DONE_ITEMS!!___
 
+***[ DONE! ]*** Create a "Scale" option for users to use for scaling the output image ( using/maintaining proper aspect ratios ) !!!!  Can't have a "v1.0 - release" until then of course ;-)
+
+
 ***[ DONE! ]*** Create a way to "create" the upPIC's to various images on the server-side-php  Can't have a "v1.0 - release" until then of course ;-)
 ***[ DONE! ]*** (IMPLEMENTED_BY: having the user just click a button then their desired format is downloaded then they can right-click and save as the image!!) ^-- and figure out a way to allow the user to then download.  Can't have a "v1.0 - release" until then of course ;-)
 
@@ -79,6 +82,15 @@ ___DONE_ITEMS!!___
 
 
 ___MISSION-CRITICAL-MUST-BE-DONE Priority Items___ ( FOR VERSION 1.1 )
+
+
+[Priority-one/MileStone] ***[ Partially-Implemented! ]*** Create a way for users to specify a filename_prefix to use: ie: myIMGname  --  becomes:    myIMGname16x16.jpg    myIMGname16x16.png      myIMGname16x16-sxy10.jpg   myIMGname16x16-sxy10.png
+           ^---- "-sxy10" means Scale X AND Y by 10 and 10  thus for every pixel, we get a filled in 10x10 'pixel' and thus this is how we achieve making our own pixelated user profile image!!
+                      ^---- Initially just lock this at a predetermined number _BUT_ we _WANT_ to asap give users the ability to specify their own number to scale by :-)
+                                                               ^---- I like 8 but I think making it 10 would be MUCH easier for all users to mentally calculate their desired outcomes :-)
+
+
+[Priority-one/MileStone] ***[ To-Do ]*** Create a "Edit Box Cell CURRENT Info:" box which displays the current status/contents/styles of the selected Edit Box Cell!!
 
 
 [Priority-one/MileStone] ***[ To-Do ]*** To cut down on major spikes in bandwidth and some forms of possible DDoS attacks on my server; I'm going to build in that an IP Address may only submit an image once every 60 seconds -- I wish I didn't have to do that but it's for everyone's protection so that we can all continue to use the server :-)
@@ -111,11 +123,6 @@ ___MISSION-CRITICAL-MUST-BE-DONE Priority Items___ ( FOR VERSION 1.1 )
 ___MISSION-CRITICAL-MUST-BE-DONE Priority Items___ ( FOR VERSION 1.0 to be able to release it!! )
 
 
-[Priority-one/MileStone] ***[ To-Do ]*** Create a "Scale" option for users to use for scaling the output image ( using/maintaining proper aspect ratios ) !!!!  Can't have a "v1.0 - release" until then of course ;-)
-[Priority-one/MileStone] ***[ To-Do ]*** Create a way for users to specify a filename_prefix to use: ie: myIMGname  --  becomes:    myIMGname16x16.jpg    myIMGname16x16.png      myIMGname16x16-sxy10.jpg   myIMGname16x16-sxy10.png
-           ^---- "-sxy10" means Scale X AND Y by 10 and 10  thus for every pixel, we get a filled in 10x10 'pixel' and thus this is how we achieve making our own pixelated user profile image!!
-                      ^---- Initially just lock this at a predetermined number _BUT_ we _WANT_ to asap give users the ability to specify their own number to scale by :-)
-                                                               ^---- I like 8 but I think making it 10 would be MUCH easier for all users to mentally calculate their desired outcomes :-)
 
 
 
