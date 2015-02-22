@@ -754,7 +754,27 @@ function changeBGimage(imgNum){
 
 
 function sendData(buttonClicked){
+	buttontype = "";
 	switch(buttonClicked){
+		case "sendToJPGb":
+			buttontype = "sendToJPG";
+			udelivery = "b";
+		break;
+		case "sendToJPGsa":
+			buttontype = "sendToJPG";
+			udelivery = "sa";
+		break;
+		case "sendToPNGb":
+			buttontype = "sendToPNG";
+			udelivery = "b";
+		break;
+		case "sendToPNGsa":
+			buttontype = "sendToPNG";
+			udelivery = "sa";
+		break;
+	}
+
+	switch(buttontype){
 		case "sendToJPG":
 			/* FIRST: Create a string of the EditBox cell color values */
 			uPd = "";
@@ -780,7 +800,7 @@ function sendData(buttonClicked){
 				}
 			}
 			uPd = uPd.substring(0,(uPd.length-1)); // remove the last ";" thus preventing server errors or extra unneeded server load
-			document.getElementById("phpimgframe").src = "process_uppic.php?ut=1&ud=b&uscr="+document.getElementById('uPscaleYbox').value+"&uscc="+document.getElementById('uPscaleXbox').value+"&ufn="+document.getElementById('uPfilenameBox').value+"&umc="+upPICmaxCols+"&umr="+upPICmaxRows+"&uPd="+uPd;
+			document.getElementById("phpimgframe").src = "process_uppic.php?ut=1&ud="+udelivery+"&uscr="+document.getElementById('uPscaleYbox').value+"&uscc="+document.getElementById('uPscaleXbox').value+"&ufn="+document.getElementById('uPfilenameBox').value+"&umc="+upPICmaxCols+"&umr="+upPICmaxRows+"&uPd="+uPd;
 		break;
 		case "sendToPNG":
 			/* FIRST: Create a string of the EditBox cell color values */
@@ -823,7 +843,7 @@ function sendData(buttonClicked){
 				}
 			}
 			uPd = uPd.substring(0,(uPd.length-1)); // remove the last ";" thus preventing server errors or extra unneeded server load
-			document.getElementById("phpimgframe").src = "process_uppic.php?ut=2&ud=b&uscr="+document.getElementById('uPscaleYbox').value+"&uscc="+document.getElementById('uPscaleXbox').value+"&ufn="+document.getElementById('uPfilenameBox').value+"&umc="+upPICmaxCols+"&umr="+upPICmaxRows+"&uPd="+uPd;
+			document.getElementById("phpimgframe").src = "process_uppic.php?ut=2&ud="+udelivery+"&uscr="+document.getElementById('uPscaleYbox').value+"&uscc="+document.getElementById('uPscaleXbox').value+"&ufn="+document.getElementById('uPfilenameBox').value+"&umc="+upPICmaxCols+"&umr="+upPICmaxRows+"&uPd="+uPd;
 		break;
 		default: // do nothing because we don't know how we got here O_o
 //			document.title = "sendData(default section) buttonClicked = ["+buttonClicked+"]";
@@ -1669,8 +1689,8 @@ documentwriteInitialNineBox_9a();
 
 
 <div style="display:inline-block;text-align:center;padding:16px;border-radius:8px;background-color:#00aaff;border:4px solid #f0f0cf;">
-<div style="display:table-cell;vertical-align:top;width:900px;height:900px;text-align:center;padding:10px;border-radius:8px;background-color:#77dfff;border:4px solid #f0f0cf;">
-<div style="display:inline-block;width:100%;height:700px;background-image:URL('bg16x16.jpg');"><iframe id="phpimgframe" src="bg8x8.jpg" style="width:100%;height:100%;background-color:transparent;">I need an iframe! ;..-(</iframe></div>
+<div style="display:table-cell;vertical-align:top;width:900px;height:800px;text-align:center;padding:10px;border-radius:8px;background-color:#77dfff;border:4px solid #f0f0cf;">
+<div style="display:inline-block;width:100%;height:520px;background-image:URL('bg16x16.jpg');"><iframe id="phpimgframe" src="bg8x8.jpg" style="width:100%;height:100%;background-color:transparent;">I need an iframe! ;..-(</iframe></div>
 <br><br>Scale-X: <input type="number" id="uPscaleXbox" min="1" max="100" value="1" style="">  Scale-Y: <input type="number" id="uPscaleYbox" min="1" max="100" value="1" style="">
 <br><br><div style="display:inline-block;width:100%;height:170px;">FileName _prefix_ :FileName _prefix_ :<input type="text" style="width:160px;height:27px;" value="upPIC_" id="uPfilenameBox"><br>
 <br>
