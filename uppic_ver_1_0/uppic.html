@@ -1667,11 +1667,30 @@ documentwriteInitialNineBox_9a();
 <br><br>
 
 
+
 <div style="display:inline-block;text-align:center;padding:16px;border-radius:8px;background-color:#00aaff;border:4px solid #f0f0cf;">
-<div style="display:table-cell;vertical-align:top;width:800px;height:480px;text-align:center;padding:10px;border-radius:8px;background-color:#77dfff;border:4px solid #f0f0cf;">
-<div style="display:inline-block;width:100%;height:460px;background-image:URL('bg16x16.jpg');"><iframe id="phpimgframe" src="bg8x8.jpg" style="width:100%;height:100%;background-color:transparent;">I need an iframe! ;..-(</iframe></div>
-<br><br>Scale-X: <input type="number" id="uPscaleYbox" min="1" max="100" value="1" style="">  Scale-Y: <input type="number" id="uPscaleXbox" min="1" max="100" value="1" style="">
-<br><br><div style="display:inline-block;width:100%;height:80px;">FileName _prefix_ :<input type="text" style="width:160px;height:27px;" value="upPIC_" id="uPfilenameBox"><br><br><input type="button" id="sendToJPG" onclick="sendData(this.id);" value="Create a JPG !"><input type="button" id="sendToPNG" onclick="sendData(this.id);" value="Create a PNG !"><input type="button" id="sendToAnimatedPNG" onclick="sendData(this.id);" value="(planned) Create a Animated PNG !" disabled></div>
+<div style="display:table-cell;vertical-align:top;width:900px;height:900px;text-align:center;padding:10px;border-radius:8px;background-color:#77dfff;border:4px solid #f0f0cf;">
+<div style="display:inline-block;width:100%;height:700px;background-image:URL('bg16x16.jpg');"><iframe id="phpimgframe" src="bg8x8.jpg" style="width:100%;height:100%;background-color:transparent;">I need an iframe! ;..-(</iframe></div>
+<br><br>Scale-X: <input type="number" id="uPscaleXbox" min="1" max="100" value="1" style="">  Scale-Y: <input type="number" id="uPscaleYbox" min="1" max="100" value="1" style="">
+<br><br><div style="display:inline-block;width:100%;height:170px;">FileName _prefix_ :FileName _prefix_ :<input type="text" style="width:160px;height:27px;" value="upPIC_" id="uPfilenameBox"><br>
+<br>
+
+<div style="display:inline-block;border:3px inset #00aaff;padding:7px;background-color:#44ccff;margin:4px;">Create a non-transparent JPG:<br>
+<input type="button" id="sendToJPGb" onclick="sendData(this.id);" value="Show JPG !"><br><br>
+<input type="button" id="sendToJPGsa" onclick="sendData(this.id);" value="Save JPG As...">
+</div>
+<div style="display:inline-block;border:3px inset #00aaff;padding:7px;background-color:#44ccff;margin:4px;">Create a transparent-able PNG:<br>
+<input type="button" id="sendToPNGb" onclick="sendData(this.id);" value="Show PNG !"><br><br>
+<input type="button" id="sendToPNGsa" onclick="sendData(this.id);" value="Save PNG As...">
+</div>
+<div style="display:inline-block;border:3px inset #00aaff;padding:7px;background-color:#44ccff;margin:4px;">Create a transparent-able Animated PNG:<br>
+<input type="button" id="sendToAnimatedPNGb" onclick="sendData(this.id);" value="(planned) Create a Animated PNG ! ( show! )" disabled><br><br>
+<input type="button" id="sendToAnimatedPNGsa" onclick="sendData(this.id);" value="(planned) Create a Animated PNG ! ( save as... )" disabled>
+</div>
+
+</div>
+
+<br>
 </div>
 </div>
 
