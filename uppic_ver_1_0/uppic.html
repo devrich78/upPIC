@@ -31,8 +31,8 @@ div.pal124,div.pal125,div.pal126,div.pal127 {
 
 	/*  Add Rounded Borders  */
 		div.actionButtonSelected,div.actionButtonNotSelected {
-			-webkit-border-radius: 10px;  
-			border-radius: 10px;
+			-webkit-border-radius: 7px;  
+			border-radius: 7px;
 		}
 	/*  end:Add Rounded Borders  */
 
@@ -215,7 +215,8 @@ div.div_actionsBox{
 }
 
 div.actionButtonNotSelected{
-	display:inline-block;
+	display:table-cell;
+	vertical-align:middle;
 
 	background-color:#f0f0f0;
 	color:#00003f;
@@ -226,17 +227,18 @@ div.actionButtonNotSelected{
 	
 
 	font-family:freesans,Ubuntu,Helvetica,'Liberation Serif',Verdana,Consolas,Arial;;
-	font-size:12px;
+	font-size:14px;
 	
 	cursor:pointer;
 
-	width:160px;
-	height:32px;
+	width:80px;
+	height:27px;
 	
 }
 
 div.actionButtonSelected{
-	display:inline-block;
+	display:table-cell;
+	vertical-align:middle;
 
 	background-color:#2222aa;
 	color:#f0f0f0;
@@ -247,12 +249,12 @@ div.actionButtonSelected{
 	
 
 	font-family:freesans,Ubuntu,Helvetica,'Liberation Serif',Verdana,Consolas,Arial;;
-	font-size:12px;
+	font-size:14px;
 	
 	cursor:pointer;
 
-	width:160px;
-	height:32px;
+	width:80px;
+	height:27px;
 
 }
 
@@ -299,8 +301,7 @@ div.pal76,div.pal77,div.pal78,div.pal79,div.pal80,div.pal81,div.pal82,div.pal83,
 div.pal101,div.pal102,div.pal103,div.pal104,div.pal105,div.pal106,div.pal107,div.pal108,div.pal109,div.pal110,div.pal111,div.pal112,div.pal113,div.pal114,div.pal115,div.pal116,div.pal117,div.pal118,div.pal119,div.pal120,div.pal121,div.pal122,div.pal123,
 div.pal124,div.pal125,div.pal126,div.pal127 {
 	display:inline-block;
-	width:24px;
-	height:24px;
+
 	
 	background-color:#000000;
 	
@@ -360,6 +361,18 @@ div.pal126{background-color:#993333;} div.pal127{background-color:#000000;}
 
 
 
+div.spreadworddiv {
+	display:inline-block;
+	border:2px solid #0f0f77;
+	padding:20px;
+	background-color:#0077cc;
+	color:#f0f0f0;
+	font-weight:bold;
+}
+
+
+
+
 
 
 </style>
@@ -369,8 +382,11 @@ div.pal126{background-color:#993333;} div.pal127{background-color:#000000;}
 	var upPICmaxCols = 16; // NOTE: this is base-one so 1-64 NOT 0-63 !!!!
 	var upPICmaxRows = 16; // NOTE: this is base-one so 1-64 NOT 0-63 !!!!
 	
-	var upPICcellScaleX = "27px"; // (MUST BE IN "px") NOTE: This is the scale used to scale the clickable grid
-	var upPICcellScaleY = "27px"; // (MUST BE IN "px") NOTE: This is the scale used to scale the clickable grid
+	var upPICcellScaleX = "32px"; // (MUST BE IN "px") NOTE: This is the scale used to scale the Edit Box Cells
+	var upPICcellScaleY = "32px"; // (MUST BE IN "px") NOTE: This is the scale used to scale the Edit Box Cells
+	
+	var upPICpalBoxScaleX = "24px"; // (MUST BE IN "px") NOTE: This is the scale used to scale the Color Palette Cells
+	var upPICpalBoxScaleY = "24px"; // (MUST BE IN "px") NOTE: This is the scale used to scale the Color Palette Cells
 	
 	var cellPrefix = "id_uPc_"; // ( changed it to "uPc_" short form of "uPgridCell" to improve script responsiveness) This prefix is used to help ensure uniqueness between various HTML tag elements..
 	
@@ -895,7 +911,7 @@ function initMeNow(){
 }
 </script>
 </head>
-<body><div style="display:block;text-align:center;">
+<body><a id="thetop">&nbsp;</a><div style="display:block;text-align:center;">
 
 
 
@@ -910,42 +926,49 @@ function initMeNow(){
 
 <br><br>
 
-<div style="display:inline-block;"><div style="display:table-cell;vertical-align:top;text-align:center;border-radius:8px;background-color:#ffffdf;border:4px groove #00aaff;padding:10px;">
 
-
-NOTE: You must _FIRST_ Select what Action you would like to do.<br>By Default "Nothing" is selected as the click/tap action!<br><br>
-
-What you click/tap on a cell in the Edit Box:<br>
-
-
-
-<div style="display:inline-block;width:480px;vertical-align:top;">
-<div id="id_actionBox_nothing" onclick="selectActionBox(this.id);" class="actionButtonSelected">ONLY&nbsp;Select (change&nbsp;nothing!)</div>
-<div id="id_actionBox_changeCellColor" onclick="selectActionBox(this.id);" class="actionButtonNotSelected">Change&nbsp;Cell&nbsp;Color<br><br></div>
-
-<br><br>
-<div style="display:inline-block;width:90%;padding:8px;border:2px solid #44449F;">NOTE: Set to 1.0 to remove the Alpha altogether!<br><br>
-<div id="id_actionBox_setAlphaValue" onclick="selectActionBox(this.id);" class="actionButtonNotSelected">Set&nbsp;The&nbsp;Alpha&nbsp;Value<br>A:
-
-<input type="number" id="input_alphaAmount" min="0" max="127" value="0" style="width:100px;">
-
-</div>
-<br><br>NOTE: Any cell you click on with an Alpha value less than 1.0 will keep that Alpha Value!<br>This is very useful if you want to keep the Alpha Value but want to try different colors to see which color better fits ;-)
-</div>
-<br><br>
-
-</div></div>
-
-</div>
 <br><br>
 
 
 
 <div class="div_primarydivcontainer" id="id_primarydivcontainer" style="display:inline-block;text-align:center;border-radius:8px;background-color:#cff4ff;border:4px groove #00aaff;">
 
+<div style="display:table-cell;vertical-align:top;">
 
+
+
+
+
+
+
+
+
+
+<div style="display:inline-block;"><div style="display:table-cell;vertical-align:top;text-align:center;border-radius:8px;background-color:#ffffdf;border:4px groove #00aaff;padding:10px;">
+<div style="display:inline-block;">==[&nbsp;Tools:&nbsp;]==</div><br><br>
 
 <div style="display:inline-block;">
+<div id="id_actionBox_nothing" onclick="selectActionBox(this.id);" class="actionButtonSelected" title="( Select ONLY ) Click/Tap this Button to only select Edit Box Cells when you click/tap on them">Select ONLY</div><br>
+<div id="id_actionBox_changeCellColor" onclick="selectActionBox(this.id);" class="actionButtonNotSelected" title="( Pencil ) Click/Tap this Button then click/tap on a Edit Box Cell and it will change the RGB color to the select Palette Color in the Palette Box -- NOTE: Pencel does _NOT_ change the Transparancy/Alpha which is by design so that you can change a color without loosing your preset Transparancy/Alpha setting - Artists will find this very handy because you can set the Alpha value of a Edit Box Cell and then keep changing the RGB color until you get it exactly the way you want!">Pencil</div><br>
+<div id="id_actionBox_setAlphaValue" onclick="selectActionBox(this.id);" class="actionButtonNotSelected" title="Click/Tap this Button and then specify the amount of Transparancy/Alpha you want: 0=FULLY_SOLID and 127=FULLY_TRANSPARENT -- NOTE: If you specify zero ( 0 ) then click on a Edit Box Cell that has a Transparancy/Alpha on it then this will remove the Transparancy/Alpha by making that Edit Box Cell 100% solid -- ALSO_NOTE that this in no way prevents PNG images from being created so don't worry about that :-)">Transparent:<input type="number" id="input_alphaAmount" min="0" max="127" value="0" style="width:64px;height:32px;font-size:20px;" title="Click/Tap this Button and then specify the amount of Transparancy/Alpha you want: 0=FULLY_SOLID and 127=FULLY_TRANSPARENT -- NOTE: If you specify zero ( 0 ) then click on a Edit Box Cell that has a Transparancy/Alpha on it then this will remove the Transparancy/Alpha by making that Edit Box Cell 100% solid -- ALSO_NOTE that this in no way prevents PNG images from being created so don't worry about that :-)"></div>
+</div>
+<br><br>
+
+</div></div>
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div style="display:table-cell;vertical-align:top;">
 <div class="div_uPeditBox" id="id_uPeditBox" style="display:table-cell;background-image:url('bg16x16.jpg');">
 
 <script type="text/JavaScript">
@@ -993,7 +1016,7 @@ documentwriteInitialEditGrid(); // Added this call here so that the edit Grid Bo
 
 
 
-<div class="css_uPcolorPalBox" id="id_uPcolorPalBox" style="display:table-cell;width:320px;">
+<div class="css_uPcolorPalBox" id="id_uPcolorPalBox" style="display:table-cell;vertical-align:top;width:320px;">
 
 <script type="text/JavaScript">
 
@@ -1013,7 +1036,7 @@ function documentwriteInitialColorPal(){
 	
 	for(ir=0;ir<8;ir++){
 		for(ic=0;ic<16;ic++){
-			tmpStr+=("<div id=\"id_pal"+i.toString()+"\"     onclick=\"changeColorTo(this.id);\"     class=\"pal"+i.toString()+"\" style=\"background-color:#"+colorPalArr[i]+";border-width:4px;border-style:solid;border-color:#0f0f0f;\"></div>");
+			tmpStr+=("<div id=\"id_pal"+i.toString()+"\"     onclick=\"changeColorTo(this.id);\"     class=\"pal"+i.toString()+"\" style=\"width:"+upPICpalBoxScaleX+";height:"+upPICpalBoxScaleY+";background-color:#"+colorPalArr[i]+";border-width:4px;border-style:solid;border-color:#0f0f0f;\"></div>");
 			i++;
 			if(i > 127){i=127;}
 		}
@@ -1652,19 +1675,42 @@ documentwriteInitialNineBox_9a();
 </div>
 </div>
 
-<br><br>
-<a id="instructions">&nbsp;</a>
-<br><br>
-<div style="display:inline-block;text-align:center;padding:42px;border-radius:16px;background-color:#f0f0cf;color:#909090;border:8px solid #00aaff;font-weight:bold;">
+<br>
+
+<br><a id="instructions">&nbsp;</a><br>
+
+<div style="display:inline-block;width:900px;text-align:center;padding:24px;border-radius:16px;background-color:#f0f0cf;color:#909090;border:8px solid #00aaff;font-weight:bold;">
 Spread The Word about &nbsp; <a href="http://devrich78.com/uppic" target="_blank"><div style="display:inline-block;background-color:#0070b0;background: -moz-linear-gradient(#0070b0, #77d0ff);background: linear-gradient(#0057ac, #44b0ff);margin:0px;padding-top:3px;padding-left:5px;padding-right:5px;padding-bottom:6px;border-radius:5px;font-weight:normal;"><span style="background-color:transparent;font-family:freesans,Ubuntu,Helvetica,'Liberation Serif',Verdana,Consolas,Arial;font-size:18px;color:#fdfdfd;">[</span><span style="background-color:transparent;font-family:freesans,Ubuntu,Helvetica,'Liberation Serif',Verdana,Consolas,Arial;font-size:18px;color:#e0e0e0;">:</span><span style="background-color:transparent;font-family:freesans,Ubuntu,Helvetica,'Liberation Serif',Verdana,Consolas,Arial;font-size:18px;color:#e0e0e0;">.</span><span style="background-color:transparent;font-family:freesans,Ubuntu,Helvetica,'Liberation Serif',Verdana,Consolas,Arial;font-size:18px;color:#e0e0e0;">:</span><span style="background-color:transparent;font-family:freesans,Ubuntu,Helvetica,'Liberation Serif',Verdana,Consolas,Arial;font-size:18px;color:#fdfdfd;">]</span></div></a> &nbsp; Copy and USE The Following Code where appropriate:<br><br><br>
 
-<br><br>
-<a href="http://devrich78.com/uppic" target="_blank"><div style="display:inline-block;background-color:#0070b0;background: -moz-linear-gradient(#0070b0, #77d0ff);background: linear-gradient(#0057ac, #44b0ff);margin:0px;padding-top:3px;padding-left:5px;padding-right:5px;padding-bottom:6px;border-radius:5px;font-weight:normal;"><span style="background-color:transparent;font-family:freesans,Ubuntu,Helvetica,'Liberation Serif',Verdana,Consolas,Arial;font-size:18px;color:#fdfdfd;">[</span><span style="background-color:transparent;font-family:freesans,Ubuntu,Helvetica,'Liberation Serif',Verdana,Consolas,Arial;font-size:18px;color:#e0e0e0;">:</span><span style="background-color:transparent;font-family:freesans,Ubuntu,Helvetica,'Liberation Serif',Verdana,Consolas,Arial;font-size:18px;color:#e0e0e0;">.</span><span style="background-color:transparent;font-family:freesans,Ubuntu,Helvetica,'Liberation Serif',Verdana,Consolas,Arial;font-size:18px;color:#e0e0e0;">:</span><span style="background-color:transparent;font-family:freesans,Ubuntu,Helvetica,'Liberation Serif',Verdana,Consolas,Arial;font-size:18px;color:#fdfdfd;">]</span></div></a>
-<br><br>
+<div class="spreadworddiv">On Your Website:<br><br><textarea readonly onclick="this.select();" style="width:270px;overflow-x:hidden;"><a href="http://devrich78.com/uppic" target="_blank"><div style="display:inline-block;background-color:#0070b0;background: -moz-linear-gradient(#0070b0, #77d0ff);background: linear-gradient(#0057ac, #44b0ff);margin:0px;padding-top:3px;padding-left:5px;padding-right:5px;padding-bottom:6px;border-radius:5px;font-weight:normal;"><span style="background-color:transparent;font-family:freesans,Ubuntu,Helvetica,'Liberation Serif',Verdana,Consolas,Arial;font-size:18px;color:#fdfdfd;">[</span><span style="background-color:transparent;font-family:freesans,Ubuntu,Helvetica,'Liberation Serif',Verdana,Consolas,Arial;font-size:18px;color:#e0e0e0;">:</span><span style="background-color:transparent;font-family:freesans,Ubuntu,Helvetica,'Liberation Serif',Verdana,Consolas,Arial;font-size:18px;color:#e0e0e0;">.</span><span style="background-color:transparent;font-family:freesans,Ubuntu,Helvetica,'Liberation Serif',Verdana,Consolas,Arial;font-size:18px;color:#e0e0e0;">:</span><span style="background-color:transparent;font-family:freesans,Ubuntu,Helvetica,'Liberation Serif',Verdana,Consolas,Arial;font-size:18px;color:#fdfdfd;">]</span></div></a></textarea></div><div class="spreadworddiv">In Your phpBB/vBulletin Posting Signature:<br><br><textarea readonly onclick="this.select();" style="width:270px;overflow-x:hidden;">Don't settle for what someone else made -- upPIC your own [size=150][b][color=#009999][[/color][color=#ff4444]:[/color][color=#ffaa00].[/color][color=#4444ff]:[/color][color=#009999]][/color][/b][/size] at: [b][i][url]http://DevRich78.com/upPIC[/url][/i][/b]</textarea></div>
+<br>
 
-<div style="display:table-cell;border:2px solid #0f0f77;padding:20px;background-color:#0077cc;color:#f0f0f0;font-weight:bold;">On Your Website:<br><br><textarea readonly onclick="this.select();" style="width:270px;overflow-x:hidden;"><a href="http://devrich78.com/uppic" target="_blank"><div style="display:inline-block;background-color:#0070b0;background: -moz-linear-gradient(#0070b0, #77d0ff);background: linear-gradient(#0057ac, #44b0ff);margin:0px;padding-top:3px;padding-left:5px;padding-right:5px;padding-bottom:6px;border-radius:5px;font-weight:normal;"><span style="background-color:transparent;font-family:freesans,Ubuntu,Helvetica,'Liberation Serif',Verdana,Consolas,Arial;font-size:18px;color:#fdfdfd;">[</span><span style="background-color:transparent;font-family:freesans,Ubuntu,Helvetica,'Liberation Serif',Verdana,Consolas,Arial;font-size:18px;color:#e0e0e0;">:</span><span style="background-color:transparent;font-family:freesans,Ubuntu,Helvetica,'Liberation Serif',Verdana,Consolas,Arial;font-size:18px;color:#e0e0e0;">.</span><span style="background-color:transparent;font-family:freesans,Ubuntu,Helvetica,'Liberation Serif',Verdana,Consolas,Arial;font-size:18px;color:#e0e0e0;">:</span><span style="background-color:transparent;font-family:freesans,Ubuntu,Helvetica,'Liberation Serif',Verdana,Consolas,Arial;font-size:18px;color:#fdfdfd;">]</span></div></a></textarea></div>
-<div style="display:table-cell;border:2px solid #0f0f77;padding:20px;background-color:#0077cc;color:#f0f0f0;font-weight:bold;">In Your phpBB/vBulletin Posting Signature:<br><br><textarea readonly onclick="this.select();" style="width:270px;overflow-x:hidden;">Don't settle for what someone else made -- upPIC your own [size=150][b][color=#009999][[/color][color=#ff4444]:[/color][color=#ffaa00].[/color][color=#4444ff]:[/color][color=#009999]][/color][/b][/size] at: [b][i][url]http://DevRich78.com/upPIC[/url][/i][/b]</textarea></div>
 </div>
+<br><br>
+<div style="display:inline-block;width:900px;text-align:center;padding:24px;border-radius:16px;background-color:#f0f0cf;color:#909090;border:8px solid #00aaff;font-weight:bold;">
+<a href="http://devrich78.com/uppic" target="_blank"><div style="display:inline-block;background-color:#0070b0;background: -moz-linear-gradient(#0070b0, #77d0ff);background: linear-gradient(#0057ac, #44b0ff);margin:0px;padding-top:3px;padding-left:5px;padding-right:5px;padding-bottom:6px;border-radius:5px;font-weight:normal;"><span style="background-color:transparent;font-family:freesans,Ubuntu,Helvetica,'Liberation Serif',Verdana,Consolas,Arial;font-size:18px;color:#fdfdfd;">[</span><span style="background-color:transparent;font-family:freesans,Ubuntu,Helvetica,'Liberation Serif',Verdana,Consolas,Arial;font-size:18px;color:#e0e0e0;">:</span><span style="background-color:transparent;font-family:freesans,Ubuntu,Helvetica,'Liberation Serif',Verdana,Consolas,Arial;font-size:18px;color:#e0e0e0;">.</span><span style="background-color:transparent;font-family:freesans,Ubuntu,Helvetica,'Liberation Serif',Verdana,Consolas,Arial;font-size:18px;color:#e0e0e0;">:</span><span style="background-color:transparent;font-family:freesans,Ubuntu,Helvetica,'Liberation Serif',Verdana,Consolas,Arial;font-size:18px;color:#fdfdfd;">]</span></div></a> &nbsp; Instructions:<br><br>
+
+<br>upPIC is very simple to use and I've tried to keep it that way with the layout of this page.
+<br>
+<br>STEP_1: Select your desired tool from the Tool List
+<br>
+<br>STEP_2: 
+<br>
+<br>STEP_3: 
+<br>
+<br>STEP_4:
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>Done!  Enjoy! :-D
+
+
+
+</div>
+
+
 
 
 
@@ -1737,6 +1783,41 @@ Copyright (C) DevRich78.com -- All Rights Reserved -- You can find out about Lic
 <br><br>
 
 
+
+
+
+
+
+
+
+<br><br>
+<div style="display:inline-block;"><div style="display:table-cell;vertical-align:top;text-align:center;border-radius:8px;background-color:#ffffdf;border:4px groove #00aaff;padding:10px;">
+
+
+NOTE: You must _FIRST_ Select what Action you would like to do.<br>By Default "Nothing" is selected as the click/tap action!<br><br>
+
+What you click/tap on a cell in the Edit Box:<br>
+
+
+
+<div style="display:inline-block;width:480px;">
+<div id="id_actionBox_nothing22" onclick="selectActionBox(this.id);" class="actionButtonSelected">ONLY&nbsp;Select (change&nbsp;nothing!)</div>
+<div id="id_actionBox_changeCellColor22" onclick="selectActionBox(this.id);" class="actionButtonNotSelected">Change&nbsp;Cell&nbsp;Color<br><br></div>
+
+<br><br>
+<div style="display:inline-block;width:90%;padding:8px;border:2px solid #44449F;">NOTE: Set to 1.0 to remove the Alpha altogether!<br><br>
+<div id="id_actionBox_setAlphaValue22" onclick="selectActionBox(this.id);" class="actionButtonNotSelected">Set&nbsp;The&nbsp;Alpha&nbsp;Value<br>A:
+
+<input type="number" id="input_alphaAmount22" min="0" max="127" value="0" style="width:100px;">
+
+</div>
+<br><br>NOTE: Any cell you click on with an Alpha value less than 1.0 will keep that Alpha Value!<br>This is very useful if you want to keep the Alpha Value but want to try different colors to see which color better fits ;-)
+</div>
+<br><br>
+
+</div></div>
+
+</div>
 
 
 
