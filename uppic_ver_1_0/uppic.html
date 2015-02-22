@@ -764,7 +764,7 @@ function sendData(buttonClicked){
 				}
 			}
 			uPd = uPd.substring(0,(uPd.length-1)); // remove the last ";" thus preventing server errors or extra unneeded server load
-			document.getElementById("phpimgframe").src = "process_uppic.php?ut=1&uPfn="+document.getElementByID('uPfilenameBox').value+"&uPmc="+upPICmaxCols+"&uPmr="+upPICmaxRows+"&uPd="+uPd;
+			document.getElementById("phpimgframe").src = "process_uppic.php?ut=1&ud=b&uscr="+document.getElementById('uPscaleYbox').value+"&uscc="+document.getElementById('uPscaleXbox').value+"&ufn="+document.getElementById('uPfilenameBox').value+"&umc="+upPICmaxCols+"&umr="+upPICmaxRows+"&uPd="+uPd;
 		break;
 		case "sendToPNG":
 			/* FIRST: Create a string of the EditBox cell color values */
@@ -807,7 +807,7 @@ function sendData(buttonClicked){
 				}
 			}
 			uPd = uPd.substring(0,(uPd.length-1)); // remove the last ";" thus preventing server errors or extra unneeded server load
-			document.getElementById("phpimgframe").src = "process_uppic.php?ut=2&uPfn="+document.getElementByID('uPfilenameBox').value+"&uPmc="+upPICmaxCols+"&uPmr="+upPICmaxRows+"&uPd="+uPd;
+			document.getElementById("phpimgframe").src = "process_uppic.php?ut=2&ud=b&uscr="+document.getElementById('uPscaleYbox').value+"&uscc="+document.getElementById('uPscaleXbox').value+"&ufn="+document.getElementById('uPfilenameBox').value+"&umc="+upPICmaxCols+"&umr="+upPICmaxRows+"&uPd="+uPd;
 		break;
 		default: // do nothing because we don't know how we got here O_o
 //			document.title = "sendData(default section) buttonClicked = ["+buttonClicked+"]";
@@ -897,21 +897,17 @@ function initMeNow(){
 </head>
 <body><div style="display:block;text-align:center;">
 
-<div style="display:inline-block;padding:16px;background-color:#992222;color:#f0f0f0;font-size:14px;border-radius:7px;">(Priority one To-Do): Make a php script on my web server that will convert the Edit Box Cells into a downloadable/saveable/and usable .JPG and .PNG</div><br><br>
 
 
 
 
-<a href="http://devrich78.com/uppic" target="_blank"><a style="text-decoration:none;font-style:normal;font-weight:normal;background-color:transparent;color:#ffffff;font-size:10px;font-family:freesans,arial;" href="http://devrich78.com/uppic" target="_blank">
-<div style="display:inline-block;background-color:#0070b0;background: -moz-linear-gradient(#0070b0, #77d0ff);background: linear-gradient(#0070b0, #77d0ff);margin:0px;padding-top:1px;padding-left:3px;padding-right:4px;padding-bottom:4px;border-radius:4px;"><span style="background-color:transparent;font-family:freesans,Ubuntu,Helvetica,'Liberation Serif',Verdana,Consolas,Arial;font-size:16px;color:#fdfdfd;">[</span><span style="background-color:transparent;font-family:freesans,Ubuntu,Helvetica,'Liberation Serif',Verdana,Consolas,Arial;font-size:16px;color:#e0e0e0;">:</span><span style="background-color:transparent;font-family:freesans,Ubuntu,Helvetica,'Liberation Serif',Verdana,Consolas,Arial;font-size:16px;color:#e0e0e0;">.</span><span style="background-color:transparent;font-family:freesans,Ubuntu,Helvetica,'Liberation Serif',Verdana,Consolas,Arial;font-size:16px;color:#e0e0e0;">:</span><span style="background-color:transparent;font-family:freesans,Ubuntu,Helvetica,'Liberation Serif',Verdana,Consolas,Arial;font-size:16px;color:#fdfdfd;">]</span></div>
-</a>
+
+<a href="http://devrich78.com/uppic" target="_blank"><div style="display:inline-block;background-color:#0070b0;background: -moz-linear-gradient(#0070b0, #77d0ff);background: linear-gradient(#0057ac, #44b0ff);margin:0px;padding-top:3px;padding-left:5px;padding-right:5px;padding-bottom:6px;border-radius:5px;font-weight:normal;"><span style="background-color:transparent;font-family:freesans,Ubuntu,Helvetica,'Liberation Serif',Verdana,Consolas,Arial;font-size:18px;color:#fdfdfd;">[</span><span style="background-color:transparent;font-family:freesans,Ubuntu,Helvetica,'Liberation Serif',Verdana,Consolas,Arial;font-size:18px;color:#e0e0e0;">:</span><span style="background-color:transparent;font-family:freesans,Ubuntu,Helvetica,'Liberation Serif',Verdana,Consolas,Arial;font-size:18px;color:#e0e0e0;">.</span><span style="background-color:transparent;font-family:freesans,Ubuntu,Helvetica,'Liberation Serif',Verdana,Consolas,Arial;font-size:18px;color:#e0e0e0;">:</span><span style="background-color:transparent;font-family:freesans,Ubuntu,Helvetica,'Liberation Serif',Verdana,Consolas,Arial;font-size:18px;color:#fdfdfd;">]</span></div></a>
 <br>
-<h2>[:.:] - upPIC user profile Pixelated Image Creator - ver 1.0 ( Currently a W.I.P. )</h2>
-<div style="display:inline-block;text-align:center;padding:16px;border-radius:8px;background-color:#00aaff;border:4px solid #f0f0cf;">
-Spread The Word! Copy and USE The Following Code<br>
-<div style="display:inline-block;border:2px solid #0f0f77;padding:7px;">On Your Website:<textarea rows="2" cols="16" readonly onclick="this.select();" style="width:128px;overflow-x:hidden;"><a href="http://devrich78.com/uppic" target="_blank"><div style="display:inline-block;background-color:#0070b0;background: -moz-linear-gradient(#0070b0, #77d0ff);background: linear-gradient(#0070b0, #77d0ff);margin:0px;padding-top:1px;padding-left:3px;padding-right:4px;padding-bottom:4px;border-radius:4px;"><span style="background-color:transparent;font-family:freesans,Ubuntu,Helvetica,'Liberation Serif',Verdana,Consolas,Arial;font-size:16px;color:#fdfdfd;">[</span><span style="background-color:transparent;font-family:freesans,Ubuntu,Helvetica,'Liberation Serif',Verdana,Consolas,Arial;font-size:16px;color:#e0e0e0;">:</span><span style="background-color:transparent;font-family:freesans,Ubuntu,Helvetica,'Liberation Serif',Verdana,Consolas,Arial;font-size:16px;color:#e0e0e0;">.</span><span style="background-color:transparent;font-family:freesans,Ubuntu,Helvetica,'Liberation Serif',Verdana,Consolas,Arial;font-size:16px;color:#e0e0e0;">:</span><span style="background-color:transparent;font-family:freesans,Ubuntu,Helvetica,'Liberation Serif',Verdana,Consolas,Arial;font-size:16px;color:#fdfdfd;">]</span></div></a></textarea></div>
-<div style="display:inline-block;border:2px solid #0f0f77;padding:7px;">In Your phpBB/vBulletin Posting Signature:<textarea rows="2" cols="16" readonly onclick="this.select();" style="width:128px;overflow-x:hidden;">Don't settle for whatever someone else made -- upPIC your own [size=125][b][color=#0040FF][[/color][color=#00AFFF]:.:[/color][color=#0040FF]][/color][/b][/size] at: [b][i][url]http://devrich78.com/uppic[/url][/i][/b]</textarea></div>
-</div>
+<h2>upPIC (user profile Pixelated Image Creator) - version 1.0</h2>
+
+<br><br><a href="#instructions" style="color:#00aaff;">Click Here To Read The Instructions At The Bottom Of The Page</a>
+
 <br><br>
 
 <div style="display:inline-block;"><div style="display:table-cell;vertical-align:top;text-align:center;border-radius:8px;background-color:#ffffdf;border:4px groove #00aaff;padding:10px;">
@@ -938,11 +934,7 @@ What you click/tap on a cell in the Edit Box:<br>
 </div>
 <br><br>
 
-</div></div><div style="display:table-cell;vertical-align:top;width:480px;height:380px;text-align:center;padding:10px;border-radius:8px;background-color:#77dfff;border:4px solid #f0f0cf;">
-<div style="display:inline-block;width:100%;height:300px;"><iframe id="phpimgframe" src="bg8x8.jpg" style="width:100%;height:100%;">I need an iframe! ;..-(</iframe></div>
-<br><br>
-<div style="display:inline-block;width:100%;height:60px;"><input type="text" style="width:160px;height:20px;" value="upPIC_" id="uPfilenameBox"><br><br><input type="button" id="sendToJPG" onclick="sendData(this.id);" value="Create a JPG !"><input type="button" id="sendToPNG" onclick="sendData(this.id);" value="Create a PNG !"><input type="button" id="sendToAnimatedPNG" onclick="sendData(this.id);" value="(planned) Create a Animated PNG !" disabled></div>
-</div>
+</div></div>
 
 </div>
 <br><br>
@@ -1038,6 +1030,8 @@ documentwriteInitialColorPal();
 </div>
 
 </div>
+
+
 
 
 
@@ -1647,9 +1641,30 @@ documentwriteInitialNineBox_9a();
 </div><br>
 
 
+<br><br>
 
 
+<div style="display:inline-block;text-align:center;padding:16px;border-radius:8px;background-color:#00aaff;border:4px solid #f0f0cf;">
+<div style="display:table-cell;vertical-align:top;width:800px;height:480px;text-align:center;padding:10px;border-radius:8px;background-color:#77dfff;border:4px solid #f0f0cf;">
+<div style="display:inline-block;width:100%;height:460px;background-image:URL('bg16x16.jpg');"><iframe id="phpimgframe" src="bg8x8.jpg" style="width:100%;height:100%;background-color:transparent;">I need an iframe! ;..-(</iframe></div>
+<br><br>Scale-X: <input type="number" id="uPscaleYbox" min="1" max="100" value="1" style="">  Scale-Y: <input type="number" id="uPscaleXbox" min="1" max="100" value="1" style="">
+<br><br><div style="display:inline-block;width:100%;height:80px;">FileName _prefix_ :<input type="text" style="width:160px;height:27px;" value="upPIC_" id="uPfilenameBox"><br><br><input type="button" id="sendToJPG" onclick="sendData(this.id);" value="Create a JPG !"><input type="button" id="sendToPNG" onclick="sendData(this.id);" value="Create a PNG !"><input type="button" id="sendToAnimatedPNG" onclick="sendData(this.id);" value="(planned) Create a Animated PNG !" disabled></div>
+</div>
+</div>
 
+<br><br>
+<a id="instructions">&nbsp;</a>
+<br><br>
+<div style="display:inline-block;text-align:center;padding:42px;border-radius:16px;background-color:#f0f0cf;color:#909090;border:8px solid #00aaff;font-weight:bold;">
+Spread The Word about &nbsp; <a href="http://devrich78.com/uppic" target="_blank"><div style="display:inline-block;background-color:#0070b0;background: -moz-linear-gradient(#0070b0, #77d0ff);background: linear-gradient(#0057ac, #44b0ff);margin:0px;padding-top:3px;padding-left:5px;padding-right:5px;padding-bottom:6px;border-radius:5px;font-weight:normal;"><span style="background-color:transparent;font-family:freesans,Ubuntu,Helvetica,'Liberation Serif',Verdana,Consolas,Arial;font-size:18px;color:#fdfdfd;">[</span><span style="background-color:transparent;font-family:freesans,Ubuntu,Helvetica,'Liberation Serif',Verdana,Consolas,Arial;font-size:18px;color:#e0e0e0;">:</span><span style="background-color:transparent;font-family:freesans,Ubuntu,Helvetica,'Liberation Serif',Verdana,Consolas,Arial;font-size:18px;color:#e0e0e0;">.</span><span style="background-color:transparent;font-family:freesans,Ubuntu,Helvetica,'Liberation Serif',Verdana,Consolas,Arial;font-size:18px;color:#e0e0e0;">:</span><span style="background-color:transparent;font-family:freesans,Ubuntu,Helvetica,'Liberation Serif',Verdana,Consolas,Arial;font-size:18px;color:#fdfdfd;">]</span></div></a> &nbsp; Copy and USE The Following Code where appropriate:<br><br><br>
+
+<br><br>
+<a href="http://devrich78.com/uppic" target="_blank"><div style="display:inline-block;background-color:#0070b0;background: -moz-linear-gradient(#0070b0, #77d0ff);background: linear-gradient(#0057ac, #44b0ff);margin:0px;padding-top:3px;padding-left:5px;padding-right:5px;padding-bottom:6px;border-radius:5px;font-weight:normal;"><span style="background-color:transparent;font-family:freesans,Ubuntu,Helvetica,'Liberation Serif',Verdana,Consolas,Arial;font-size:18px;color:#fdfdfd;">[</span><span style="background-color:transparent;font-family:freesans,Ubuntu,Helvetica,'Liberation Serif',Verdana,Consolas,Arial;font-size:18px;color:#e0e0e0;">:</span><span style="background-color:transparent;font-family:freesans,Ubuntu,Helvetica,'Liberation Serif',Verdana,Consolas,Arial;font-size:18px;color:#e0e0e0;">.</span><span style="background-color:transparent;font-family:freesans,Ubuntu,Helvetica,'Liberation Serif',Verdana,Consolas,Arial;font-size:18px;color:#e0e0e0;">:</span><span style="background-color:transparent;font-family:freesans,Ubuntu,Helvetica,'Liberation Serif',Verdana,Consolas,Arial;font-size:18px;color:#fdfdfd;">]</span></div></a>
+<br><br>
+
+<div style="display:table-cell;border:2px solid #0f0f77;padding:20px;background-color:#0077cc;color:#f0f0f0;font-weight:bold;">On Your Website:<br><br><textarea readonly onclick="this.select();" style="width:270px;overflow-x:hidden;"><a href="http://devrich78.com/uppic" target="_blank"><div style="display:inline-block;background-color:#0070b0;background: -moz-linear-gradient(#0070b0, #77d0ff);background: linear-gradient(#0057ac, #44b0ff);margin:0px;padding-top:3px;padding-left:5px;padding-right:5px;padding-bottom:6px;border-radius:5px;font-weight:normal;"><span style="background-color:transparent;font-family:freesans,Ubuntu,Helvetica,'Liberation Serif',Verdana,Consolas,Arial;font-size:18px;color:#fdfdfd;">[</span><span style="background-color:transparent;font-family:freesans,Ubuntu,Helvetica,'Liberation Serif',Verdana,Consolas,Arial;font-size:18px;color:#e0e0e0;">:</span><span style="background-color:transparent;font-family:freesans,Ubuntu,Helvetica,'Liberation Serif',Verdana,Consolas,Arial;font-size:18px;color:#e0e0e0;">.</span><span style="background-color:transparent;font-family:freesans,Ubuntu,Helvetica,'Liberation Serif',Verdana,Consolas,Arial;font-size:18px;color:#e0e0e0;">:</span><span style="background-color:transparent;font-family:freesans,Ubuntu,Helvetica,'Liberation Serif',Verdana,Consolas,Arial;font-size:18px;color:#fdfdfd;">]</span></div></a></textarea></div>
+<div style="display:table-cell;border:2px solid #0f0f77;padding:20px;background-color:#0077cc;color:#f0f0f0;font-weight:bold;">In Your phpBB/vBulletin Posting Signature:<br><br><textarea readonly onclick="this.select();" style="width:270px;overflow-x:hidden;">Don't settle for what someone else made -- upPIC your own [size=150][b][color=#009999][[/color][color=#ff4444]:[/color][color=#ffaa00].[/color][color=#4444ff]:[/color][color=#009999]][/color][/b][/size] at: [b][i][url]http://DevRich78.com/upPIC[/url][/i][/b]</textarea></div>
+</div>
 
 
 
@@ -1658,22 +1673,8 @@ documentwriteInitialNineBox_9a();
 
 <br><br><br><br>
 
-<div style="display:inline-block;text-align:center;padding:16px;border-radius:8px;background-color:#00aaff;border:4px solid #f0f0cf;">
-Spread The Word! Copy and USE The Following Code<br>
-<div style="display:inline-block;border:2px solid #0f0f77;padding:7px;">On Your Website:<textarea rows="2" cols="16" readonly onclick="this.select();" style="width:128px;overflow-x:hidden;"><a href="http://devrich78.com/uppic" target="_blank"><div style="display:inline-block;background-color:#0070b0;background: -moz-linear-gradient(#0070b0, #77d0ff);background: linear-gradient(#0070b0, #77d0ff);margin:0px;padding-top:1px;padding-left:3px;padding-right:4px;padding-bottom:4px;border-radius:4px;"><span style="background-color:transparent;font-family:freesans,Ubuntu,Helvetica,'Liberation Serif',Verdana,Consolas,Arial;font-size:16px;color:#fdfdfd;">[</span><span style="background-color:transparent;font-family:freesans,Ubuntu,Helvetica,'Liberation Serif',Verdana,Consolas,Arial;font-size:16px;color:#e0e0e0;">:</span><span style="background-color:transparent;font-family:freesans,Ubuntu,Helvetica,'Liberation Serif',Verdana,Consolas,Arial;font-size:16px;color:#e0e0e0;">.</span><span style="background-color:transparent;font-family:freesans,Ubuntu,Helvetica,'Liberation Serif',Verdana,Consolas,Arial;font-size:16px;color:#e0e0e0;">:</span><span style="background-color:transparent;font-family:freesans,Ubuntu,Helvetica,'Liberation Serif',Verdana,Consolas,Arial;font-size:16px;color:#fdfdfd;">]</span></div></a></textarea></div>
-<div style="display:inline-block;border:2px solid #0f0f77;padding:7px;">In Your phpBB/vBulletin Posting Signature:<textarea rows="2" cols="16" readonly onclick="this.select();" style="width:128px;overflow-x:hidden;">Don't settle for whatever someone else made -- upPIC your own [size=125][b][color=#0040FF][[/color][color=#00AFFF]:.:[/color][color=#0040FF]][/color][/b][/size] at: [b][i][url]http://devrich78.com/uppic[/url][/i][/b]</textarea></div>
-</div>
 
-<br><br>
 
-<div style="display:inline-block;text-align:center;padding:16px;border-radius:8px;background-color:#77dfff;border:4px solid #f0f0cf;">
-
-Copyright (C) DevRich78.com -- All Rights Reserved -- You can find out about Licensing upPIC under the Apache 2.0 License<br>as well as Check out my repo at GitHub.com: <a href="http://github.com/DevRich78/upPIC/" target="_blank">https://github.com/DevRich78/upPIC/</a>
-<br><br>
-&quot;upPIC&quot; and the <a href="http://devrich78.com/uppic" target="_blank"><div style="display:inline-block;background-color:#0070b0;background: -moz-linear-gradient(#0070b0, #77d0ff);background: linear-gradient(#0070b0, #77d0ff);margin:0px;padding-top:1px;padding-left:3px;padding-right:4px;padding-bottom:4px;border-radius:4px;"><span style="background-color:transparent;font-family:freesans,Ubuntu,Helvetica,'Liberation Serif',Verdana,Consolas,Arial;font-size:16px;color:#fdfdfd;">[</span><span style="background-color:transparent;font-family:freesans,Ubuntu,Helvetica,'Liberation Serif',Verdana,Consolas,Arial;font-size:16px;color:#e0e0e0;">:</span><span style="background-color:transparent;font-family:freesans,Ubuntu,Helvetica,'Liberation Serif',Verdana,Consolas,Arial;font-size:16px;color:#e0e0e0;">.</span><span style="background-color:transparent;font-family:freesans,Ubuntu,Helvetica,'Liberation Serif',Verdana,Consolas,Arial;font-size:16px;color:#e0e0e0;">:</span><span style="background-color:transparent;font-family:freesans,Ubuntu,Helvetica,'Liberation Serif',Verdana,Consolas,Arial;font-size:16px;color:#fdfdfd;">]</span></div></a> logo are TradeMarks of DevRich78 and all other copyrights/trademarks are the property of their respective owners.
-</div>
-
-<br><br>
 <br><br>
 <br><br>
 <br><br>
@@ -1700,9 +1701,40 @@ Possible Button Values Are:<br><br>0 = Left<br>1 = Middle/Wheel_Click<br>2 = rig
 </div>
 
 
+<br><br>
+<div style="display:inline-block;padding:16px;background-color:#992222;color:#f0f0f0;font-size:14px;border-radius:7px;">(Priority one To-Do): w.i.p.</div><br><br>
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br><br>
+
+<div style="display:inline-block;text-align:center;padding:16px;border-radius:8px;background-color:#77dfff;border:4px solid #f0f0cf;">
+
+Copyright (C) DevRich78.com -- All Rights Reserved -- You can find out about Licensing upPIC under the Apache 2.0 License<br>as well as Check out my repo at GitHub.com: <a href="http://github.com/DevRich78/upPIC/" target="_blank">https://github.com/DevRich78/upPIC/</a>
+<br><br>
+&quot;upPIC&quot; and the <a href="http://devrich78.com/uppic" target="_blank"><div style="display:inline-block;background-color:#0070b0;background: -moz-linear-gradient(#0070b0, #77d0ff);background: linear-gradient(#0070b0, #77d0ff);margin:0px;padding-top:1px;padding-left:3px;padding-right:4px;padding-bottom:4px;border-radius:4px;"><span style="background-color:transparent;font-family:freesans,Ubuntu,Helvetica,'Liberation Serif',Verdana,Consolas,Arial;font-size:16px;color:#fdfdfd;">[</span><span style="background-color:transparent;font-family:freesans,Ubuntu,Helvetica,'Liberation Serif',Verdana,Consolas,Arial;font-size:16px;color:#e0e0e0;">:</span><span style="background-color:transparent;font-family:freesans,Ubuntu,Helvetica,'Liberation Serif',Verdana,Consolas,Arial;font-size:16px;color:#e0e0e0;">.</span><span style="background-color:transparent;font-family:freesans,Ubuntu,Helvetica,'Liberation Serif',Verdana,Consolas,Arial;font-size:16px;color:#e0e0e0;">:</span><span style="background-color:transparent;font-family:freesans,Ubuntu,Helvetica,'Liberation Serif',Verdana,Consolas,Arial;font-size:16px;color:#fdfdfd;">]</span></div></a> logo are TradeMarks of DevRich78 and all other copyrights/trademarks are the property of their respective owners.
+</div>
+
+<br><br>
 
 
 
@@ -1715,5 +1747,5 @@ Possible Button Values Are:<br><br>0 = Left<br>1 = Middle/Wheel_Click<br>2 = rig
 <script type="text/JavaScript">
 initMeNow(); // Inititalize the upPIC construction system :-)
 </script>
-</div></body>
+</div></div></body>
 </html>
