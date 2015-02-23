@@ -1,3 +1,7 @@
+
+[CONTRIBUTORS Please Click Here To Scroll Down!!](https://github.com/devrich78/upPIC#contributors)
+
+
 #[[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)] upPIC -- version: 1.0 -- Released: Monday, February 23rd 2015
 
 user profile Pixelated Image Creator
