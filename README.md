@@ -1,5 +1,8 @@
 
+
 [CONTRIBUTORS Please Click Here To Scroll Down!!](https://github.com/devrich78/upPIC#contributors)
+
+ALL STABLE RELEASES ARE LOCATED HERE: [https://github.com/devrich78/upPIC/releases](https://github.com/devrich78/upPIC/releases)
 
 
 #[[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)] upPIC -- version: 1.0
