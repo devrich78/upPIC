@@ -14,7 +14,7 @@ user profile Pixelated Image Creator; originally created and inspired by me: [De
 
 (( formerly -> [:upPIC:] ))
 
-Quick Links To Our Relevant GitHub Pages:
+#Quick Links To Our Relevant GitHub Pages:
 
 [Change_Log](http://DevRich78.github.io/upPIC/change_log.html)
 
