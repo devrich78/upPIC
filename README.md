@@ -2,11 +2,11 @@
 [CONTRIBUTORS Please Click Here To Scroll Down!!](https://github.com/devrich78/upPIC#contributors)
 
 
-#[[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)] upPIC -- version: 1.0 -- Released: Monday, February 23rd 2015
+#[[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)] upPIC -- version: 1.0
 
-user profile Pixelated Image Creator
+___Released: Monday, February 23rd 2015___
 
-Initially created and inspired by me: DevRich78 and currently made available under the Apache 2.0 license
+user profile Pixelated Image Creator; originally created and inspired by me: (DevRich78.com)[http://DevRich78.com] and currently made available under the Apache 2.0 license
 
 (( formerly -> [:upPIC:] ))
 
