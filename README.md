@@ -127,6 +127,10 @@ Essentially; the image(s) created with [[:](http://GitHub.com/devrich78/upPIC/).
 
 2: Another stipulation is that I don't want you to copyright the images created with [[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)] "directly" -- However; if you combine/embed the image(s) that you create with [[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)] into other image(s) not created with [[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)] then that is ok to copyright, however you agree NOT to attempt to interfer with or prevent others using [[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)] who may create the same image(s) as yours to copyrighting their own creations as long as they also combine the image(s) they create with [[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)] by combining/embedding them with other images... hmmm i should probaably re-word that better... but you get the idea, let's all play nice, and play fair :-)
 
+3: Also; please don't try to "compete" with me and/or upPIC as I am doing this for the benefit of everyone and you would look horrible to the world if you tried to take my upPIC invention and use it to directly compete with me.
+
+Instead; why not help contribute to making upPIC as perfect and feature-complete as pssible.  I'm nice and generally polite so why not help me make the world a better place for everybody :-)
+
 
 ___Did you trademark the___ [[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)] ___ASCII logo?___
 
@@ -144,7 +148,10 @@ ___NOTE: For those of you new to GitHub as I have been; a excellent place to sta
 
 ^---- Starting with version 1.1; I will be using the built-in features of GitHub for feature-requests, to-do-lists, change-logs, and milestones
 
-NOTE TO ALL CONTRIBUTORS: with the release of [[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)] version 1.0; I plan to allow contributors to be able to contribute by first forking the "master branch" from this primary-repo -- then make your changes/additions -- then submit a "Pull Request" and I will take a look to see about incorporating your changes or suggest any bigs/fixes for your fork. ( i hope I am using the proper terminology for 'fork' )
+NOTE TO ALL CONTRIBUTORS: with the release of [[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)] version 1.0; I plan to allow contributors to be able to contribute so if you are interested then please contact me to let me know :-)
 
 
-**_( This README.md and the_** [[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)] **_"upPIC" project are a constant Work-In-Progress ( W.I.P ).  I ask that you please be patient and kind as I don't have a lot of free time these days.  However; I plan to work on_** [[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)] **_as often as I can over time.  Many thanks for your support! )_**
+**_( This README.md and the_** [[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)] **_"upPIC" project are a constant Work-In-Progress ( W.I.P ).  I ask that you please be patient and kind as I don't have a lot of free time these days.  However; I will be working on_** [[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)] **_as often as I can over time.  Many thanks for your support! )_**
+
+AND PLEASE HELP SPREAD THE WORD ABOUT upPIC:
+
