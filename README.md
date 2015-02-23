@@ -5,7 +5,7 @@ ___NOTE: For those of you new to GitHub as I have been; a excellent place to sta
 
 ^---- Starting with version 1.1; I will be using the built-in features of GitHub for feature-requests, to-do-lists, change-logs, and milestones
 
-NOTE TO ALL CONTRIBUTORS: In a day or so I will releaseing [[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)] version 1.0 and I plan to allow contributors to be able to contribute but first by forking the "master branch" from this primary-repo -- then make your changes/additions -- then submit a "Pull Request" and I will take a look to see about incorporating your changes or suggest any bigs/fixes for your fork. ( i hope I am using the proper terminology for 'fork' )
+NOTE TO ALL CONTRIBUTORS: In a day or so I will be releaseing [[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)] version 1.0 and I plan to allow contributors to be able to contribute by first forking the "master branch" from this primary-repo -- then make your changes/additions -- then submit a "Pull Request" and I will take a look to see about incorporating your changes or suggest any bigs/fixes for your fork. ( i hope I am using the proper terminology for 'fork' )
 
 **_( This README.md and the_** [[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)] **_"upPIC" project are a constant Work-In-Progress ( W.I.P ).  I ask that you please be patient and kind as I don't have a lot of free time these days.  However; I plan to work on_** [[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)] **_as often as I can over time.  Many thanks for your support! )_**
 
