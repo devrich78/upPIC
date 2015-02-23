@@ -2,7 +2,7 @@
 
 [CONTRIBUTORS and those of you intereste din Contributing; Please Click Here To Scroll Down to the Contributor Section!!](https://github.com/devrich78/upPIC#contributors)
 
-#ALL STABLE RELEASES ARE LOCATED HERE: ( It is STRONGLY RECOMMENDED to download/use the latest Stable Releases ) [https://github.com/devrich78/upPIC/releases](https://github.com/devrich78/upPIC/releases)
+#ALL STABLE RELEASES ARE LOCATED HERE: NOTE: It is STRONGLY RECOMMENDED to download/use the latest Stable Releases ) [https://github.com/devrich78/upPIC/releases](https://github.com/devrich78/upPIC/releases)
 
 
 
