@@ -1,18 +1,6 @@
+#[[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)] upPIC -- version: 1.0 -- Released: Monday, February 23rd 2015
 
-#PROJECT_STATUS: (UPDATE): Version 1.0 Is close to Initial Release!
-
-___NOTE: For those of you new to GitHub as I have been; a excellent place to start understand "how" GitHub does Project Mangament ( or Repo Management) is this page here: [https://guides.github.com/features/issues/](https://guides.github.com/features/issues/)___
-
-^---- Starting with version 1.1; I will be using the built-in features of GitHub for feature-requests, to-do-lists, change-logs, and milestones
-
-NOTE TO ALL CONTRIBUTORS: In a day or so I will be releaseing [[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)] version 1.0 and I plan to allow contributors to be able to contribute by first forking the "master branch" from this primary-repo -- then make your changes/additions -- then submit a "Pull Request" and I will take a look to see about incorporating your changes or suggest any bigs/fixes for your fork. ( i hope I am using the proper terminology for 'fork' )
-
-**_( This README.md and the_** [[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)] **_"upPIC" project are a constant Work-In-Progress ( W.I.P ).  I ask that you please be patient and kind as I don't have a lot of free time these days.  However; I plan to work on_** [[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)] **_as often as I can over time.  Many thanks for your support! )_**
-
-
-#[[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)] upPIC -- ver: 1.0 (almost there)
-
-user profile Pixelated Image Creator - ( Note that ver 1.0 is CURRENTLY A W.I.P. )
+user profile Pixelated Image Creator
 
 Initially created and inspired by me: DevRich78 and currently made available under the Apache 2.0 license
 
@@ -142,3 +130,13 @@ Many thanks for your support on that and because of your continued support, I pl
 
 
 
+#CONTRIBUTORS:
+
+___NOTE: For those of you new to GitHub as I have been; a excellent place to start understand "how" GitHub does Project Mangament ( or Repo Management) is this page here: [https://guides.github.com/features/issues/](https://guides.github.com/features/issues/)___
+
+^---- Starting with version 1.1; I will be using the built-in features of GitHub for feature-requests, to-do-lists, change-logs, and milestones
+
+NOTE TO ALL CONTRIBUTORS: with the release of [[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)] version 1.0; I plan to allow contributors to be able to contribute by first forking the "master branch" from this primary-repo -- then make your changes/additions -- then submit a "Pull Request" and I will take a look to see about incorporating your changes or suggest any bigs/fixes for your fork. ( i hope I am using the proper terminology for 'fork' )
+
+
+**_( This README.md and the_** [[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)] **_"upPIC" project are a constant Work-In-Progress ( W.I.P ).  I ask that you please be patient and kind as I don't have a lot of free time these days.  However; I plan to work on_** [[:](http://GitHub.com/devrich78/upPIC/).[:](http://GitHub.com/devrich78/upPIC/)] **_as often as I can over time.  Many thanks for your support! )_**
