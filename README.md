@@ -6,7 +6,7 @@
 
 ___Released: Monday, February 23rd 2015___
 
-user profile Pixelated Image Creator; originally created and inspired by me: (DevRich78.com)[http://DevRich78.com] and currently made available under the Apache 2.0 license
+user profile Pixelated Image Creator; originally created and inspired by me: [DevRich78](http://DevRich78.com) and currently made available under the Apache 2.0 license
 
 (( formerly -> [:upPIC:] ))
 
