@@ -1,4 +1,4 @@
-**__[:.:]__** -- upPIC Version **__1.0__** -- Release Date: **___(Almost Ready)___**
+**__[:.:]__** -- upPIC Version **__1.0__** -- Releasd: __Feburary 23rd 2015__
 
 #Instructions For Installing
 
