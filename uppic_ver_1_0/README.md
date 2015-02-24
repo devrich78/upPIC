@@ -6,7 +6,7 @@ Installing is simple.  Very simple.  Just copy all of the files from this folder
 
 Besure to upload all of the files "AS-IS" and with***___out___*** modifying them in any way.
 
-NEXT: Just make a URL link to the file -> "uppic.html".
+NEXT: Just make a URL link to the file -> "index.html".
 
 Done.
 
